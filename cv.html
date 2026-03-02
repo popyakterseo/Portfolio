@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popy Akter | Advanced CV</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #0f172a;
+            --secondary: #2563eb;
+            --text-main: #334155;
+            --text-light: #64748b;
+            --bg-page: #f1f5f9;
+            --bg-cv: #ffffff;
+            --sidebar-bg: #f8fafc;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-page);
+            color: var(--text-main);
+            line-height: 1.5;
+            padding: 40px 20px;
+        }
+
+        /* A4 Paper Dimensions for Web View */
+        .cv-container {
+            max-width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            background: var(--bg-cv);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            display: grid;
+            grid-template-columns: 32% 68%;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        /* SIDEBAR (Left Column) */
+        .sidebar {
+            background-color: var(--sidebar-bg);
+            padding: 40px 30px;
+            border-right: 1px solid #e2e8f0;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--secondary);
+            margin-bottom: 25px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .sidebar-section {
+            margin-bottom: 30px;
+        }
+
+        .sidebar-title {
+            font-size: 1.1rem;
+            color: var(--primary);
+            border-bottom: 2px solid var(--secondary);
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+            color: var(--text-main);
+            word-break: break-word;
+        }
+
+        .contact-item i {
+            color: var(--secondary);
+            width: 16px;
+        }
+
+        .skill-list, .tool-list {
+            list-style: none;
+        }
+
+        .skill-list li {
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            position: relative;
+            padding-left: 15px;
+        }
+
+        .skill-list li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        .tool-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .tool-tags span {
+            background: #e2e8f0;
+            color: var(--primary);
+            font-size: 0.75rem;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        /* MAIN CONTENT (Right Column) */
+        .main-content {
+            padding: 40px;
+        }
+
+        .header-name h1 {
+            font-size: 2.8rem;
+            color: var(--primary);
+            line-height: 1.1;
+            margin-bottom: 5px;
+        }
+
+        .header-name h2 {
+            font-size: 1.2rem;
+            color: var(--secondary);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .summary-text {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+            text-align: justify;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            color: var(--primary);
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title i {
+            color: var(--secondary);
+        }
+
+        /* Experience Items */
+        .exp-item {
+            margin-bottom: 25px;
+        }
+
+        .exp-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .exp-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .exp-date {
+            font-size: 0.85rem;
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .exp-company {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-main);
+            margin-bottom: 8px;
+            font-style: italic;
+        }
+
+        .exp-bullets {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .exp-bullets li {
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 15px;
+            color: var(--text-light);
+        }
+
+        .exp-bullets li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+        }
+
+        /* Print Specific Styles */
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .cv-container {
+                box-shadow: none;
+                margin: 0;
+                width: 100%;
+                max-width: 100%;
+                min-height: auto;
+            }
+            .print-btn {
+                display: none;
+            }
+        }
+
+        /* Download Button */
+        .print-btn {
+            display: block;
+            width: 200px;
+            margin: 0 auto 30px auto;
+            text-align: center;
+            background: var(--secondary);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .print-btn:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Print Button (Hidden when printing) -->
+    <button class="print-btn" onclick="window.print()">
+        <i class="fas fa-file-pdf"></i> Save as PDF
+    </button>
+
+    <div class="cv-container">
+        
+        <!-- LEFT SIDEBAR -->
+        <div class="sidebar">
+            <img src="https://drive.google.com/thumbnail?id=1UePGYm5DSzVba59h46qHx_AJDGND9rlf&sz=w500" alt="Popy Akter" class="profile-img">
+            
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Contact</h3>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i> popyakter4407@gmail.com
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i> +880 1924 798350
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-linkedin"></i> linkedin.com/in/popy-akter-tj
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-globe"></i> popyakterseo.github.io/Portfolio
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Core Expertise</h3>
+                <ul class="skill-list">
+                    <li>Technical SEO & Audits</li>
+                    <li>Dynamic PHP Schema</li>
+                    <li>eCommerce Growth Strategy</li>
+                    <li>Content Architecture</li>
+                    <li>AI-Driven SEO Planning</li>
+                    <li>Data Analytics & Reporting</li>
+                </ul>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Tools & Tech</h3>
+                <div class="tool-tags">
+                    <span>Screaming Frog</span>
+                    <span>GA4</span>
+                    <span>GSC</span>
+                    <span>SEMrush</span>
+                    <span>BrightLocal</span>
+                    <span>WordPress</span>
+                    <span>HTML/CSS</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Education</h3>
+                <div style="margin-bottom: 10px;">
+                    <div style="font-weight: 600; font-size: 0.85rem; color: var(--primary);">MBA (Management)</div>
+                    <div style="font-size: 0.8rem; color: var(--text-light);">University of Dhaka</div>
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <div style="font-weight: 600; font-size: 0.85rem; color: var(--primary);">BBA (Management)</div>
+                    <div style="font-size: 0.8rem; color: var(--text-light);">University of Dhaka</div>
+                </div>
+                <div>
+                    <div style="font-weight: 600; font-size: 0.85rem; color: var(--primary);">Professional Digital Mktg</div>
+                    <div style="font-size: 0.8rem; color: var(--text-light);">Creative IT</div>
+                </div>
+            </div>
+
+            <div class="sidebar-section">
+                <h3 class="sidebar-title">Languages</h3>
+                <ul class="skill-list">
+                    <li>English (Fluent)</li>
+                    <li>Bengali (Fluent)</li>
+                    <li>Hindi (Basic)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- RIGHT MAIN CONTENT -->
+        <div class="main-content">
+            
+            <div class="header-name">
+                <h1>Popy Akter</h1>
+                <h2>SEO Manager | Technical SEO Strategist</h2>
+            </div>
+
+            <p class="summary-text">
+                Results-driven SEO Manager with hands-on experience leading organic growth strategies across 50+ websites. Specialized in building scalable SEO systems, executing complex technical audits, implementing dynamic PHP schema, and aligning organic initiatives strictly with business revenue KPIs.
+            </p>
+
+            <h3 class="section-title"><i class="fas fa-briefcase"></i> Professional Experience</h3>
+            
+            <!-- Cansoft Role 1 -->
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-title">Search Engine Optimization Manager</div>
+                    <div class="exp-date">Dec 2025 – Present</div>
+                </div>
+                <div class="exp-company">Cansoft Technologies | Vancouver, BC (Remote)</div>
+                <ul class="exp-bullets">
+                    <li>Spearhead end-to-end technical and on-page SEO strategies for a diverse portfolio of 50+ client websites.</li>
+                    <li>Conduct advanced technical SEO audits, resolving complex backend issues to enhance crawlability.</li>
+                    <li>Lead dynamic PHP schema implementations and structured data mapping to maximize SERP visibility.</li>
+                    <li>Align SEO initiatives directly with core business KPIs, focusing on revenue-driven organic growth.</li>
+                </ul>
+            </div>
+
+            <!-- Cansoft Role 2 -->
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-title">Digital Marketing Strategist</div>
+                    <div class="exp-date">Jan 2024 – Mar 2025</div>
+                </div>
+                <div class="exp-company">Cansoft Technologies | Vancouver, BC</div>
+                <ul class="exp-bullets">
+                    <li>Managed team coordination and collaborated with development teams to execute robust digital growth campaigns.</li>
+                    <li>Performed comprehensive market research and identified high-impact organic growth opportunities.</li>
+                    <li>Monitored traffic trends and conversion metrics to continuously refine marketing funnels.</li>
+                </ul>
+            </div>
+
+            <!-- YSSE Role -->
+            <div class="exp-item">
+                <div class="exp-header">
+                    <div class="exp-title">Management Trainee & Intern</div>
+                    <div class="exp-date">Mar 2023 – Dec 2023</div>
+                </div>
+                <div class="exp-company">Youth School for Social Entrepreneurs (YSSE) | Dhaka</div>
+                <ul class="exp-bullets">
+                    <li>Provided virtual assistance and managed operational data analysis using advanced Microsoft Excel.</li>
+                    <li>Streamlined internal workflows and assisted in cross-departmental project execution.</li>
+                </ul>
+            </div>
+
+            <h3 class="section-title"><i class="fas fa-star"></i> Achievements & Case Studies</h3>
+            
+            <div class="exp-item" style="margin-bottom: 15px;">
+                <div class="exp-title" style="font-size: 0.95rem;">🏆 Top Performance Recognition (2025)</div>
+                <div class="exp-company" style="font-size: 0.85rem; margin-top: 3px;">Recognized as <strong>Best Scorer & Team Leader</strong> at Cansoft Technologies with an Annual Evaluation Score of 90.74.</div>
+            </div>
+
+            <div class="exp-item" style="margin-bottom: 15px;">
+                <div class="exp-title" style="font-size: 0.95rem;">📈 Multi-Site SEO Scaling</div>
+                <div class="exp-company" style="font-size: 0.85rem; margin-top: 3px;">Successfully managed and scaled the organic presence for 50+ concurrent websites, standardizing technical audits and KPI-based reporting.</div>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-title" style="font-size: 0.95rem;">⚙️ SEO Automation Development</div>
+                <div class="exp-company" style="font-size: 0.85rem; margin-top: 3px;">Developed internal agency tools (WebP Converter, GeoTag Tool, SEO Analyzer) to drastically reduce repetitive task hours and boost workflow efficiency.</div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

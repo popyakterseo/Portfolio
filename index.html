@@ -33,7 +33,6 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            /* Updated to a premium, professional subtle gradient instead of flat white */
             background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); 
             color: var(--text-main);
             line-height: 1.6;
@@ -163,11 +162,12 @@
             font-size: 0.9rem;
         }
 
-        /* Expertise Grid */
+        /* Expertise Grid - FIXED LAYOUT */
         .grid-cards {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 24px;
+            align-items: stretch; /* Forces cards in the same row to be equal height */
         }
 
         .card {
@@ -176,11 +176,14 @@
             border-radius: 12px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
             border-top: 4px solid var(--secondary-color);
+            display: flex;
+            flex-direction: column; /* Ensures content stretches properly */
+            height: 100%;
         }
 
         .card h3 {
             font-size: 1.25rem;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -188,21 +191,24 @@
 
         .card ul {
             list-style: none;
+            flex-grow: 1; /* Pushes content evenly */
         }
 
         .card ul li {
             position: relative;
             padding-left: 20px;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
             font-size: 0.95rem;
             color: var(--text-main);
+            line-height: 1.5;
         }
 
         .card ul li::before {
             content: '→';
             position: absolute;
             left: 0;
-            color: var(--secondary-color);
+            color: var(--text-light);
+            font-weight: 600;
         }
 
         /* Tools & Technologies Tags */
@@ -252,7 +258,7 @@
         }
 
         .doc-link:hover {
-            background-color: #1d4ed8; /* Darker blue */
+            background-color: #1d4ed8;
         }
 
         .doc-link.secondary {
@@ -344,31 +350,105 @@
             flex-shrink: 0;
         }
 
-        /* Experience & Education */
-        .timeline-item {
+        /* Advanced Experience Timeline */
+        .experience-card {
             background: var(--surface-color);
             padding: 30px;
             border-radius: 12px;
-            border-left: 4px solid var(--secondary-color);
             box-shadow: 0 10px 25px rgba(0,0,0,0.04);
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            border-left: 4px solid var(--secondary-color);
         }
 
-        .timeline-header {
+        .company-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .role-group {
+            margin-top: 20px;
+            position: relative;
+            padding-left: 20px;
+            border-left: 2px solid #e2e8f0;
+        }
+
+        .role-group::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+        }
+
+        .role-header {
             display: flex;
             justify-content: space-between;
-            align-items: center;
-            margin-bottom: 15px;
+            align-items: flex-start;
             flex-wrap: wrap;
+            margin-bottom: 10px;
         }
 
-        .timeline-date {
-            color: var(--secondary-color);
+        .role-title {
+            font-size: 1.2rem;
             font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .role-meta {
+            color: var(--text-light);
             font-size: 0.9rem;
-            background: var(--accent-color);
-            padding: 4px 12px;
-            border-radius: 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 4px;
+        }
+
+        .role-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .role-bullets {
+            list-style: none;
+            margin-top: 12px;
+            color: var(--text-main);
+            font-size: 0.95rem;
+        }
+
+        .role-bullets li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .role-bullets li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .skills-pills {
+            margin-top: 12px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skills-pills span {
+            background: var(--bg-color);
+            border: 1px solid #cbd5e1;
+            padding: 4px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: var(--text-light);
         }
 
         /* Footer */
@@ -389,10 +469,9 @@
             .contact-pills {
                 justify-content: center;
             }
-            .timeline-header {
+            .role-header {
                 flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
+                gap: 5px;
             }
         }
     </style>
@@ -403,8 +482,8 @@
         
         <!-- Hero Section -->
         <header class="hero">
-            <!-- Using your direct Google Drive Image -->
-            <img src="https://drive.google.com/file/d/1UePGYm5DSzVba59h46qHx_AJDGND9rlf/view?usp=sharing" alt="Popy Akter" class="hero-img">
+            <!-- Using Google Thumbnail API hack to bypass drive restrictions -->
+            <img src="https://drive.google.com/thumbnail?id=1UePGYm5DSzVba59h46qHx_AJDGND9rlf&sz=w500" alt="Popy Akter" class="hero-img">
             <div class="hero-content">
                 <h1>Popy Akter</h1>
                 <h2>SEO Manager | Technical SEO & eCommerce Growth Strategist</h2>
@@ -451,6 +530,7 @@
             <h2 class="section-title"><i class="fas fa-laptop-code"></i> Core Expertise</h2>
             <div class="grid-cards">
                 
+                <!-- Card 1 -->
                 <div class="card">
                     <h3><i class="fas fa-cogs"></i> Technical SEO</h3>
                     <ul>
@@ -465,8 +545,9 @@
                     </ul>
                 </div>
 
+                <!-- Card 2 -->
                 <div class="card">
-                    <h3><i class="fas fa-pen-nib"></i> On-Page & Content SEO</h3>
+                    <h3><i class="fas fa-pen-nib"></i> On-Page & Content</h3>
                     <ul>
                         <li>Metadata optimization at scale</li>
                         <li>Intent-based keyword mapping</li>
@@ -478,6 +559,7 @@
                     </ul>
                 </div>
 
+                <!-- Card 3 -->
                 <div class="card">
                     <h3><i class="fas fa-chart-line"></i> eCommerce & Growth</h3>
                     <ul>
@@ -491,6 +573,7 @@
                     </ul>
                 </div>
 
+                <!-- Card 4 -->
                 <div class="card">
                     <h3><i class="fas fa-chart-pie"></i> Reporting & Analysis</h3>
                     <ul>
@@ -503,6 +586,7 @@
                     </ul>
                 </div>
 
+                <!-- Card 5 (Full Width) -->
                 <div class="card" style="grid-column: 1 / -1;">
                     <h3><i class="fas fa-users"></i> Client & Stakeholder Management</h3>
                     <ul style="display: flex; flex-wrap: wrap; gap: 20px;">
@@ -515,6 +599,129 @@
                 </div>
 
             </div>
+        </section>
+
+        <!-- Professional Experience (OPTIMIZED TIMELINE) -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-building"></i> Professional Experience</h2>
+            
+            <!-- Company 1: Cansoft Technologies -->
+            <div class="experience-card">
+                <div class="company-title">Cansoft Technologies</div>
+                
+                <!-- Role 1 -->
+                <div class="role-group">
+                    <div class="role-header">
+                        <div class="role-title">Search Engine Optimization Manager</div>
+                        <div class="role-meta">
+                            <span><i class="fas fa-calendar-alt"></i> Dec 2025 - Present</span>
+                            <span><i class="fas fa-globe"></i> Vancouver, BC (Remote)</span>
+                        </div>
+                    </div>
+                    <ul class="role-bullets">
+                        <li>Spearhead end-to-end technical and on-page SEO strategies for a diverse portfolio of 50+ client websites.</li>
+                        <li>Conduct advanced technical SEO audits, resolving complex backend issues to enhance crawlability and indexation speed.</li>
+                        <li>Lead dynamic PHP schema implementations and structured data mapping to maximize SERP feature eligibility.</li>
+                        <li>Align SEO initiatives directly with core business KPIs, focusing heavily on revenue-driven organic growth.</li>
+                    </ul>
+                    <div class="skills-pills">
+                        <span>Technical SEO</span>
+                        <span>SEO Audits</span>
+                        <span>Schema Markup</span>
+                        <span>Team Leadership</span>
+                    </div>
+                </div>
+
+                <!-- Role 2 -->
+                <div class="role-group">
+                    <div class="role-header">
+                        <div class="role-title">Digital Marketing Strategist</div>
+                        <div class="role-meta">
+                            <span><i class="fas fa-calendar-alt"></i> Jan 2024 - Mar 2025</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Vancouver, BC</span>
+                        </div>
+                    </div>
+                    <ul class="role-bullets">
+                        <li>Managed team coordination and collaborated with cross-functional development teams to execute robust digital growth campaigns.</li>
+                        <li>Performed comprehensive SEO audits and market research to identify high-impact organic growth opportunities.</li>
+                        <li>Monitored traffic trends, keyword rankings, and conversion metrics to continuously refine marketing funnels.</li>
+                    </ul>
+                    <div class="skills-pills">
+                        <span>Team Coordination</span>
+                        <span>SEO Audits</span>
+                        <span>Digital Strategy</span>
+                        <span>KPI Tracking</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Company 2: YSSE -->
+            <div class="experience-card">
+                <div class="company-title">Youth School for Social Entrepreneurs (YSSE)</div>
+                
+                <!-- Role 1 -->
+                <div class="role-group">
+                    <div class="role-header">
+                        <div class="role-title">Management Trainee (Part-time)</div>
+                        <div class="role-meta">
+                            <span><i class="fas fa-calendar-alt"></i> Aug 2023 - Dec 2023</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</span>
+                        </div>
+                    </div>
+                    <ul class="role-bullets">
+                        <li>Provided comprehensive virtual assistance and managed operational data using Microsoft Excel.</li>
+                        <li>Streamlined internal workflows and assisted in cross-departmental project coordination and execution.</li>
+                    </ul>
+                    <div class="skills-pills">
+                        <span>Virtual Assistance</span>
+                        <span>Microsoft Excel</span>
+                        <span>Project Coordination</span>
+                    </div>
+                </div>
+
+                <!-- Role 2 -->
+                <div class="role-group">
+                    <div class="role-header">
+                        <div class="role-title">Intern</div>
+                        <div class="role-meta">
+                            <span><i class="fas fa-calendar-alt"></i> Mar 2023 - Aug 2023</span>
+                            <span><i class="fas fa-globe"></i> Remote</span>
+                        </div>
+                    </div>
+                    <ul class="role-bullets">
+                        <li>Supported daily administrative tasks, successfully balancing multiple responsibilities under strict deadlines.</li>
+                        <li>Developed strong time management and presentation skills through collaborative internal projects.</li>
+                    </ul>
+                    <div class="skills-pills">
+                        <span>Time Management</span>
+                        <span>Presentation Skills</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Company 3: Euro Bangla IT -->
+            <div class="experience-card">
+                <div class="company-title">Euro Bangla IT</div>
+                <div class="role-group">
+                    <div class="role-header">
+                        <div class="role-title">Office Coordinator</div>
+                        <div class="role-meta">
+                            <span><i class="fas fa-calendar-alt"></i> May 2017 - Jul 2017</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh (On-site)</span>
+                        </div>
+                    </div>
+                    <ul class="role-bullets">
+                        <li>Handled day-to-day office administration and cross-departmental communication.</li>
+                        <li>Organized and maintained critical documentation and scheduling utilizing Microsoft Excel.</li>
+                    </ul>
+                    <div class="skills-pills">
+                        <span>Office Administration</span>
+                        <span>Microsoft Excel</span>
+                        <span>Data Management</span>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <!-- Tools & Technologies -->
@@ -723,29 +930,6 @@
             </div>
         </section>
 
-        <!-- Professional Experience -->
-        <section>
-            <h2 class="section-title"><i class="fas fa-building"></i> Professional Experience</h2>
-            
-            <div class="timeline-item">
-                <div class="timeline-header">
-                    <div>
-                        <h3 style="font-size: 1.4rem;">SEO Project Manager</h3>
-                        <h4 style="color: var(--text-light); font-weight: 500;">Cansoft Technologies</h4>
-                    </div>
-                    <span class="timeline-date">Jan 2024 – Present</span>
-                </div>
-                <ul style="list-style-position: inside; color: var(--text-main);">
-                    <li>Led SEO strategy for 50+ websites concurrently.</li>
-                    <li>Conducted advanced technical audits addressing complex backend issues.</li>
-                    <li>Improved crawlability, indexing, and overall site performance.</li>
-                    <li>Increased keyword rankings via precise metadata & internal linking optimization.</li>
-                    <li>Delivered monthly data-driven performance reports directly to stakeholders.</li>
-                    <li>Maintained absolute alignment with ongoing Google algorithm updates.</li>
-                </ul>
-            </div>
-        </section>
-
         <!-- Education, Languages & Recognitions -->
         <section>
             <div class="grid-cards">
@@ -783,9 +967,9 @@
                 <div class="card" style="border-top-color: var(--primary-color);">
                     <h2 class="section-title" style="margin-bottom: 20px; font-size: 1.5rem;"><i class="fas fa-globe"></i> Languages</h2>
                     <ul style="list-style: none;">
-                        <li style="margin-bottom: 10px;"><strong>English:</strong> Fluent</li>
-                        <li style="margin-bottom: 10px;"><strong>Bengali:</strong> Fluent</li>
-                        <li style="margin-bottom: 10px;"><strong>Hindi:</strong> Basic</li>
+                        <li style="margin-bottom: 10px; padding-left: 0;"><strong>English:</strong> Fluent</li>
+                        <li style="margin-bottom: 10px; padding-left: 0;"><strong>Bengali:</strong> Fluent</li>
+                        <li style="margin-bottom: 10px; padding-left: 0;"><strong>Hindi:</strong> Basic</li>
                     </ul>
                 </div>
 

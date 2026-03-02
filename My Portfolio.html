@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popy Akter | SEO Manager & eCommerce Strategist</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* CSS Variables */
+        :root {
+            --primary-color: #0f172a; /* Deep Slate */
+            --secondary-color: #2563eb; /* Professional Blue */
+            --accent-color: #dbeafe; /* Light Blue */
+            --surface-color: #ffffff; /* Card backgrounds */
+            --text-main: #334155;
+            --text-light: #64748b;
+        }
+
+        /* Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            /* Updated to a premium, professional subtle gradient instead of flat white */
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%); 
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+
+        section:last-child {
+            border-bottom: none;
+        }
+
+        h1, h2, h3, h4 {
+            color: var(--primary-color);
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title i {
+            color: var(--secondary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            background-color: var(--surface-color);
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+            margin-top: 50px;
+        }
+
+        .hero-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--accent-color);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero-content h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        .hero-content h2 {
+            font-size: 1.25rem;
+            color: var(--secondary-color);
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        .contact-pills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .contact-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background-color: transparent;
+            border: 1px solid #cbd5e1;
+            border-radius: 30px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-pill:hover {
+            background-color: var(--accent-color);
+            color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        /* Philosophy Callout */
+        .philosophy-box {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .philosophy-box h3 {
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .philosophy-grid p {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+        }
+
+        /* Expertise Grid */
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--surface-color);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card ul {
+            list-style: none;
+        }
+
+        .card ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+            color: var(--text-main);
+        }
+
+        .card ul li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+        }
+
+        /* Tools & Technologies Tags */
+        .tool-category {
+            margin-bottom: 20px;
+        }
+        
+        .tool-category h4 {
+            margin-bottom: 10px;
+            color: var(--text-light);
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: var(--surface-color);
+            border: 1px solid #cbd5e1;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        /* Document Links (Portfolio Buttons) */
+        .doc-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            background-color: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: background 0.3s;
+            margin-top: 15px;
+            margin-right: 10px;
+        }
+
+        .doc-link:hover {
+            background-color: #1d4ed8; /* Darker blue */
+        }
+
+        .doc-link.secondary {
+            background-color: var(--primary-color);
+        }
+
+        .doc-link.secondary:hover {
+            background-color: #1e293b;
+        }
+
+        /* Case Studies (HTML Accordion) */
+        details {
+            background: var(--surface-color);
+            margin-bottom: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+            border: 1px solid #e2e8f0;
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 20px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: var(--surface-color);
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '\f078';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--secondary-color);
+            transition: transform 0.3s;
+        }
+
+        details[open] summary::after {
+            transform: rotate(180deg);
+        }
+
+        .details-content {
+            padding: 0 20px 20px;
+            border-top: 1px solid #e2e8f0;
+            margin-top: 10px;
+            padding-top: 15px;
+        }
+
+        .details-content h4 {
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: var(--secondary-color);
+            font-size: 1rem;
+        }
+
+        /* Framework Ordered Steps */
+        .framework-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .framework-step {
+            background: var(--surface-color);
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            gap: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+        }
+
+        .step-number {
+            background: var(--secondary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* Experience & Education */
+        .timeline-item {
+            background: var(--surface-color);
+            padding: 30px;
+            border-radius: 12px;
+            border-left: 4px solid var(--secondary-color);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.04);
+            margin-bottom: 20px;
+        }
+
+        .timeline-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .timeline-date {
+            color: var(--secondary-color);
+            font-weight: 600;
+            font-size: 0.9rem;
+            background: var(--accent-color);
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+            .contact-pills {
+                justify-content: center;
+            }
+            .timeline-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- Hero Section -->
+        <header class="hero">
+            <!-- Using your direct Google Drive Image -->
+            <img src="https://drive.google.com/file/d/1UePGYm5DSzVba59h46qHx_AJDGND9rlf/view?usp=sharing" alt="Popy Akter" class="hero-img">
+            <div class="hero-content">
+                <h1>Popy Akter</h1>
+                <h2>SEO Manager | Technical SEO & eCommerce Growth Strategist</h2>
+                <p style="margin-bottom: 20px; color: var(--text-light);">
+                    Results-driven SEO Manager with hands-on experience leading organic growth strategies across 50+ websites. Specializing in building scalable SEO systems, dynamic PHP schema, AI-driven growth strategies, and aligning technical optimization with business KPIs.
+                </p>
+                <div class="contact-pills">
+                    <a href="mailto:popyakter4407@gmail.com" class="contact-pill"><i class="fas fa-envelope"></i> popyakter4407@gmail.com</a>
+                    <a href="tel:+8801924798350" class="contact-pill"><i class="fas fa-phone"></i> +880 1924 798350</a>
+                    <a href="https://www.linkedin.com/in/popy-akter-tj/" target="_blank" class="contact-pill"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Professional Summary -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-user-tie"></i> Professional Summary</h2>
+            <p>I am a results-driven SEO Manager with hands-on experience leading organic growth strategies across 50+ websites. My expertise combines technical SEO, on-page optimization, structured data implementation, content strategy, and performance tracking — all focused on driving measurable revenue impact.</p>
+            <br>
+            <p>I specialize in building scalable SEO systems, implementing dynamic PHP schema, optimizing backend structures, and aligning SEO with business KPIs — not just rankings.</p>
+            <br>
+            <p><strong>My approach is data-backed, technically sound, and growth-oriented.</strong></p>
+        </section>
+
+        <!-- SEO Philosophy -->
+        <section>
+            <div class="philosophy-box">
+                <h3>"SEO is Not Rankings. SEO is Revenue."</h3>
+                <p style="font-size: 1.1rem;">I believe SEO must connect directly to business outcomes. Every SEO action must answer: <strong>How does this increase profitable organic traffic?</strong></p>
+                
+                <div class="philosophy-grid">
+                    <p><i class="fas fa-check-circle" style="color: #60a5fa; margin-right: 8px;"></i> Technical SEO foundations</p>
+                    <p><i class="fas fa-check-circle" style="color: #60a5fa; margin-right: 8px;"></i> Search intent mapping</p>
+                    <p><i class="fas fa-check-circle" style="color: #60a5fa; margin-right: 8px;"></i> Revenue-aligned keyword targeting</p>
+                    <p><i class="fas fa-check-circle" style="color: #60a5fa; margin-right: 8px;"></i> Content architecture planning</p>
+                    <p><i class="fas fa-check-circle" style="color: #60a5fa; margin-right: 8px;"></i> Internal linking ecosystems</p>
+                    <p><i class="fas fa-check-circle" style="color: #60a5fa; margin-right: 8px;"></i> CRO alignment & Iteration</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core Expertise -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-laptop-code"></i> Core Expertise</h2>
+            <div class="grid-cards">
+                
+                <div class="card">
+                    <h3><i class="fas fa-cogs"></i> Technical SEO</h3>
+                    <ul>
+                        <li>In-depth technical audits (crawl, indexation, health)</li>
+                        <li>Dynamic PHP schema implementation</li>
+                        <li>Structured data (LocalBusiness, Service)</li>
+                        <li>Crawlability & indexing improvements</li>
+                        <li>Page speed optimization</li>
+                        <li>Canonical & duplicate content management</li>
+                        <li>XML sitemap optimization</li>
+                        <li>Internal linking architecture from backend</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3><i class="fas fa-pen-nib"></i> On-Page & Content SEO</h3>
+                    <ul>
+                        <li>Metadata optimization at scale</li>
+                        <li>Intent-based keyword mapping</li>
+                        <li>Pillar & cluster content strategy</li>
+                        <li>Content gap analysis</li>
+                        <li>SERP feature targeting</li>
+                        <li>Entity-based optimization</li>
+                        <li>AI-assisted content refinement</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3><i class="fas fa-chart-line"></i> eCommerce & Growth</h3>
+                    <ul>
+                        <li>AI-driven Growth Strategy & Planning</li>
+                        <li>Revenue-focused keyword targeting</li>
+                        <li>Category & product page optimization</li>
+                        <li>Brand traffic capture strategy</li>
+                        <li>Comparison & high-intent blog strategy</li>
+                        <li>Funnel-aligned SEO planning</li>
+                        <li>SEO + Paid Media synergy</li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h3><i class="fas fa-chart-pie"></i> Reporting & Analysis</h3>
+                    <ul>
+                        <li>Monthly performance reporting</li>
+                        <li>KPI tracking & dashboard creation</li>
+                        <li>Traffic & Ranking trend analysis</li>
+                        <li>User behavior tracking (Clarity & GA4)</li>
+                        <li>Conversion tracking alignment</li>
+                        <li>Actionable strategic adjustments</li>
+                    </ul>
+                </div>
+
+                <div class="card" style="grid-column: 1 / -1;">
+                    <h3><i class="fas fa-users"></i> Client & Stakeholder Management</h3>
+                    <ul style="display: flex; flex-wrap: wrap; gap: 20px;">
+                        <li style="width: 45%;">Leading client SEO discussions</li>
+                        <li style="width: 45%;">Presenting performance reports</li>
+                        <li style="width: 45%;">Translating technical data into business insights</li>
+                        <li style="width: 45%;">Collaborating with developers & content teams</li>
+                        <li style="width: 45%;">Supporting SEO proposals & strategy planning</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tools & Technologies -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-tools"></i> Tools & Technologies</h2>
+            
+            <div class="tool-category">
+                <h4>SEO & Technical Tools</h4>
+                <div class="tags">
+                    <span class="tag">Screaming Frog</span>
+                    <span class="tag">Google Search Console (GSC)</span>
+                    <span class="tag">Google Analytics 4 (GA4)</span>
+                    <span class="tag">SEMrush</span>
+                    <span class="tag">BrightLocal</span>
+                    <span class="tag">SERProbot</span>
+                </div>
+            </div>
+
+            <div class="tool-category">
+                <h4>Project & Workflow Tools</h4>
+                <div class="tags">
+                    <span class="tag">Asana</span>
+                    <span class="tag">ClickUp</span>
+                    <span class="tag">Google Workspace</span>
+                    <span class="tag">Microsoft Clarity</span>
+                </div>
+            </div>
+
+            <div class="tool-category">
+                <h4>Content & Creative Tools</h4>
+                <div class="tags">
+                    <span class="tag">Canva</span>
+                    <span class="tag">AI Studio</span>
+                    <span class="tag">AI-driven SEO research tools</span>
+                </div>
+            </div>
+
+            <div class="tool-category">
+                <h4>Development & Backend</h4>
+                <div class="tags">
+                    <span class="tag">WordPress backend optimization</span>
+                    <span class="tag">Dynamic PHP schema injection</span>
+                    <span class="tag">Structured data implementation</span>
+                    <span class="tag">HTML page creation</span>
+                    <span class="tag">Basic CSS</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Case Studies -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-briefcase"></i> Selected Case Studies</h2>
+            
+            <details>
+                <summary>Case Study 1: Managing 50+ Websites – Multi-Site SEO Leadership</summary>
+                <div class="details-content">
+                    <h4>Challenge:</h4>
+                    <p>Managing SEO strategy across multiple websites with varying performance levels and technical inconsistencies.</p>
+                    <h4>Actions Taken:</h4>
+                    <p>Conducted full technical SEO audits, improved crawlability & indexing issues, implemented structured data enhancements, optimized internal linking from backend, reworked metadata & content structure, and delivered monthly KPI-based reporting.</p>
+                    <h4>Impact:</h4>
+                    <p>Improved site health scores, increased organic visibility consistency, strengthened crawl efficiency, and enhanced reporting transparency for stakeholders.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Case Study 2: Dynamic PHP Schema Implementation</summary>
+                <div class="details-content">
+                    <h4>Challenge:</h4>
+                    <p>Client websites lacked structured data, limiting search visibility and rich result eligibility.</p>
+                    <h4>Solution:</h4>
+                    <p>Implemented dynamic PHP-based schema site-wide, structured LocalBusiness & service schema, and integrated schema directly within WordPress backend.</p>
+                    <h4>Impact:</h4>
+                    <p>Enhanced rich result eligibility, improved SERP CTR, and better indexation clarity.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Case Study 3: Automation & SEO Tool Development</summary>
+                <div class="details-content">
+                    <h4>Challenge:</h4>
+                    <p>Manual SEO workflows were inefficient and time-consuming.</p>
+                    <h4>Solution:</h4>
+                    <p>Developed internal efficiency tools: Unlimited WebP Converter Tool, GeoTag Tool, and an SEO Analyzer Tool.</p>
+                    <h4>Impact:</h4>
+                    <p>Reduced repetitive SEO tasks, increased workflow efficiency, and enhanced technical optimization speed.</p>
+                </div>
+            </details>
+
+            <details>
+                <summary>Case Study 4: Paid Media Audit & SEO Alignment</summary>
+                <div class="details-content">
+                    <h4>Challenge:</h4>
+                    <p>Ads performance lacked alignment with organic strategy.</p>
+                    <h4>Actions Taken:</h4>
+                    <p>Audited Ads reports, analyzed CTR, CPC, and ROAS. Suggested landing page & keyword alignment improvements to foster an SEO + Paid integration strategy.</p>
+                    <h4>Impact:</h4>
+                    <p>Improved funnel clarity, strengthened cross-channel growth strategy, and ensured better traffic quality alignment.</p>
+                </div>
+            </details>
+        </section>
+
+        <!-- Featured Portfolio Documents -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-folder-open"></i> Featured Strategy & Documents</h2>
+            <div class="grid-cards">
+                
+                <div class="card">
+                    <h3><i class="fas fa-chart-bar"></i> SEO Reporting & Schema</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 10px;">View samples of my detailed performance reporting and advanced structured data logic.</p>
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <a href="https://drive.google.com/file/d/10IyzdDG114dtQzmWXdNPKY1ZCnJov28O/view?usp=sharing" target="_blank" class="doc-link">
+                            <i class="fas fa-file-pdf"></i> SEO Report
+                        </a>
+                        <a href="https://drive.google.com/file/d/1wvQjGISfmpmEG13zJw6yOCYtxW_ZSP2q/view?usp=sharing" target="_blank" class="doc-link secondary">
+                            <i class="fas fa-code"></i> Advance Schema
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3><i class="fas fa-link"></i> Internal Linking Strategy</h3>
+                    <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 10px;">Review my strategic frameworks for mapping entities and distributing page authority.</p>
+                    <div style="display: flex; flex-wrap: wrap;">
+                        <a href="https://drive.google.com/file/d/1ax2s-rwdTqpaxlSSHsJVhpCAiQPfeRl2/view?usp=drive_link" target="_blank" class="doc-link">
+                            <i class="fas fa-sitemap"></i> Strategy Doc 1
+                        </a>
+                        <a href="https://drive.google.com/file/d/1d5vJ64d3nV70mGilj-gUkTqwcGaLOaSF/view?usp=sharing" target="_blank" class="doc-link secondary">
+                            <i class="fas fa-sitemap"></i> Strategy Doc 2
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SEO Framework -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-network-wired"></i> My SEO Framework</h2>
+            <div class="framework-grid">
+                
+                <div class="framework-step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <strong>Business & KPI Alignment</strong>
+                        <p style="font-size: 0.9rem; margin-top: 5px; color: var(--text-light);">Understand revenue goals and define SEO success metrics.</p>
+                    </div>
+                </div>
+
+                <div class="framework-step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <strong>Technical Foundation</strong>
+                        <p style="font-size: 0.9rem; margin-top: 5px; color: var(--text-light);">Conduct audits and fix crawl, index, and structural issues.</p>
+                    </div>
+                </div>
+
+                <div class="framework-step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <strong>Keyword & Intent Mapping</strong>
+                        <p style="font-size: 0.9rem; margin-top: 5px; color: var(--text-light);">Identify high-impact, revenue-focused search terms.</p>
+                    </div>
+                </div>
+
+                <div class="framework-step">
+                    <div class="step-number">4</div>
+                    <div>
+                        <strong>Content & Architecture</strong>
+                        <p style="font-size: 0.9rem; margin-top: 5px; color: var(--text-light);">Build scalable pillar-cluster systems.</p>
+                    </div>
+                </div>
+
+                <div class="framework-step">
+                    <div class="step-number">5</div>
+                    <div>
+                        <strong>Internal Linking & Entity</strong>
+                        <p style="font-size: 0.9rem; margin-top: 5px; color: var(--text-light);">Strengthen site authority through structured linking.</p>
+                    </div>
+                </div>
+
+                <div class="framework-step">
+                    <div class="step-number">6</div>
+                    <div>
+                        <strong>Structured Data & SERP</strong>
+                        <p style="font-size: 0.9rem; margin-top: 5px; color: var(--text-light);">Implement schema for improved search appearance.</p>
+                    </div>
+                </div>
+
+                <div class="framework-step">
+                    <div class="step-number">7</div>
+                    <div>
+                        <strong>Performance Monitoring</strong>
+                        <p style="font-size: 0.9rem; margin-top: 5px; color: var(--text-light);">Track KPIs through GA4, GSC, and SEO tools.</p>
+                    </div>
+                </div>
+
+                <div class="framework-step">
+                    <div class="step-number">8</div>
+                    <div>
+                        <strong>Continuous Growth</strong>
+                        <p style="font-size: 0.9rem; margin-top: 5px; color: var(--text-light);">Optimize and iterate based on real performance data.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Professional Experience -->
+        <section>
+            <h2 class="section-title"><i class="fas fa-building"></i> Professional Experience</h2>
+            
+            <div class="timeline-item">
+                <div class="timeline-header">
+                    <div>
+                        <h3 style="font-size: 1.4rem;">SEO Project Manager</h3>
+                        <h4 style="color: var(--text-light); font-weight: 500;">Cansoft Technologies</h4>
+                    </div>
+                    <span class="timeline-date">Jan 2024 – Present</span>
+                </div>
+                <ul style="list-style-position: inside; color: var(--text-main);">
+                    <li>Led SEO strategy for 50+ websites concurrently.</li>
+                    <li>Conducted advanced technical audits addressing complex backend issues.</li>
+                    <li>Improved crawlability, indexing, and overall site performance.</li>
+                    <li>Increased keyword rankings via precise metadata & internal linking optimization.</li>
+                    <li>Delivered monthly data-driven performance reports directly to stakeholders.</li>
+                    <li>Maintained absolute alignment with ongoing Google algorithm updates.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education, Languages & Recognitions -->
+        <section>
+            <div class="grid-cards">
+                
+                <div class="card" style="border-top-color: var(--primary-color);">
+                    <h2 class="section-title" style="margin-bottom: 20px; font-size: 1.5rem;"><i class="fas fa-graduation-cap"></i> Education</h2>
+                    <div style="margin-bottom: 15px;">
+                        <strong>Master of Business Administration (Management)</strong>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">University of Dhaka</p>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <strong>Bachelor of Business Administration (Management)</strong>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">University of Dhaka</p>
+                    </div>
+                    <div>
+                        <strong>Professional Digital Marketing Course</strong>
+                        <p style="color: var(--text-light); font-size: 0.9rem;">Creative IT</p>
+                    </div>
+                </div>
+
+                <div class="card" style="border-top-color: var(--primary-color);">
+                    <h2 class="section-title" style="margin-bottom: 20px; font-size: 1.5rem;"><i class="fas fa-award"></i> Recognitions</h2>
+                    <div style="margin-bottom: 15px;">
+                        <strong style="font-size: 1.1rem;">2025 Annual Evaluation</strong>
+                        <p style="color: var(--text-light); font-size: 0.95rem; margin-top: 5px;">Average Score: <strong>90.74</strong></p>
+                        
+                        <div style="margin-top: 15px; background: var(--accent-color); padding: 12px; border-radius: 8px; display: inline-block;">
+                            <p style="color: var(--secondary-color); font-weight: 600; font-size: 0.95rem;">
+                                <i class="fas fa-trophy"></i> Best Scorer & Team Leader
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card" style="border-top-color: var(--primary-color);">
+                    <h2 class="section-title" style="margin-bottom: 20px; font-size: 1.5rem;"><i class="fas fa-globe"></i> Languages</h2>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 10px;"><strong>English:</strong> Fluent</li>
+                        <li style="margin-bottom: 10px;"><strong>Bengali:</strong> Fluent</li>
+                        <li style="margin-bottom: 10px;"><strong>Hindi:</strong> Basic</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Footer / Contact -->
+        <footer>
+            <div class="contact-pills" style="justify-content: center; margin-bottom: 20px;">
+                <a href="mailto:popyakter4407@gmail.com" class="contact-pill"><i class="fas fa-envelope"></i> popyakter4407@gmail.com</a>
+                <a href="tel:+8801924798350" class="contact-pill"><i class="fas fa-phone"></i> +880 1924 798350</a>
+                <a href="https://www.linkedin.com/in/popy-akter-tj/" target="_blank" class="contact-pill"><i class="fab fa-linkedin"></i> Connect on LinkedIn</a>
+            </div>
+            <p>&copy; 2026 Popy Akter. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

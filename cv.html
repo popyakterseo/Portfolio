@@ -3,510 +3,1222 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popy Akter | Advanced Professional CV</title>
-    
-    <!-- Google Fonts: Inter -->
+    <title>Popy Akter — Curriculum Vitae</title>
+    <meta name="description" content="Curriculum Vitae of Popy Akter, SEO Manager specialising in technical SEO, dynamic schema, AEO &amp; GEO, and revenue-driven organic growth across 50+ websites.">
+
+    <!-- Fonts: Fraunces + Geist + JetBrains Mono — matching portfolio -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <style>
+        /* ============================================
+           DESIGN SYSTEM — matches portfolio
+           ============================================ */
         :root {
-            --primary: #0f172a; /* Slate 900 */
-            --secondary: #1e40af; /* Deep Blue */
-            --accent: #eff6ff;
-            --text-main: #334155;
-            --text-light: #64748b;
-            --border: #e2e8f0;
-            --bg: #ffffff;
+            --paper:        #F4F1EA;
+            --paper-warm:   #EEE9DD;
+            --ink:          #1A1A1A;
+            --ink-soft:     #2A2A28;
+            --muted:        #6B6862;
+            --muted-soft:   #9A968E;
+            --hairline:     #D4CFC4;
+            --hairline-soft:#E5E0D4;
+            --accent:       #2D4A3E;
+            --accent-soft:  #4A6B5C;
+            --accent-tint:  #DDE5DF;
+
+            --serif: "Fraunces", "Times New Roman", serif;
+            --sans:  "Geist", -apple-system, BlinkMacSystemFont, sans-serif;
+            --mono:  "JetBrains Mono", "SF Mono", Menlo, monospace;
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #f8fafc;
-            color: var(--text-main);
-            line-height: 1.6;
-            padding: 40px 20px;
+            font-family: var(--sans);
+            background: #ECE7DC;
+            color: var(--ink);
+            font-size: 15px;
+            line-height: 1.55;
+            padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
-        .cv-container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: var(--bg);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            padding: 60px;
-            border-top: 6px solid var(--secondary);
-        }
-
-        /* --- Print Button --- */
-        .print-btn {
+        /* ============================================
+           ACTION BAR — screen only
+           ============================================ */
+        .actions {
+            max-width: 850px;
+            margin: 0 auto 24px;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            gap: 8px;
-            width: 200px;
-            margin: 0 auto 30px auto;
-            background: var(--secondary);
-            color: white;
-            padding: 12px 20px;
-            border-radius: 30px;
-            text-decoration: none;
-            font-weight: 600;
-            cursor: pointer;
-            border: none;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: 0.3s;
-        }
-
-        .print-btn:hover {
-            background: #1e3a8a;
-            transform: translateY(-2px);
-        }
-
-        /* --- Header --- */
-        .header {
-            display: flex;
-            align-items: center;
-            gap: 30px;
-            border-bottom: 2px solid var(--border);
-            padding-bottom: 30px;
-            margin-bottom: 30px;
-        }
-
-        .header-img {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--accent);
-        }
-
-        .header-content {
-            flex-grow: 1;
-        }
-
-        .header-content h1 {
-            font-size: 2.8rem;
-            color: var(--primary);
-            line-height: 1.1;
-            margin-bottom: 5px;
-            letter-spacing: -0.5px;
-        }
-
-        .header-content h2 {
-            font-size: 1.25rem;
-            color: var(--secondary);
-            font-weight: 500;
-            margin-bottom: 15px;
-        }
-
-        .contact-info {
-            display: flex;
+            gap: 16px;
             flex-wrap: wrap;
-            gap: 15px 25px;
-            font-size: 0.9rem;
-            color: var(--text-light);
         }
 
-        .contact-info span {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .contact-info i {
-            color: var(--secondary);
-        }
-
-        /* --- Sections --- */
-        .section {
-            margin-bottom: 35px;
-        }
-
-        .section-title {
-            font-size: 1.25rem;
-            color: var(--primary);
+        .actions-meta {
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 8px;
-            margin-bottom: 20px;
+            color: var(--muted);
+        }
+
+        .actions-meta .accent { color: var(--accent); }
+
+        .action-group {
             display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            font-family: var(--mono);
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 12px 22px;
+            border: 1px solid var(--ink);
+            background: var(--ink);
+            color: var(--paper);
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
             align-items: center;
             gap: 10px;
+            transition: all 0.2s ease;
         }
 
-        .section-title i {
-            color: var(--secondary);
-        }
-
-        .summary-text {
-            font-size: 1rem;
-            text-align: justify;
-            margin-bottom: 15px;
-        }
-
-        .philosophy-quote {
+        .btn:hover {
             background: var(--accent);
-            padding: 15px 20px;
-            border-left: 4px solid var(--secondary);
-            font-style: italic;
-            font-weight: 500;
-            color: var(--secondary);
-            margin-top: 15px;
+            border-color: var(--accent);
         }
 
-        /* --- Skills Grid --- */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+        .btn--ghost {
+            background: transparent;
+            color: var(--ink);
         }
 
-        .skill-group h4 {
-            font-size: 0.95rem;
-            color: var(--primary);
-            margin-bottom: 10px;
+        .btn--ghost:hover {
+            background: var(--ink);
+            color: var(--paper);
         }
 
-        .skill-group ul {
-            list-style: none;
-        }
-
-        .skill-group li {
-            font-size: 0.9rem;
-            margin-bottom: 6px;
-            color: var(--text-main);
+        /* ============================================
+           CV SHEET
+           ============================================ */
+        .cv {
+            max-width: 850px;
+            margin: 0 auto;
+            background: var(--paper);
+            padding: 64px 72px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.08);
             position: relative;
-            padding-left: 15px;
         }
 
-        .skill-group li::before {
-            content: '▹';
+        /* Subtle paper grain (screen only) */
+        .cv::before {
+            content: "";
             position: absolute;
-            left: 0;
-            color: var(--secondary);
-            font-weight: bold;
+            inset: 0;
+            background-image:
+                radial-gradient(circle at 20% 30%, rgba(45,74,62,0.015) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(26,26,26,0.015) 0%, transparent 50%);
+            pointer-events: none;
         }
 
-        /* --- Experience --- */
-        .job {
-            margin-bottom: 25px;
-            page-break-inside: avoid;
+        .cv > * { position: relative; z-index: 1; }
+
+        /* ============================================
+           MASTHEAD
+           ============================================ */
+        .masthead {
+            border-bottom: 1px solid var(--ink);
+            padding-bottom: 32px;
+            margin-bottom: 40px;
         }
 
-        .job-header {
+        .masthead-meta {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 5px;
-            flex-wrap: wrap;
+            margin-bottom: 28px;
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
         }
 
-        .job-title {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--primary);
+        .masthead-meta .vol { color: var(--accent); }
+
+        .masthead-grid {
+            display: grid;
+            grid-template-columns: 1fr 80px;
+            gap: 32px;
+            align-items: end;
         }
 
-        .job-date {
-            font-size: 0.9rem;
-            color: var(--secondary);
-            font-weight: 600;
+        h1.name {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: 72px;
+            line-height: 0.95;
+            letter-spacing: -0.035em;
+            color: var(--ink);
+            font-variation-settings: "opsz" 144, "SOFT" 30;
+            margin-bottom: 18px;
         }
 
-        .job-company {
-            font-size: 1rem;
+        h1.name em {
+            font-style: italic;
+            font-weight: 300;
+            color: var(--accent);
+            font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
+        }
+
+        .role-line {
+            font-family: var(--sans);
+            font-size: 13.5px;
             font-weight: 500;
-            color: var(--text-main);
+            letter-spacing: 0.015em;
+            color: var(--ink-soft);
+            padding-top: 18px;
+            border-top: 1px solid var(--hairline);
+        }
+
+        .role-line .sep {
+            color: var(--accent);
+            margin: 0 8px;
+        }
+
+        .portrait {
+            width: 80px;
+            height: 100px;
+            object-fit: cover;
+            filter: grayscale(0.15) contrast(1.02);
+            border: 1px solid var(--hairline);
+        }
+
+        /* Contact strip */
+        .contact-strip {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            margin-top: 28px;
+            padding-top: 20px;
+            border-top: 1px solid var(--hairline);
+        }
+
+        .contact-cell {
+            padding-right: 16px;
+            border-right: 1px solid var(--hairline-soft);
+        }
+
+        .contact-cell:last-child { border-right: none; padding-right: 0; }
+
+        .contact-cell dt {
+            font-family: var(--mono);
+            font-size: 9px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 4px;
+        }
+
+        .contact-cell dd {
+            font-size: 12.5px;
+            color: var(--ink);
+            word-break: break-word;
+        }
+
+        .contact-cell dd a {
+            color: var(--ink);
+            text-decoration: none;
+            border-bottom: 1px solid var(--hairline);
+            transition: all 0.15s ease;
+        }
+
+        .contact-cell dd a:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        /* ============================================
+           SECTIONS
+           ============================================ */
+        section {
+            margin-bottom: 40px;
+            page-break-inside: auto;
+        }
+
+        section:last-child { margin-bottom: 0; }
+
+        .section-head {
+            display: grid;
+            grid-template-columns: 56px 1fr auto;
+            gap: 20px;
+            align-items: baseline;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid var(--ink);
+        }
+
+        .section-num {
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .section-title {
+            font-family: var(--serif);
+            font-weight: 400;
+            font-size: 26px;
+            letter-spacing: -0.02em;
+            line-height: 1.05;
+            font-variation-settings: "opsz" 72;
+            color: var(--ink);
+        }
+
+        .section-title em {
+            font-style: italic;
+            color: var(--accent);
+            font-weight: 300;
+        }
+
+        .section-kicker {
+            font-family: var(--mono);
+            font-size: 9.5px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        /* ============================================
+           SUMMARY
+           ============================================ */
+        .summary p {
+            font-size: 14.5px;
+            line-height: 1.65;
+            color: var(--ink-soft);
+            margin-bottom: 12px;
+        }
+
+        .philosophy {
+            margin-top: 22px;
+            padding: 22px 26px;
+            background: var(--paper-warm);
+            border-left: 3px solid var(--accent);
+            position: relative;
+        }
+
+        .philosophy q {
+            font-family: var(--serif);
+            font-size: 22px;
+            font-weight: 300;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            color: var(--ink);
+            font-variation-settings: "opsz" 72, "SOFT" 50;
+            quotes: """ """;
+            display: block;
             margin-bottom: 10px;
         }
 
-        .job-bullets {
-            padding-left: 20px;
-            color: var(--text-main);
+        .philosophy q em {
+            font-style: italic;
+            color: var(--accent);
         }
 
-        .job-bullets li {
-            margin-bottom: 8px;
-            font-size: 0.95rem;
-            text-align: justify;
+        .philosophy-note {
+            font-size: 12.5px;
+            font-style: italic;
+            color: var(--muted);
+            line-height: 1.5;
         }
 
-        .job-bullets li::marker {
-            color: var(--secondary);
+        /* ============================================
+           COMPETENCIES GRID
+           ============================================ */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            border-top: 1px solid var(--hairline);
+            border-left: 1px solid var(--hairline);
         }
 
-        /* --- Case Studies & Achievements --- */
-        .case-study {
-            background: #f8fafc;
-            border: 1px solid var(--border);
-            padding: 20px;
-            border-radius: 6px;
-            margin-bottom: 15px;
-            page-break-inside: avoid;
+        .skill {
+            padding: 22px 22px;
+            border-right: 1px solid var(--hairline);
+            border-bottom: 1px solid var(--hairline);
+            background: var(--paper);
         }
 
-        .case-study h4 {
-            font-size: 1.05rem;
-            color: var(--primary);
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .case-study p {
-            font-size: 0.95rem;
-            margin-bottom: 8px;
-        }
-
-        /* --- Education & Extra --- */
-        .edu-flex {
+        .skill-header {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 15px;
+            align-items: baseline;
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--hairline-soft);
+        }
+
+        .skill-title {
+            font-family: var(--serif);
+            font-size: 16px;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            line-height: 1.15;
+            color: var(--ink);
+            font-variation-settings: "opsz" 36;
+        }
+
+        .skill-id {
+            font-family: var(--mono);
+            font-size: 9px;
+            color: var(--accent);
+            letter-spacing: 0.1em;
+        }
+
+        .skill ul {
+            list-style: none;
+        }
+
+        .skill li {
+            font-size: 12.5px;
+            line-height: 1.45;
+            color: var(--ink-soft);
+            padding: 5px 0;
+            border-bottom: 1px dotted var(--hairline-soft);
+        }
+
+        .skill li:last-child { border-bottom: none; }
+
+        /* ============================================
+           EXPERIENCE
+           ============================================ */
+        .experience-entry {
+            display: grid;
+            grid-template-columns: 130px 1fr;
+            gap: 28px;
+            padding: 22px 0;
+            border-bottom: 1px solid var(--hairline-soft);
             page-break-inside: avoid;
         }
 
-        .edu-flex h4 {
-            font-size: 1rem;
-            color: var(--primary);
+        .experience-entry:first-of-type { padding-top: 4px; }
+        .experience-entry:last-of-type { border-bottom: none; padding-bottom: 4px; }
+
+        .exp-meta {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
         }
 
-        .edu-flex p {
-            font-size: 0.95rem;
-            color: var(--text-light);
+        .exp-dates {
+            font-family: var(--mono);
+            font-size: 10.5px;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            font-variant-numeric: tabular-nums;
+            line-height: 1.5;
         }
 
-        /* --- Print Styles --- */
+        .exp-dates .ongoing {
+            display: inline-block;
+            width: 5px;
+            height: 5px;
+            background: var(--accent);
+            border-radius: 50%;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+
+        .exp-location {
+            font-family: var(--mono);
+            font-size: 9.5px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            line-height: 1.4;
+        }
+
+        .exp-title {
+            font-family: var(--serif);
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: -0.015em;
+            color: var(--ink);
+            font-variation-settings: "opsz" 36;
+            line-height: 1.2;
+            margin-bottom: 3px;
+        }
+
+        .exp-company {
+            font-family: var(--sans);
+            font-size: 12.5px;
+            font-weight: 500;
+            color: var(--ink-soft);
+            margin-bottom: 12px;
+        }
+
+        .exp-bullets {
+            list-style: none;
+        }
+
+        .exp-bullets li {
+            font-size: 13px;
+            line-height: 1.55;
+            color: var(--ink-soft);
+            padding: 4px 0 4px 16px;
+            position: relative;
+        }
+
+        .exp-bullets li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: 400;
+        }
+
+        .exp-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .exp-tag {
+            font-family: var(--mono);
+            font-size: 9px;
+            letter-spacing: 0.06em;
+            color: var(--muted);
+            padding: 3px 8px;
+            border: 1px solid var(--hairline);
+            background: var(--paper);
+        }
+
+        /* ============================================
+           CASE STUDIES / ACHIEVEMENTS
+           ============================================ */
+        .achievement {
+            padding: 22px 24px;
+            background: var(--paper);
+            border: 1px solid var(--hairline);
+            margin-bottom: 14px;
+            page-break-inside: avoid;
+        }
+
+        .achievement.highlight {
+            background: var(--accent);
+            color: var(--paper);
+            border-color: var(--accent);
+        }
+
+        .achievement-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 12px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--hairline-soft);
+        }
+
+        .achievement.highlight .achievement-head {
+            border-bottom-color: rgba(244, 241, 234, 0.2);
+        }
+
+        .achievement-title {
+            font-family: var(--serif);
+            font-size: 17px;
+            font-weight: 500;
+            letter-spacing: -0.015em;
+            line-height: 1.2;
+            color: var(--ink);
+            font-variation-settings: "opsz" 36;
+        }
+
+        .achievement.highlight .achievement-title { color: var(--paper); }
+
+        .achievement-id {
+            font-family: var(--mono);
+            font-size: 9.5px;
+            letter-spacing: 0.12em;
+            color: var(--accent);
+            text-transform: uppercase;
+        }
+
+        .achievement.highlight .achievement-id { color: var(--accent-tint); }
+
+        .achievement-grid {
+            display: grid;
+            grid-template-columns: 80px 1fr;
+            gap: 16px 24px;
+            font-size: 12.5px;
+            line-height: 1.55;
+        }
+
+        .achievement-grid dt {
+            font-family: var(--mono);
+            font-size: 9.5px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            padding-top: 2px;
+        }
+
+        .achievement.highlight .achievement-grid dt { color: var(--accent-tint); }
+
+        .achievement-grid dd {
+            color: var(--ink-soft);
+        }
+
+        .achievement.highlight .achievement-grid dd { color: var(--paper); }
+
+        .recognition-stat {
+            font-family: var(--serif);
+            font-size: 48px;
+            font-weight: 300;
+            line-height: 1;
+            letter-spacing: -0.04em;
+            color: var(--paper);
+            font-variation-settings: "opsz" 144;
+            margin-top: 12px;
+            display: flex;
+            align-items: baseline;
+            gap: 16px;
+        }
+
+        .recognition-stat em {
+            font-style: italic;
+            color: var(--accent-tint);
+            font-variation-settings: "opsz" 144, "WONK" 1;
+        }
+
+        .recognition-stat .stat-label {
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent-tint);
+            font-style: normal;
+        }
+
+        /* ============================================
+           EDUCATION & LANGUAGES
+           ============================================ */
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        .education-list {
+            list-style: none;
+        }
+
+        .education-list li {
+            display: grid;
+            grid-template-columns: 130px 1fr;
+            gap: 24px;
+            padding: 14px 0;
+            border-bottom: 1px solid var(--hairline-soft);
+            page-break-inside: avoid;
+        }
+
+        .education-list li:last-child { border-bottom: none; }
+
+        .education-year {
+            font-family: var(--mono);
+            font-size: 10.5px;
+            letter-spacing: 0.05em;
+            color: var(--accent);
+            padding-top: 2px;
+        }
+
+        .education-detail strong {
+            font-family: var(--serif);
+            font-size: 15.5px;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: var(--ink);
+            display: block;
+            line-height: 1.25;
+            font-variation-settings: "opsz" 36;
+            margin-bottom: 2px;
+        }
+
+        .education-detail span {
+            font-size: 12px;
+            color: var(--muted);
+            font-family: var(--mono);
+            letter-spacing: 0.02em;
+        }
+
+        .languages {
+            border-left: 1px solid var(--hairline);
+            padding-left: 32px;
+        }
+
+        .lang-list { list-style: none; }
+
+        .lang-list li {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            padding: 10px 0;
+            border-bottom: 1px dotted var(--hairline);
+            font-family: var(--serif);
+            font-size: 15px;
+            font-variation-settings: "opsz" 36;
+        }
+
+        .lang-list li:last-child { border-bottom: none; }
+
+        .lang-list .level {
+            font-family: var(--mono);
+            font-size: 9.5px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        /* ============================================
+           COLOPHON
+           ============================================ */
+        .colophon {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid var(--hairline);
+            display: flex;
+            justify-content: space-between;
+            font-family: var(--mono);
+            font-size: 9.5px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .colophon .accent { color: var(--accent); }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 720px) {
+            body { padding: 24px 12px; }
+            .cv { padding: 36px 28px; }
+            h1.name { font-size: 52px; }
+            .masthead-grid { grid-template-columns: 1fr; }
+            .portrait { width: 64px; height: 80px; }
+            .contact-strip { grid-template-columns: repeat(2, 1fr); gap: 12px 0; }
+            .contact-cell { border-right: none; border-bottom: 1px solid var(--hairline-soft); padding: 10px 0 10px 0; }
+            .contact-cell:nth-child(2) { border-right: none; }
+            .contact-cell:last-child, .contact-cell:nth-last-child(2) { border-bottom: none; }
+            .section-head { grid-template-columns: 1fr; gap: 8px; }
+            .skills { grid-template-columns: 1fr; }
+            .experience-entry { grid-template-columns: 1fr; gap: 8px; }
+            .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+            .languages { border-left: none; border-top: 1px solid var(--hairline); padding-left: 0; padding-top: 20px; }
+            .achievement-grid { grid-template-columns: 1fr; gap: 8px; }
+            .actions { flex-direction: column; align-items: stretch; text-align: center; }
+            .colophon { flex-direction: column; gap: 8px; text-align: center; }
+        }
+
+        /* ============================================
+           PRINT — A4
+           ============================================ */
         @media print {
             @page {
                 size: A4;
-                margin: 15mm;
+                margin: 12mm 14mm;
             }
+
             body {
                 background: white;
                 padding: 0;
-                -webkit-print-color-adjust: exact;
-                print-color-adjust: exact;
+                font-size: 10pt;
+                line-height: 1.45;
+                color: black;
             }
-            .cv-container {
+
+            .actions { display: none !important; }
+
+            .cv {
                 box-shadow: none;
-                margin: 0;
-                padding: 0;
                 max-width: 100%;
-                border-top: none;
+                padding: 0;
+                margin: 0;
+                background: white;
             }
-            .print-btn {
-                display: none;
+
+            .cv::before { display: none; }
+
+            /* Tighten typography for print */
+            h1.name { font-size: 44pt; margin-bottom: 10pt; }
+            .role-line { font-size: 9pt; padding-top: 10pt; }
+            .section-title { font-size: 16pt; }
+            .exp-title { font-size: 12pt; }
+            .skill-title { font-size: 11pt; }
+            .achievement-title { font-size: 11pt; }
+            .education-detail strong { font-size: 10pt; }
+            .lang-list li { font-size: 10pt; }
+            .philosophy q { font-size: 14pt; }
+            .recognition-stat { font-size: 30pt; }
+
+            /* Tight section spacing */
+            .masthead { padding-bottom: 16pt; margin-bottom: 18pt; }
+            section { margin-bottom: 18pt; }
+            .section-head { margin-bottom: 12pt; padding-bottom: 6pt; }
+            .summary p { font-size: 9.5pt; line-height: 1.45; }
+            .philosophy { padding: 12pt 14pt; margin-top: 12pt; }
+            .skill { padding: 12pt 14pt; }
+            .skill li { font-size: 8.5pt; padding: 3pt 0; }
+            .experience-entry { padding: 12pt 0; }
+            .exp-bullets li { font-size: 9pt; padding: 2pt 0 2pt 14pt; }
+            .exp-tag { font-size: 7pt; padding: 2pt 6pt; }
+            .achievement { padding: 12pt 14pt; margin-bottom: 8pt; }
+            .achievement-grid { font-size: 9pt; }
+            .education-list li { padding: 8pt 0; }
+            .colophon { font-size: 7.5pt; margin-top: 24pt; padding-top: 12pt; }
+
+            /* Preserve accent color */
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+
+            /* Avoid awkward breaks */
+            section, .experience-entry, .achievement, .education-list li, .skill {
+                page-break-inside: avoid;
             }
+
+            .section-head { page-break-after: avoid; }
+
+            a { color: inherit; text-decoration: none; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { transition-duration: 0.01ms !important; }
         }
     </style>
 </head>
 <body>
 
-    <button class="print-btn" onclick="window.print()">
-        <i class="fas fa-file-pdf"></i> Save as PDF / Print
-    </button>
+    <!-- ACTION BAR — hidden in print -->
+    <div class="actions">
+        <div class="actions-meta">
+            <span class="accent">Curriculum Vitae</span> &nbsp;·&nbsp; Popy Akter &nbsp;·&nbsp; MMXXVI
+        </div>
+        <div class="action-group">
+            <a href="./index.html" class="btn btn--ghost">← Portfolio</a>
+            <button class="btn" onclick="window.print()">
+                Save as PDF
+            </button>
+        </div>
+    </div>
 
-    <div class="cv-container">
-        
-        <!-- HEADER -->
-        <header class="header">
-            <img src="https://drive.google.com/thumbnail?id=1UePGYm5DSzVba59h46qHx_AJDGND9rlf&sz=w500" alt="Popy Akter" class="header-img">
-            <div class="header-content">
-                <h1>Popy Akter</h1>
-                <h2>SEO Manager | Technical SEO & eCommerce Growth Strategist</h2>
-                <div class="contact-info">
-                    <span><i class="fas fa-envelope"></i> popyakter4407@gmail.com</span>
-                    <span><i class="fas fa-phone"></i> +880 1924 798350</span>
-                    <span><i class="fab fa-linkedin"></i> linkedin.com/in/popy-akter-tj</span>
-                    <span><i class="fas fa-globe"></i> popyakterseo.github.io/Portfolio</span>
-                </div>
+    <article class="cv">
+
+        <!-- MASTHEAD -->
+        <header class="masthead">
+            <div class="masthead-meta">
+                <div class="vol">Curriculum Vitae · Volume 01</div>
+                <div>Dhaka — Remote · MMXXVI</div>
             </div>
+
+            <div class="masthead-grid">
+                <div>
+                    <h1 class="name">Popy Akter<em>.</em></h1>
+                    <div class="role-line">
+                        SEO Manager <span class="sep">/</span> Technical SEO &amp; AEO <span class="sep">/</span> GEO &amp; eCommerce Growth Strategist
+                    </div>
+                </div>
+                <img class="portrait" src="https://drive.google.com/thumbnail?id=1UePGYm5DSzVba59h46qHx_AJDGND9rlf&sz=w400" alt="Popy Akter">
+            </div>
+
+            <dl class="contact-strip">
+                <div class="contact-cell">
+                    <dt>Email</dt>
+                    <dd><a href="mailto:popyakter4407@gmail.com">popyakter4407@gmail.com</a></dd>
+                </div>
+                <div class="contact-cell">
+                    <dt>Phone</dt>
+                    <dd><a href="tel:+8801924798350">+880 1924 798 350</a></dd>
+                </div>
+                <div class="contact-cell">
+                    <dt>LinkedIn</dt>
+                    <dd><a href="https://www.linkedin.com/in/popy-akter-tj/" target="_blank" rel="noopener">popy-akter-tj</a></dd>
+                </div>
+                <div class="contact-cell">
+                    <dt>Portfolio</dt>
+                    <dd><a href="https://popyakterseo.github.io/Portfolio/" target="_blank" rel="noopener">popyakterseo.github.io</a></dd>
+                </div>
+            </dl>
         </header>
 
-        <!-- PROFESSIONAL SUMMARY -->
-        <section class="section">
-            <h3 class="section-title"><i class="fas fa-user-tie"></i> Executive Summary</h3>
-            <p class="summary-text">
-                Results-driven SEO Manager with hands-on experience leading organic growth strategies across 50+ websites concurrently. Expertise combines advanced technical SEO, dynamic structured data implementation, AI-driven content architecture, and rigorous performance tracking. Specialized in building scalable SEO systems and optimizing complex backend structures to capture high-intent traffic.
-            </p>
-            <div class="philosophy-quote">
-                "SEO is Not Rankings. SEO is Revenue." Every strategic action is mapped directly to measurable business outcomes, answering the core question: How does this increase profitable organic traffic?
+        <!-- § 01 EXECUTIVE SUMMARY -->
+        <section>
+            <div class="section-head">
+                <div class="section-num">§ 01</div>
+                <h2 class="section-title">Executive <em>summary</em></h2>
+                <div class="section-kicker">Profile · Philosophy</div>
+            </div>
+
+            <div class="summary">
+                <p>Results-driven SEO Manager leading organic growth strategy across 50+ websites. Combines advanced technical SEO, dynamic structured data implementation, AI-accelerated workflows, and rigorous performance tracking into systems that compound over time.</p>
+                <p>Specialised in scalable SEO architecture, dynamic PHP schema, Elementor HTML site building, and content ranking across SEO, AEO &amp; GEO surfaces — aligning every initiative with business KPIs rather than vanity rankings.</p>
+            </div>
+
+            <div class="philosophy">
+                <q>SEO is not rankings. SEO is <em>revenue.</em></q>
+                <p class="philosophy-note">Every strategic action maps to a measurable business outcome. The question that frames the work: how does this increase profitable organic traffic?</p>
             </div>
         </section>
 
-        <!-- CORE COMPETENCIES -->
-        <section class="section">
-            <h3 class="section-title"><i class="fas fa-laptop-code"></i> Core Competencies & Tools</h3>
-            <div class="skills-grid">
-                <div class="skill-group">
-                    <h4>Technical & On-Page SEO</h4>
+        <!-- § 02 CORE COMPETENCIES -->
+        <section>
+            <div class="section-head">
+                <div class="section-num">§ 02</div>
+                <h2 class="section-title">Core <em>competencies</em></h2>
+                <div class="section-kicker">Disciplines · Tools · Stack</div>
+            </div>
+
+            <div class="skills">
+                <div class="skill">
+                    <div class="skill-header">
+                        <div class="skill-title">Technical &amp; On-Page</div>
+                        <span class="skill-id">A.01</span>
+                    </div>
                     <ul>
-                        <li>In-depth crawl & indexation audits</li>
-                        <li>Dynamic PHP schema implementation</li>
-                        <li>Core Web Vitals & speed optimization</li>
+                        <li>Crawl &amp; indexation audits</li>
+                        <li>Dynamic PHP schema</li>
+                        <li>Core Web Vitals optimization</li>
                         <li>Internal linking architecture</li>
-                        <li>Entity-based & metadata optimization</li>
+                        <li>Entity-based metadata</li>
+                        <li>Sitemap &amp; robots structure</li>
                     </ul>
                 </div>
-                <div class="skill-group">
-                    <h4>Strategy & Growth</h4>
+
+                <div class="skill">
+                    <div class="skill-header">
+                        <div class="skill-title">SEO · AEO · GEO</div>
+                        <span class="skill-id">A.02</span>
+                    </div>
                     <ul>
-                        <li>eCommerce brand traffic capture</li>
+                        <li>Answer engine optimization</li>
+                        <li>AI-overview content design</li>
+                        <li>Semantic &amp; entity clustering</li>
+                        <li>Local SEO &amp; map-pack ranking</li>
+                        <li>Pillar &amp; cluster systems</li>
+                        <li>Off-page authority building</li>
+                    </ul>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-header">
+                        <div class="skill-title">Strategy &amp; Growth</div>
+                        <span class="skill-id">A.03</span>
+                    </div>
+                    <ul>
+                        <li>eCommerce traffic capture</li>
                         <li>Revenue-focused keyword mapping</li>
-                        <li>Pillar & cluster content ecosystems</li>
-                        <li>SEO + Paid Media synergy analysis</li>
-                        <li>CRO alignment & funnel tracking</li>
+                        <li>SEO + paid media synergy</li>
+                        <li>CRO &amp; funnel alignment</li>
+                        <li>KPI dashboarding</li>
+                        <li>AI-driven research workflows</li>
                     </ul>
                 </div>
-                <div class="skill-group">
-                    <h4>Tools & Technologies</h4>
+
+                <div class="skill">
+                    <div class="skill-header">
+                        <div class="skill-title">Tooling</div>
+                        <span class="skill-id">A.04</span>
+                    </div>
                     <ul>
-                        <li>Screaming Frog, GSC, GA4</li>
-                        <li>SEMrush, BrightLocal, Clarity</li>
-                        <li>WordPress backend & HTML/CSS</li>
-                        <li>AI Studio & AI Search Term Tools</li>
-                        <li>Asana, ClickUp, Workspace</li>
+                        <li>Screaming Frog</li>
+                        <li>GSC · GA4 · Microsoft Clarity</li>
+                        <li>SEMrush · BrightLocal</li>
+                        <li>Asana · ClickUp · Workspace</li>
+                        <li>Google AI Studio</li>
+                        <li>Canva · WebP &amp; GeoTag tools</li>
+                    </ul>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-header">
+                        <div class="skill-title">Development</div>
+                        <span class="skill-id">A.05</span>
+                    </div>
+                    <ul>
+                        <li>Elementor HTML site building</li>
+                        <li>WordPress backend optimization</li>
+                        <li>Dynamic PHP schema injection</li>
+                        <li>Structured data implementation</li>
+                        <li>HTML page creation</li>
+                        <li>Basic CSS</li>
+                    </ul>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-header">
+                        <div class="skill-title">Reporting</div>
+                        <span class="skill-id">A.06</span>
+                    </div>
+                    <ul>
+                        <li>Monthly KPI reporting</li>
+                        <li>Traffic &amp; ranking trend analysis</li>
+                        <li>Conversion tracking alignment</li>
+                        <li>Stakeholder presentations</li>
+                        <li>Technical-to-business translation</li>
+                        <li>Strategic adjustment cycles</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- PROFESSIONAL EXPERIENCE -->
-        <section class="section">
-            <h3 class="section-title"><i class="fas fa-building"></i> Professional Experience</h3>
-
-            <div class="job">
-                <div class="job-header">
-                    <div class="job-title">Search Engine Optimization Manager</div>
-                    <div class="job-date">Dec 2025 – Present</div>
-                </div>
-                <div class="job-company">Cansoft Technologies | Vancouver, BC (Remote)</div>
-                <ul class="job-bullets">
-                    <li>Spearhead end-to-end technical and on-page SEO strategies for a diverse portfolio of 50+ client websites, maintaining absolute alignment with ongoing Google algorithm updates.</li>
-                    <li>Conduct advanced technical SEO audits, diagnosing and resolving complex backend issues to radically enhance site crawlability and indexation speed.</li>
-                    <li>Implement dynamic PHP-based schema site-wide, structuring LocalBusiness and service schemas to maximize rich result eligibility and SERP Click-Through Rates (CTR).</li>
-                    <li>Develop and deliver comprehensive, data-driven monthly KPI reports directly to executive stakeholders, translating technical metrics into actionable business growth insights.</li>
-                </ul>
+        <!-- § 03 EXPERIENCE -->
+        <section>
+            <div class="section-head">
+                <div class="section-num">§ 03</div>
+                <h2 class="section-title">Professional <em>experience</em></h2>
+                <div class="section-kicker">2017 — Present</div>
             </div>
 
-            <div class="job">
-                <div class="job-header">
-                    <div class="job-title">Digital Marketing Strategist</div>
-                    <div class="job-date">Jan 2024 – Mar 2025</div>
+            <div class="experience-entry">
+                <div class="exp-meta">
+                    <div class="exp-dates"><span class="ongoing"></span>Dec 2025<br>— Present</div>
+                    <div class="exp-location">Vancouver, BC<br>Remote</div>
                 </div>
-                <div class="job-company">Cansoft Technologies | Vancouver, BC</div>
-                <ul class="job-bullets">
-                    <li>Led team coordination and collaborated cross-functionally with development and content teams to execute robust digital growth campaigns.</li>
-                    <li>Performed comprehensive market research, competitor gap analysis, and funnel-aligned SEO planning to identify high-impact organic revenue opportunities.</li>
-                    <li>Monitored traffic trends, keyword rankings, and user behavior via GA4 and Microsoft Clarity to continuously refine marketing funnels and conversion pathways.</li>
-                    <li>Audited Paid Media reports (CPC, CTR, ROAS) to suggest landing page improvements, fostering a highly profitable SEO + Paid integration strategy.</li>
-                </ul>
+                <div>
+                    <h4 class="exp-title">SEO Manager</h4>
+                    <div class="exp-company">Cansoft Technologies</div>
+                    <ul class="exp-bullets">
+                        <li>Spearhead end-to-end technical and on-page SEO strategies for a portfolio of 50+ client websites, aligned with ongoing Google algorithm updates.</li>
+                        <li>Conduct advanced technical audits — diagnosing complex backend issues to improve crawlability and indexation speed.</li>
+                        <li>Implement dynamic PHP-based schema site-wide, structuring LocalBusiness and Service schemas for maximum rich-result eligibility.</li>
+                        <li>Deliver monthly KPI reports to executive stakeholders, translating technical metrics into business growth insight.</li>
+                    </ul>
+                    <div class="exp-tags">
+                        <span class="exp-tag">Technical SEO</span>
+                        <span class="exp-tag">Schema Markup</span>
+                        <span class="exp-tag">SEO Audits</span>
+                        <span class="exp-tag">Team Leadership</span>
+                        <span class="exp-tag">AEO / GEO</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="job">
-                <div class="job-header">
-                    <div class="job-title">Management Trainee</div>
-                    <div class="job-date">Aug 2023 – Dec 2023</div>
+            <div class="experience-entry">
+                <div class="exp-meta">
+                    <div class="exp-dates">Jan 2024<br>— Mar 2025</div>
+                    <div class="exp-location">Vancouver, BC</div>
                 </div>
-                <div class="job-company">Youth School for Social Entrepreneurs (YSSE) | Dhaka, Bangladesh</div>
-                <ul class="job-bullets">
-                    <li>Provided comprehensive virtual assistance and managed operational data using Microsoft Excel, ensuring high data integrity.</li>
-                    <li>Streamlined internal workflows and assisted in cross-departmental project coordination and execution.</li>
-                </ul>
+                <div>
+                    <h4 class="exp-title">Digital Marketing Strategist</h4>
+                    <div class="exp-company">Cansoft Technologies</div>
+                    <ul class="exp-bullets">
+                        <li>Led team coordination and collaborated cross-functionally with development and content teams to execute digital growth campaigns.</li>
+                        <li>Performed market research, competitor gap analysis, and funnel-aligned SEO planning to identify high-impact organic revenue opportunities.</li>
+                        <li>Monitored traffic, keyword rankings, and user behaviour via GA4 and Microsoft Clarity, refining marketing funnels iteratively.</li>
+                        <li>Audited paid media reports against CTR, CPC, and ROAS — proposing landing page improvements to integrate SEO and paid media.</li>
+                    </ul>
+                    <div class="exp-tags">
+                        <span class="exp-tag">Digital Strategy</span>
+                        <span class="exp-tag">Team Coordination</span>
+                        <span class="exp-tag">SEO + Paid Synergy</span>
+                        <span class="exp-tag">KPI Tracking</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="job">
-                <div class="job-header">
-                    <div class="job-title">Intern</div>
-                    <div class="job-date">Mar 2023 – Aug 2023</div>
+            <div class="experience-entry">
+                <div class="exp-meta">
+                    <div class="exp-dates">Aug 2023<br>— Dec 2023</div>
+                    <div class="exp-location">Dhaka,<br>Bangladesh</div>
                 </div>
-                <div class="job-company">Youth School for Social Entrepreneurs (YSSE) | Remote</div>
-                <ul class="job-bullets">
-                    <li>Supported daily administrative tasks, successfully balancing multiple responsibilities under strict deadlines.</li>
-                    <li>Developed strong time management and presentation skills through collaborative internal projects.</li>
-                </ul>
+                <div>
+                    <h4 class="exp-title">Management Trainee <span style="font-style:italic; font-weight:400; font-size:13px; color: var(--muted);">— Part-time</span></h4>
+                    <div class="exp-company">Youth School for Social Entrepreneurs</div>
+                    <ul class="exp-bullets">
+                        <li>Provided comprehensive virtual assistance and managed operational data using advanced Excel workflows.</li>
+                        <li>Streamlined internal processes and supported cross-departmental project coordination.</li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="job">
-                <div class="job-header">
-                    <div class="job-title">Office Coordinator</div>
-                    <div class="job-date">May 2017 – Jul 2017</div>
+            <div class="experience-entry">
+                <div class="exp-meta">
+                    <div class="exp-dates">Mar 2023<br>— Aug 2023</div>
+                    <div class="exp-location">Remote</div>
                 </div>
-                <div class="job-company">Euro Bangla IT | Dhaka, Bangladesh (On-site)</div>
-                <ul class="job-bullets">
-                    <li>Handled day-to-day office administration and facilitated seamless cross-departmental communication.</li>
-                    <li>Organized and maintained critical documentation and scheduling utilizing Microsoft Excel.</li>
-                </ul>
+                <div>
+                    <h4 class="exp-title">Intern</h4>
+                    <div class="exp-company">Youth School for Social Entrepreneurs</div>
+                    <ul class="exp-bullets">
+                        <li>Supported daily administrative operations, balancing multiple responsibilities under tight deadlines.</li>
+                        <li>Developed strong time management and presentation skills through collaborative internal projects.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-entry">
+                <div class="exp-meta">
+                    <div class="exp-dates">May 2017<br>— Jul 2017</div>
+                    <div class="exp-location">Dhaka, Bangladesh<br>On-site</div>
+                </div>
+                <div>
+                    <h4 class="exp-title">Office Coordinator</h4>
+                    <div class="exp-company">Euro Bangla IT</div>
+                    <ul class="exp-bullets">
+                        <li>Handled day-to-day office administration and facilitated cross-departmental communication.</li>
+                        <li>Organised and maintained critical documentation and scheduling using Microsoft Excel.</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <!-- KEY ACHIEVEMENTS & CASE STUDIES -->
-        <section class="section">
-            <h3 class="section-title"><i class="fas fa-trophy"></i> Key Achievements & Case Studies</h3>
-            
-            <div class="case-study">
-                <h4><i class="fas fa-award"></i> 2025 Top Performance Recognition</h4>
-                <p>Achieved an elite <strong>Annual Evaluation Score of 90.74</strong> at Cansoft Technologies. Officially recognized as the <strong>Best Scorer & Team Leader</strong> for exceptional strategic execution and client revenue growth.</p>
+        <!-- § 04 ACHIEVEMENTS -->
+        <section>
+            <div class="section-head">
+                <div class="section-num">§ 04</div>
+                <h2 class="section-title">Selected <em>achievements</em></h2>
+                <div class="section-kicker">Recognition · Case Studies</div>
             </div>
 
-            <div class="case-study">
-                <h4><i class="fas fa-sitemap"></i> Multi-Site SEO Scaling (50+ Websites)</h4>
-                <p><strong>Challenge:</strong> Inconsistent performance across a massive portfolio of diverse websites. <br>
-                <strong>Action & Impact:</strong> Executed systemic technical audits and optimized backend internal linking architecture. Stabilized organic visibility, strengthened crawl efficiency, and dramatically improved average site health scores across the board.</p>
+            <div class="achievement highlight">
+                <div class="achievement-head">
+                    <h4 class="achievement-title">2025 Annual Evaluation — Distinction</h4>
+                    <span class="achievement-id">REC / 01</span>
+                </div>
+                <div class="achievement-grid">
+                    <dt>Context</dt>
+                    <dd>Cansoft Technologies annual performance evaluation, judged on strategic execution and client revenue impact across the portfolio.</dd>
+                </div>
+                <div class="recognition-stat">
+                    <span>90.74<em>/100</em></span>
+                    <span class="stat-label">Best Scorer &amp; Team Lead</span>
+                </div>
             </div>
 
-            <div class="case-study">
-                <h4><i class="fas fa-code"></i> Automation & Internal SEO Tool Development</h4>
-                <p><strong>Challenge:</strong> Manual workflow bottlenecks were draining agency resources. <br>
-                <strong>Action & Impact:</strong> Developed proprietary internal tools including an <em>Unlimited WebP Converter</em>, <em>GeoTag Tool</em>, and an <em>SEO Analyzer</em>. Reduced repetitive task hours significantly and accelerated technical optimization deployment speeds.</p>
+            <div class="achievement">
+                <div class="achievement-head">
+                    <h4 class="achievement-title">Multi-Site SEO Scaling — 50+ Websites</h4>
+                    <span class="achievement-id">CS / 01</span>
+                </div>
+                <dl class="achievement-grid">
+                    <dt>Challenge</dt>
+                    <dd>Inconsistent performance and technical foundations across a portfolio of 50+ diverse client websites.</dd>
+                    <dt>Approach</dt>
+                    <dd>Systemic technical audits, backend internal linking overhaul, structured data deployment, and monthly KPI-based reporting cycles.</dd>
+                    <dt>Outcome</dt>
+                    <dd>Stabilised organic visibility, stronger crawl efficiency, and improved average site health scores across the portfolio.</dd>
+                </dl>
+            </div>
+
+            <div class="achievement">
+                <div class="achievement-head">
+                    <h4 class="achievement-title">Dynamic PHP Schema at Scale</h4>
+                    <span class="achievement-id">CS / 02</span>
+                </div>
+                <dl class="achievement-grid">
+                    <dt>Challenge</dt>
+                    <dd>Client websites lacked structured data, limiting rich-result eligibility and SERP feature exposure.</dd>
+                    <dt>Approach</dt>
+                    <dd>Built dynamic PHP-based schema deployed site-wide — LocalBusiness and Service structures integrated within WordPress backend.</dd>
+                    <dt>Outcome</dt>
+                    <dd>Enhanced rich-result eligibility, improved SERP click-through rates, and clearer indexation signals.</dd>
+                </dl>
+            </div>
+
+            <div class="achievement">
+                <div class="achievement-head">
+                    <h4 class="achievement-title">Automation &amp; Custom SEO Tool Development</h4>
+                    <span class="achievement-id">CS / 03</span>
+                </div>
+                <dl class="achievement-grid">
+                    <dt>Challenge</dt>
+                    <dd>Manual SEO workflows were inefficient, slowing delivery across the portfolio.</dd>
+                    <dt>Approach</dt>
+                    <dd>Developed three internal tools — Unlimited WebP Converter, GeoTag Tool, and SEO Analyzer — to automate repetitive technical tasks.</dd>
+                    <dt>Outcome</dt>
+                    <dd>Significant reduction in workload, accelerated optimization cycles, and freed capacity for strategic work.</dd>
+                </dl>
+            </div>
+
+            <div class="achievement">
+                <div class="achievement-head">
+                    <h4 class="achievement-title">6-Month Off-Page Strategy — Multi-Location Brand</h4>
+                    <span class="achievement-id">CS / 04</span>
+                </div>
+                <dl class="achievement-grid">
+                    <dt>Challenge</dt>
+                    <dd>A Canadian multi-location printing brand needed authority signals competitive with national players, plus local trust at map-pack level.</dd>
+                    <dt>Approach</dt>
+                    <dd>Phased six-month off-page roadmap — foundation citations, .ca directory placement, niche citations, editorial guest posts (DR 35+), and geo-targeted links.</dd>
+                    <dt>Outcome</dt>
+                    <dd>Documented, KPI-tracked authority system projecting 200–260 referring domains and 35–50 DR 40+ links across six months.</dd>
+                </dl>
             </div>
         </section>
 
-        <!-- EDUCATION & LANGUAGES -->
-        <section class="section">
-            <h3 class="section-title"><i class="fas fa-graduation-cap"></i> Education & Languages</h3>
-            
-            <div class="edu-flex">
-                <div>
-                    <h4>Master of Business Administration (Management)</h4>
-                    <p>University of Dhaka</p>
-                </div>
-            </div>
-            
-            <div class="edu-flex">
-                <div>
-                    <h4>Bachelor of Business Administration (Management)</h4>
-                    <p>University of Dhaka</p>
-                </div>
+        <!-- § 05 EDUCATION & LANGUAGES -->
+        <section>
+            <div class="section-head">
+                <div class="section-num">§ 05</div>
+                <h2 class="section-title">Education <em>&amp; languages</em></h2>
+                <div class="section-kicker">Academic Background</div>
             </div>
 
-            <div class="edu-flex" style="margin-bottom: 25px;">
-                <div>
-                    <h4>Professional Digital Marketing Course</h4>
-                    <p>Creative IT</p>
-                </div>
-            </div>
+            <div class="footer-grid">
+                <ul class="education-list">
+                    <li>
+                        <div class="education-year">Postgraduate</div>
+                        <div class="education-detail">
+                            <strong>Master of Business Administration</strong>
+                            <span>Management · University of Dhaka</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="education-year">Undergraduate</div>
+                        <div class="education-detail">
+                            <strong>Bachelor of Business Administration</strong>
+                            <span>Management · University of Dhaka</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="education-year">Professional</div>
+                        <div class="education-detail">
+                            <strong>Professional Digital Marketing</strong>
+                            <span>Creative IT Institute</span>
+                        </div>
+                    </li>
+                </ul>
 
-            <div>
-                <span style="font-weight: 600; color: var(--primary);">Languages:</span> 
-                <span style="color: var(--text-main);">English (Fluent) • Bengali (Fluent) • Hindi (Basic)</span>
+                <div class="languages">
+                    <ul class="lang-list">
+                        <li><span>English</span><span class="level">Fluent</span></li>
+                        <li><span>Bengali</span><span class="level">Native</span></li>
+                        <li><span>Hindi</span><span class="level">Basic</span></li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-    </div>
+        <!-- COLOPHON -->
+        <div class="colophon">
+            <div>&copy; MMXXVI · Popy Akter</div>
+            <div>References available on request</div>
+            <div class="accent">popyakterseo.github.io/Portfolio</div>
+        </div>
+
+    </article>
 
 </body>
 </html>

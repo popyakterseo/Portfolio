@@ -955,6 +955,76 @@
             transform: translateX(4px);
         }
 
+        /* Case study card — full-width feature variant */
+        .doc-card--featured {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, var(--paper) 0%, var(--paper-warm) 100%);
+            border-color: var(--accent-soft);
+            position: relative;
+        }
+
+        .doc-card--featured::before {
+            content: "NEW";
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: 0.14em;
+            color: var(--paper);
+            background: var(--accent);
+            padding: 4px 10px;
+            font-weight: 600;
+        }
+
+        .doc-card--featured .doc-metrics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+            border-top: 1px solid var(--hairline);
+            border-bottom: 1px solid var(--hairline);
+            margin-bottom: 20px;
+        }
+
+        .doc-card--featured .doc-metric {
+            padding: 20px 16px;
+            border-right: 1px solid var(--hairline-soft);
+        }
+
+        .doc-card--featured .doc-metric:last-child { border-right: none; }
+
+        .doc-card--featured .doc-metric-value {
+            font-family: var(--serif);
+            font-size: 32px;
+            font-weight: 400;
+            line-height: 1;
+            color: var(--accent);
+            letter-spacing: -0.02em;
+            margin-bottom: 6px;
+            font-variation-settings: "opsz" 144;
+        }
+
+        .doc-card--featured .doc-metric-value em {
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .doc-card--featured .doc-metric-label {
+            font-family: var(--mono);
+            font-size: 9px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            line-height: 1.3;
+        }
+
+        @media (max-width: 720px) {
+            .doc-card--featured .doc-metrics { grid-template-columns: repeat(2, 1fr); }
+            .doc-card--featured .doc-metric:nth-child(2) { border-right: none; }
+            .doc-card--featured .doc-metric:nth-child(1),
+            .doc-card--featured .doc-metric:nth-child(2) { border-bottom: 1px solid var(--hairline-soft); }
+        }
+
         /* ============================================
            FRAMEWORK
            ============================================ */
@@ -1851,10 +1921,46 @@
             </div>
 
             <div class="docs-grid">
+
+                <!-- FEATURED CASE STUDY — Willowgreen Dental -->
+                <div class="doc-card doc-card--featured">
+                    <div class="doc-card-head">
+                        <h3>Willowgreen Dental<br>12-Month SEO Case Study</h3>
+                        <span class="doc-card-num">DOC / 01</span>
+                    </div>
+                    <p>A full year-over-year growth report for a Saskatoon dental practice — built from live Google Search Console, GA4, and Semrush data. The story: moving from the second page of Google to the first, tripling Top 3 rankings, and nearly doubling organic traffic in twelve months.</p>
+
+                    <div class="doc-metrics">
+                        <div class="doc-metric">
+                            <div class="doc-metric-value">+150<em>%</em></div>
+                            <div class="doc-metric-label">Organic<br>traffic growth</div>
+                        </div>
+                        <div class="doc-metric">
+                            <div class="doc-metric-value">+173<em>%</em></div>
+                            <div class="doc-metric-label">Top 3<br>rankings 49→134</div>
+                        </div>
+                        <div class="doc-metric">
+                            <div class="doc-metric-value">19.5<em>→</em>11</div>
+                            <div class="doc-metric-label">Average GSC<br>position</div>
+                        </div>
+                        <div class="doc-metric">
+                            <div class="doc-metric-value">+85<em>%</em></div>
+                            <div class="doc-metric-label">GSC clicks<br>818→1,510</div>
+                        </div>
+                    </div>
+
+                    <div class="doc-links">
+                        <a href="willowgreen-dental-seo-case-study.html" class="doc-link">
+                            <span>View the full case study</span>
+                            <span class="arrow">→</span>
+                        </a>
+                    </div>
+                </div>
+
                 <div class="doc-card">
                     <div class="doc-card-head">
                         <h3>SEO Reporting<br>&amp; Schema</h3>
-                        <span class="doc-card-num">DOC / 01</span>
+                        <span class="doc-card-num">DOC / 02</span>
                     </div>
                     <p>Samples of detailed performance reporting and the advanced structured data logic powering SERP eligibility across client sites.</p>
                     <div class="doc-links">
@@ -1872,7 +1978,7 @@
                 <div class="doc-card">
                     <div class="doc-card-head">
                         <h3>Internal Linking<br>Strategy</h3>
-                        <span class="doc-card-num">DOC / 02</span>
+                        <span class="doc-card-num">DOC / 03</span>
                     </div>
                     <p>Strategic frameworks for mapping entities, structuring topical clusters, and distributing page authority across complex sites.</p>
                     <div class="doc-links">
@@ -1890,7 +1996,7 @@
                 <div class="doc-card" style="grid-column: 1 / -1;">
                     <div class="doc-card-head">
                         <h3>Off-Page Strategy &amp; Backlink Roadmap</h3>
-                        <span class="doc-card-num">DOC / 03</span>
+                        <span class="doc-card-num">DOC / 04</span>
                     </div>
                     <p>A complete 6-month off-page playbook for a Canadian multi-location brand — backlink audit, monthly acquisition plan, KPI tracker, editorial &amp; niche link targets, and a Canadian directory &amp; citation master plan. Available on request.</p>
                     <div class="doc-links">

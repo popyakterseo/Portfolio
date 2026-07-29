@@ -3,62 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popy Akter — Curriculum Vitae</title>
-    <meta name="description" content="Curriculum Vitae of Popy Akter, SEO Manager specialising in technical SEO, dynamic schema, AEO &amp; GEO, and revenue-driven organic growth across 50+ websites.">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Popy Akter — Curriculum Vitae · SEO Manager">
-    <meta property="og:description" content="Technical SEO, schema, AEO & GEO. Leading organic growth across 50+ websites.">
-    <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://popyakterseo.github.io/Portfolio/cv.html">
-    <meta property="og:image" content="https://popyakterseo.github.io/Portfolio/cv-og-image.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Curriculum Vitae of Popy Akter, SEO Manager — 50+ sites managed, 11.3K clicks, 90.74 evaluation score.">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Popy Akter — Curriculum Vitae · SEO Manager">
-    <meta name="twitter:description" content="Technical SEO, schema, AEO & GEO. Leading organic growth across 50+ websites.">
-    <meta name="twitter:image" content="https://popyakterseo.github.io/Portfolio/cv-og-image.png">
-
-    <!-- Author -->
+    <title>Popy Akter — SEO Manager | Technical SEO, GEO &amp; AI Search — Curriculum Vitae</title>
+    <meta name="description" content="Curriculum Vitae of Popy Akter, SEO Manager specialising in technical SEO, structured data, GEO and AI search visibility, and revenue-driven organic growth across 50+ websites.">
     <meta name="author" content="Popy Akter">
 
-    <!-- Fonts: Fraunces + Geist + JetBrains Mono — matching portfolio -->
+    <meta property="og:title" content="Popy Akter — Curriculum Vitae · SEO Manager">
+    <meta property="og:description" content="Technical SEO, structured data, GEO and AI search. Organic growth across 50+ websites.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://popyakterseo.github.io/Portfolio/cv.html">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
     <style>
-        /* ============================================
-           DESIGN SYSTEM — matches portfolio
-           ============================================ */
+        /* ============================================================
+           ATS-FIRST CV
+           Single-column document flow. Standard section headings.
+           No multi-column grids in the content stream, so text
+           extracts in reading order. Typography carries the design.
+           ============================================================ */
         :root {
             --paper:        #F4F1EA;
             --paper-warm:   #EEE9DD;
-            --ink:          #1A1A1A;
+            --ink:          #161614;
             --ink-soft:     #2A2A28;
-            --muted:        #6B6862;
-            --muted-soft:   #9A968E;
+            --muted:        #625F59;
             --hairline:     #D4CFC4;
             --hairline-soft:#E5E0D4;
             --accent:       #2D4A3E;
-            --accent-soft:  #4A6B5C;
-            --accent-tint:  #DDE5DF;
 
             --serif: "Fraunces", "Times New Roman", serif;
-            --sans:  "Geist", -apple-system, BlinkMacSystemFont, sans-serif;
+            --sans:  "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             --mono:  "JetBrains Mono", "SF Mono", Menlo, monospace;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
-        html { scroll-behavior: smooth; }
-
         body {
             font-family: var(--sans);
-            background: #ECE7DC;
+            background: #E7E2D6;
             color: var(--ink);
             font-size: 15px;
             line-height: 1.55;
@@ -67,12 +51,10 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        /* ============================================
-           ACTION BAR — screen only
-           ============================================ */
+        /* ---------- Action bar (screen only) ---------- */
         .actions {
-            max-width: 850px;
-            margin: 0 auto 24px;
+            max-width: 820px;
+            margin: 0 auto 22px;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -90,11 +72,7 @@
 
         .actions-meta .accent { color: var(--accent); }
 
-        .action-group {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
+        .action-group { display: flex; gap: 10px; flex-wrap: wrap; }
 
         .btn {
             font-family: var(--mono);
@@ -109,718 +87,317 @@
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 10px;
-            transition: all 0.2s ease;
+            transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
         }
 
-        .btn:hover {
-            background: var(--accent);
-            border-color: var(--accent);
+        .btn:hover { background: var(--accent); border-color: var(--accent); }
+
+        .btn--ghost { background: transparent; color: var(--ink); }
+        .btn--ghost:hover { background: var(--ink); color: var(--paper); }
+
+        .btn:focus-visible,
+        a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+
+        .ats-note {
+            max-width: 820px;
+            margin: 0 auto 22px;
+            font-size: 12.5px;
+            line-height: 1.5;
+            color: var(--muted);
+            padding: 14px 18px;
+            background: rgba(45,74,62,0.06);
+            border-left: 2px solid var(--accent);
         }
 
-        .btn--ghost {
-            background: transparent;
-            color: var(--ink);
-        }
-
-        .btn--ghost:hover {
-            background: var(--ink);
-            color: var(--paper);
-        }
-
-        /* ============================================
-           CV SHEET
-           ============================================ */
+        /* ---------- Sheet ---------- */
         .cv {
-            max-width: 850px;
+            max-width: 820px;
             margin: 0 auto;
             background: var(--paper);
-            padding: 64px 72px;
+            padding: 60px 68px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.08);
-            position: relative;
         }
 
-        /* Subtle paper grain (screen only) */
-        .cv::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background-image:
-                radial-gradient(circle at 20% 30%, rgba(45,74,62,0.015) 0%, transparent 50%),
-                radial-gradient(circle at 80% 70%, rgba(26,26,26,0.015) 0%, transparent 50%);
-            pointer-events: none;
+        /* ---------- Header ---------- */
+        .cv-header {
+            border-bottom: 2px solid var(--ink);
+            padding-bottom: 22px;
+            margin-bottom: 12px;
         }
 
-        .cv > * { position: relative; z-index: 1; }
-
-        /* ============================================
-           MASTHEAD
-           ============================================ */
-        .masthead {
-            border-bottom: 1px solid var(--ink);
-            padding-bottom: 32px;
-            margin-bottom: 40px;
-        }
-
-        .masthead-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 28px;
-            font-family: var(--mono);
-            font-size: 10px;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--muted);
-        }
-
-        .masthead-meta .vol { color: var(--accent); }
-
-        .masthead-grid {
-            display: grid;
-            grid-template-columns: 1fr 80px;
-            gap: 32px;
-            align-items: end;
-        }
-
-        h1.name {
+        h1 {
             font-family: var(--serif);
             font-weight: 400;
-            font-size: 72px;
-            line-height: 0.95;
-            letter-spacing: -0.035em;
+            font-size: 46px;
+            line-height: 1;
+            letter-spacing: -0.03em;
             color: var(--ink);
             font-variation-settings: "opsz" 144, "SOFT" 30;
-            margin-bottom: 18px;
+            margin-bottom: 12px;
         }
 
-        h1.name em {
+        h1 em {
             font-style: italic;
             font-weight: 300;
             color: var(--accent);
             font-variation-settings: "opsz" 144, "SOFT" 100, "WONK" 1;
         }
 
-        .role-line {
-            font-family: var(--sans);
-            font-size: 13.5px;
-            font-weight: 500;
-            letter-spacing: 0.015em;
-            color: var(--ink-soft);
-            padding-top: 18px;
-            border-top: 1px solid var(--hairline);
+        .headline {
+            font-size: 14.5px;
+            font-weight: 600;
+            color: var(--accent);
+            letter-spacing: 0.01em;
+            margin-bottom: 14px;
         }
 
-        .role-line .sep {
-            color: var(--accent);
+        /* Contact line: inline text, not a grid — parses cleanly */
+        .contact-line {
+            font-size: 13px;
+            line-height: 1.9;
+            color: var(--ink-soft);
+        }
+
+        .contact-line a {
+            color: var(--ink-soft);
+            text-decoration: none;
+            border-bottom: 1px solid var(--hairline);
+        }
+
+        .contact-line a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+        .contact-line .divider {
+            color: var(--hairline);
             margin: 0 8px;
         }
 
-        .portrait {
-            width: 80px;
-            height: 100px;
-            object-fit: cover;
-            filter: grayscale(0.15) contrast(1.02);
-            border: 1px solid var(--hairline);
-        }
+        /* ---------- Sections ---------- */
+        section { margin-top: 30px; }
 
-        /* Contact strip */
-        .contact-strip {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0;
-            margin-top: 28px;
-            padding-top: 20px;
-            border-top: 1px solid var(--hairline);
-        }
-
-        .contact-cell {
-            padding-right: 16px;
-            border-right: 1px solid var(--hairline-soft);
-        }
-
-        .contact-cell:last-child { border-right: none; padding-right: 0; }
-
-        .contact-cell dt {
-            font-family: var(--mono);
-            font-size: 9px;
-            letter-spacing: 0.12em;
+        h2 {
+            font-family: var(--sans);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.16em;
             text-transform: uppercase;
-            color: var(--muted);
-            margin-bottom: 4px;
-        }
-
-        .contact-cell dd {
-            font-size: 12.5px;
-            color: var(--ink);
-            word-break: break-word;
-        }
-
-        .contact-cell dd a {
-            color: var(--ink);
-            text-decoration: none;
+            color: var(--accent);
+            padding-bottom: 8px;
+            margin-bottom: 16px;
             border-bottom: 1px solid var(--hairline);
-            transition: all 0.15s ease;
         }
 
-        .contact-cell dd a:hover {
-            color: var(--accent);
-            border-bottom-color: var(--accent);
-        }
-
-        /* ============================================
-           SECTIONS
-           ============================================ */
-        section {
-            margin-bottom: 40px;
-            page-break-inside: auto;
-        }
-
-        section:last-child { margin-bottom: 0; }
-
-        .section-head {
-            display: grid;
-            grid-template-columns: 56px 1fr auto;
-            gap: 20px;
-            align-items: baseline;
-            margin-bottom: 24px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid var(--ink);
-        }
-
-        .section-num {
-            font-family: var(--mono);
-            font-size: 10px;
-            letter-spacing: 0.12em;
-            color: var(--accent);
-            font-weight: 500;
-        }
-
-        .section-title {
-            font-family: var(--serif);
-            font-weight: 400;
-            font-size: 26px;
-            letter-spacing: -0.02em;
-            line-height: 1.05;
-            font-variation-settings: "opsz" 72;
-            color: var(--ink);
-        }
-
-        .section-title em {
-            font-style: italic;
-            color: var(--accent);
-            font-weight: 300;
-        }
-
-        .section-kicker {
-            font-family: var(--mono);
-            font-size: 9.5px;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--muted);
-        }
-
-        /* ============================================
-           SUMMARY
-           ============================================ */
+        /* ---------- Summary ---------- */
         .summary p {
-            font-size: 14.5px;
-            line-height: 1.65;
+            font-size: 14px;
+            line-height: 1.6;
             color: var(--ink-soft);
-            margin-bottom: 12px;
-        }
-
-        .philosophy {
-            margin-top: 22px;
-            padding: 22px 26px;
-            background: var(--paper-warm);
-            border-left: 3px solid var(--accent);
-            position: relative;
-        }
-
-        .philosophy q {
-            font-family: var(--serif);
-            font-size: 22px;
-            font-weight: 300;
-            line-height: 1.2;
-            letter-spacing: -0.02em;
-            color: var(--ink);
-            font-variation-settings: "opsz" 72, "SOFT" 50;
-            quotes: """ """;
-            display: block;
             margin-bottom: 10px;
         }
 
-        .philosophy q em {
-            font-style: italic;
-            color: var(--accent);
-        }
+        .summary p:last-child { margin-bottom: 0; }
 
-        .philosophy-note {
-            font-size: 12.5px;
-            font-style: italic;
-            color: var(--muted);
-            line-height: 1.5;
-        }
-
-        /* ============================================
-           COMPETENCIES GRID
-           ============================================ */
-        .skills {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0;
-            border-top: 1px solid var(--hairline);
-            border-left: 1px solid var(--hairline);
-        }
-
-        .skill {
-            padding: 22px 22px;
-            border-right: 1px solid var(--hairline);
-            border-bottom: 1px solid var(--hairline);
-            background: var(--paper);
-        }
-
-        .skill-header {
+        /* ---------- Skills: labelled text rows, single column ---------- */
+        .skill-row {
             display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 14px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--hairline-soft);
-        }
-
-        .skill-title {
-            font-family: var(--serif);
-            font-size: 16px;
-            font-weight: 500;
-            letter-spacing: -0.01em;
-            line-height: 1.15;
-            color: var(--ink);
-            font-variation-settings: "opsz" 36;
-        }
-
-        .skill-id {
-            font-family: var(--mono);
-            font-size: 9px;
-            color: var(--accent);
-            letter-spacing: 0.1em;
-        }
-
-        .skill ul {
-            list-style: none;
-        }
-
-        .skill li {
-            font-size: 12.5px;
-            line-height: 1.45;
-            color: var(--ink-soft);
-            padding: 5px 0;
+            gap: 14px;
+            padding: 8px 0;
             border-bottom: 1px dotted var(--hairline-soft);
+            font-size: 13.5px;
+            line-height: 1.55;
         }
 
-        .skill li:last-child { border-bottom: none; }
+        .skill-row:last-child { border-bottom: none; }
 
-        /* ============================================
-           EXPERIENCE
-           ============================================ */
-        .experience-entry {
-            display: grid;
-            grid-template-columns: 130px 1fr;
-            gap: 28px;
-            padding: 22px 0;
-            border-bottom: 1px solid var(--hairline-soft);
+        .skill-row .skill-label {
+            flex: 0 0 168px;
+            font-weight: 600;
+            color: var(--ink);
+        }
+
+        .skill-row .skill-detail { color: var(--ink-soft); }
+
+        /* ---------- Experience ---------- */
+        .job {
+            margin-bottom: 24px;
             page-break-inside: avoid;
         }
 
-        .experience-entry:first-of-type { padding-top: 4px; }
-        .experience-entry:last-of-type { border-bottom: none; padding-bottom: 4px; }
+        .job:last-child { margin-bottom: 0; }
 
-        .exp-meta {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-        }
-
-        .exp-dates {
-            font-family: var(--mono);
-            font-size: 10.5px;
-            letter-spacing: 0.05em;
-            color: var(--accent);
-            font-variant-numeric: tabular-nums;
-            line-height: 1.5;
-        }
-
-        .exp-dates .ongoing {
-            display: inline-block;
-            width: 5px;
-            height: 5px;
-            background: var(--accent);
-            border-radius: 50%;
-            margin-right: 6px;
-            vertical-align: middle;
-        }
-
-        .exp-location {
-            font-family: var(--mono);
-            font-size: 9.5px;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--muted);
-            line-height: 1.4;
-        }
-
-        .exp-title {
-            font-family: var(--serif);
-            font-size: 18px;
-            font-weight: 500;
-            letter-spacing: -0.015em;
-            color: var(--ink);
-            font-variation-settings: "opsz" 36;
-            line-height: 1.2;
-            margin-bottom: 3px;
-        }
-
-        .exp-company {
+        .job-title {
             font-family: var(--sans);
-            font-size: 12.5px;
-            font-weight: 500;
-            color: var(--ink-soft);
-            margin-bottom: 12px;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--ink);
+            letter-spacing: -0.005em;
+            line-height: 1.3;
         }
 
-        .exp-bullets {
-            list-style: none;
-        }
-
-        .exp-bullets li {
+        .job-meta {
             font-size: 13px;
+            color: var(--muted);
+            margin-bottom: 10px;
+            margin-top: 2px;
+        }
+
+        .job-meta strong {
+            color: var(--ink-soft);
+            font-weight: 600;
+        }
+
+        .job ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .job li {
+            font-size: 13.5px;
             line-height: 1.55;
             color: var(--ink-soft);
-            padding: 4px 0 4px 16px;
+            padding: 3px 0 3px 18px;
             position: relative;
         }
 
-        .exp-bullets li::before {
-            content: "—";
+        .job li::before {
+            content: "•";
             position: absolute;
-            left: 0;
+            left: 3px;
             color: var(--accent);
-            font-weight: 400;
         }
 
-        .exp-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 5px;
-            margin-top: 10px;
-        }
-
-        .exp-tag {
-            font-family: var(--mono);
-            font-size: 9px;
-            letter-spacing: 0.06em;
-            color: var(--muted);
-            padding: 3px 8px;
-            border: 1px solid var(--hairline);
-            background: var(--paper);
-        }
-
-        /* ============================================
-           CASE STUDIES / ACHIEVEMENTS
-           ============================================ */
+        /* ---------- Achievements ---------- */
         .achievement {
-            padding: 22px 24px;
-            background: var(--paper);
-            border: 1px solid var(--hairline);
-            margin-bottom: 14px;
-            page-break-inside: avoid;
-        }
-
-        .achievement.highlight {
-            background: var(--accent);
-            color: var(--paper);
-            border-color: var(--accent);
-        }
-
-        .achievement-head {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
+            padding: 4px 0 14px;
             margin-bottom: 12px;
-            padding-bottom: 10px;
-            border-bottom: 1px solid var(--hairline-soft);
-        }
-
-        .achievement.highlight .achievement-head {
-            border-bottom-color: rgba(244, 241, 234, 0.2);
-        }
-
-        .achievement-title {
-            font-family: var(--serif);
-            font-size: 17px;
-            font-weight: 500;
-            letter-spacing: -0.015em;
-            line-height: 1.2;
-            color: var(--ink);
-            font-variation-settings: "opsz" 36;
-        }
-
-        .achievement.highlight .achievement-title { color: var(--paper); }
-
-        .achievement-id {
-            font-family: var(--mono);
-            font-size: 9.5px;
-            letter-spacing: 0.12em;
-            color: var(--accent);
-            text-transform: uppercase;
-        }
-
-        .achievement.highlight .achievement-id { color: var(--accent-tint); }
-
-        .achievement-grid {
-            display: grid;
-            grid-template-columns: 80px 1fr;
-            gap: 16px 24px;
-            font-size: 12.5px;
-            line-height: 1.55;
-        }
-
-        .achievement-grid dt {
-            font-family: var(--mono);
-            font-size: 9.5px;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--accent);
-            padding-top: 2px;
-        }
-
-        .achievement.highlight .achievement-grid dt { color: var(--accent-tint); }
-
-        .achievement-grid dd {
-            color: var(--ink-soft);
-        }
-
-        .achievement.highlight .achievement-grid dd { color: var(--paper); }
-
-        .recognition-stat {
-            font-family: var(--serif);
-            font-size: 48px;
-            font-weight: 300;
-            line-height: 1;
-            letter-spacing: -0.04em;
-            color: var(--paper);
-            font-variation-settings: "opsz" 144;
-            margin-top: 12px;
-            display: flex;
-            align-items: baseline;
-            gap: 16px;
-        }
-
-        .recognition-stat em {
-            font-style: italic;
-            color: var(--accent-tint);
-            font-variation-settings: "opsz" 144, "WONK" 1;
-        }
-
-        .recognition-stat .stat-label {
-            font-family: var(--mono);
-            font-size: 10px;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-            color: var(--accent-tint);
-            font-style: normal;
-        }
-
-        /* ============================================
-           EDUCATION & LANGUAGES
-           ============================================ */
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 40px;
-        }
-
-        .education-list {
-            list-style: none;
-        }
-
-        .education-list li {
-            display: grid;
-            grid-template-columns: 130px 1fr;
-            gap: 24px;
-            padding: 14px 0;
             border-bottom: 1px solid var(--hairline-soft);
             page-break-inside: avoid;
         }
 
-        .education-list li:last-child { border-bottom: none; }
+        .achievement:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
 
-        .education-year {
-            font-family: var(--mono);
-            font-size: 10.5px;
-            letter-spacing: 0.05em;
-            color: var(--accent);
-            padding-top: 2px;
+        .achievement h3 {
+            font-family: var(--sans);
+            font-size: 14.5px;
+            font-weight: 600;
+            color: var(--ink);
+            margin-bottom: 6px;
+            line-height: 1.3;
         }
 
-        .education-detail strong {
-            font-family: var(--serif);
-            font-size: 15.5px;
-            font-weight: 500;
-            letter-spacing: -0.01em;
+        .achievement p {
+            font-size: 13.5px;
+            line-height: 1.55;
+            color: var(--ink-soft);
+            margin-bottom: 6px;
+        }
+
+        .achievement p:last-child { margin-bottom: 0; }
+
+        .achievement .result {
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        /* ---------- Education ---------- */
+        .edu-item {
+            padding: 9px 0;
+            border-bottom: 1px dotted var(--hairline-soft);
+            font-size: 13.5px;
+            line-height: 1.5;
+        }
+
+        .edu-item:last-child { border-bottom: none; }
+
+        .edu-item strong {
+            font-weight: 600;
             color: var(--ink);
             display: block;
-            line-height: 1.25;
-            font-variation-settings: "opsz" 36;
-            margin-bottom: 2px;
         }
 
-        .education-detail span {
-            font-size: 12px;
-            color: var(--muted);
-            font-family: var(--mono);
-            letter-spacing: 0.02em;
-        }
+        .edu-item span { color: var(--muted); }
 
-        .languages {
-            border-left: 1px solid var(--hairline);
-            padding-left: 32px;
-        }
-
-        .lang-list { list-style: none; }
-
-        .lang-list li {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            padding: 10px 0;
-            border-bottom: 1px dotted var(--hairline);
-            font-family: var(--serif);
-            font-size: 15px;
-            font-variation-settings: "opsz" 36;
-        }
-
-        .lang-list li:last-child { border-bottom: none; }
-
-        .lang-list .level {
-            font-family: var(--mono);
-            font-size: 9.5px;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--muted);
-        }
-
-        /* ============================================
-           COLOPHON
-           ============================================ */
-        .colophon {
-            margin-top: 50px;
-            padding-top: 20px;
+        /* ---------- Footer ---------- */
+        .cv-footer {
+            margin-top: 34px;
+            padding-top: 16px;
             border-top: 1px solid var(--hairline);
-            display: flex;
-            justify-content: space-between;
             font-family: var(--mono);
-            font-size: 9.5px;
+            font-size: 10px;
             letter-spacing: 0.1em;
             text-transform: uppercase;
             color: var(--muted);
+            display: flex;
+            justify-content: space-between;
+            gap: 16px;
+            flex-wrap: wrap;
         }
 
-        .colophon .accent { color: var(--accent); }
+        .cv-footer .accent { color: var(--accent); }
 
-        /* ============================================
-           RESPONSIVE
-           ============================================ */
+        /* ---------- Responsive ---------- */
         @media (max-width: 720px) {
-            body { padding: 24px 12px; }
-            .cv { padding: 36px 28px; }
-            h1.name { font-size: 52px; }
-            .masthead-grid { grid-template-columns: 1fr; }
-            .portrait { width: 64px; height: 80px; }
-            .contact-strip { grid-template-columns: repeat(2, 1fr); gap: 12px 0; }
-            .contact-cell { border-right: none; border-bottom: 1px solid var(--hairline-soft); padding: 10px 0 10px 0; }
-            .contact-cell:nth-child(2) { border-right: none; }
-            .contact-cell:last-child, .contact-cell:nth-last-child(2) { border-bottom: none; }
-            .section-head { grid-template-columns: 1fr; gap: 8px; }
-            .skills { grid-template-columns: 1fr; }
-            .experience-entry { grid-template-columns: 1fr; gap: 8px; }
-            .footer-grid { grid-template-columns: 1fr; gap: 28px; }
-            .languages { border-left: none; border-top: 1px solid var(--hairline); padding-left: 0; padding-top: 20px; }
-            .achievement-grid { grid-template-columns: 1fr; gap: 8px; }
-            .actions { flex-direction: column; align-items: stretch; text-align: center; }
-            .colophon { flex-direction: column; gap: 8px; text-align: center; }
+            body { padding: 22px 12px; }
+            .cv { padding: 34px 26px; }
+            h1 { font-size: 36px; }
+            .skill-row { flex-direction: column; gap: 3px; }
+            .skill-row .skill-label { flex: none; }
+            .actions { flex-direction: column; align-items: stretch; }
+            .btn { justify-content: center; }
+            .cv-footer { flex-direction: column; gap: 6px; }
         }
 
-        /* ============================================
-           PRINT — A4
-           ============================================ */
+        /* ---------- Print: A4, two pages ---------- */
         @media print {
-            @page {
-                size: A4;
-                margin: 12mm 14mm;
-            }
+            @page { size: A4; margin: 14mm 15mm; }
 
             body {
-                background: white;
+                background: #fff;
                 padding: 0;
                 font-size: 10pt;
-                line-height: 1.45;
-                color: black;
+                line-height: 1.4;
+                color: #000;
             }
 
-            .actions { display: none !important; }
+            .actions, .ats-note { display: none !important; }
 
             .cv {
                 box-shadow: none;
                 max-width: 100%;
                 padding: 0;
                 margin: 0;
-                background: white;
+                background: #fff;
             }
 
-            .cv::before { display: none; }
+            h1 { font-size: 26pt; margin-bottom: 7pt; }
+            .headline { font-size: 10.5pt; margin-bottom: 8pt; }
+            .contact-line { font-size: 8.8pt; line-height: 1.7; }
+            .cv-header { padding-bottom: 12pt; margin-bottom: 8pt; }
 
-            /* Tighten typography for print */
-            h1.name { font-size: 44pt; margin-bottom: 10pt; }
-            .role-line { font-size: 9pt; padding-top: 10pt; }
-            .section-title { font-size: 16pt; }
-            .exp-title { font-size: 12pt; }
-            .skill-title { font-size: 11pt; }
-            .achievement-title { font-size: 11pt; }
-            .education-detail strong { font-size: 10pt; }
-            .lang-list li { font-size: 10pt; }
-            .philosophy q { font-size: 14pt; }
-            .recognition-stat { font-size: 30pt; }
+            section { margin-top: 15pt; }
+            h2 { font-size: 9pt; margin-bottom: 9pt; padding-bottom: 5pt; }
 
-            /* Tight section spacing */
-            .masthead { padding-bottom: 16pt; margin-bottom: 18pt; }
-            section { margin-bottom: 18pt; }
-            .section-head { margin-bottom: 12pt; padding-bottom: 6pt; }
-            .summary p { font-size: 9.5pt; line-height: 1.45; }
-            .philosophy { padding: 12pt 14pt; margin-top: 12pt; }
-            .skill { padding: 12pt 14pt; }
-            .skill li { font-size: 8.5pt; padding: 3pt 0; }
-            .experience-entry { padding: 12pt 0; }
-            .exp-bullets li { font-size: 9pt; padding: 2pt 0 2pt 14pt; }
-            .exp-tag { font-size: 7pt; padding: 2pt 6pt; }
-            .achievement { padding: 12pt 14pt; margin-bottom: 8pt; }
-            .achievement-grid { font-size: 9pt; }
-            .education-list li { padding: 8pt 0; }
-            .colophon { font-size: 7.5pt; margin-top: 24pt; padding-top: 12pt; }
+            .summary p { font-size: 9.3pt; line-height: 1.42; margin-bottom: 6pt; }
+            .skill-row { font-size: 9pt; padding: 4.5pt 0; }
+            .skill-row .skill-label { flex: 0 0 130pt; }
 
-            /* Preserve accent color */
+            .job { margin-bottom: 13pt; }
+            .job-title { font-size: 11pt; }
+            .job-meta { font-size: 9pt; margin-bottom: 5pt; }
+            .job li { font-size: 9.2pt; line-height: 1.42; padding: 2pt 0 2pt 13pt; }
+
+            .achievement { padding-bottom: 8pt; margin-bottom: 7pt; }
+            .achievement h3 { font-size: 10pt; }
+            .achievement p { font-size: 9.2pt; line-height: 1.42; }
+
+            .edu-item { font-size: 9.2pt; padding: 5pt 0; }
+            .cv-footer { font-size: 7.5pt; margin-top: 16pt; padding-top: 9pt; }
+
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
 
-            /* Avoid awkward breaks */
-            section, .experience-entry, .achievement, .education-list li, .skill {
-                page-break-inside: avoid;
-            }
-
-            .section-head { page-break-after: avoid; }
-
-            a { color: inherit; text-decoration: none; }
+            section, .job, .achievement, .edu-item { page-break-inside: avoid; }
+            h2 { page-break-after: avoid; }
+            a { color: inherit; text-decoration: none; border-bottom: none; }
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -830,409 +407,236 @@
 </head>
 <body>
 
-    <!-- ACTION BAR — hidden in print -->
+    <!-- Screen-only controls -->
     <div class="actions">
         <div class="actions-meta">
-            <span class="accent">Curriculum Vitae</span> &nbsp;·&nbsp; Popy Akter &nbsp;·&nbsp; MMXXVI
+            <span class="accent">Curriculum Vitae</span> &nbsp;·&nbsp; Popy Akter &nbsp;·&nbsp; 2026
         </div>
         <div class="action-group">
-            <a href="./index.html" class="btn btn--ghost">← Portfolio</a>
-            <button class="btn" onclick="window.print()">
-                Save as PDF
-            </button>
+            <a href="./index.html" class="btn btn--ghost">&larr; Portfolio</a>
+            <button class="btn" onclick="window.print()">Save as PDF</button>
         </div>
+    </div>
+
+    <div class="ats-note">
+        <strong>Built for applicant tracking systems.</strong> Single-column flow, standard section headings, no images or tables in the content stream, so text extracts in reading order. Save as PDF via the button above and submit that file — avoid screenshots or scanned copies.
     </div>
 
     <article class="cv">
 
-        <!-- MASTHEAD -->
-        <header class="masthead">
-            <div class="masthead-meta">
-                <div class="vol">Curriculum Vitae · Volume 01</div>
-                <div>Dhaka — Remote · MMXXVI</div>
+        <header class="cv-header">
+            <h1>Popy Akter<em>.</em></h1>
+            <div class="headline">SEO Manager | Technical SEO, Structured Data, GEO &amp; AI Search Optimisation</div>
+            <div class="contact-line">
+                Dhaka, Bangladesh &mdash; available for remote work worldwide<br>
+                <a href="mailto:popyakter4407@gmail.com">popyakter4407@gmail.com</a>
+                <span class="divider">|</span>
+                <a href="tel:+8801924798350">+880 1924 798 350</a><br>
+                LinkedIn: <a href="https://www.linkedin.com/in/popy-akter-seo/" target="_blank" rel="noopener">linkedin.com/in/popy-akter-seo</a>
+                <span class="divider">|</span>
+                Portfolio: <a href="https://popyakterseo.github.io/Portfolio/" target="_blank" rel="noopener">popyakterseo.github.io/Portfolio</a>
             </div>
-
-            <div class="masthead-grid">
-                <div>
-                    <h1 class="name">Popy Akter<em>.</em></h1>
-                    <div class="role-line">
-                        SEO Manager <span class="sep">/</span> Technical SEO &amp; AEO <span class="sep">/</span> GEO &amp; eCommerce Growth Strategist
-                    </div>
-                </div>
-                <img class="portrait" src="https://drive.google.com/thumbnail?id=1UePGYm5DSzVba59h46qHx_AJDGND9rlf&sz=w400" alt="Popy Akter">
-            </div>
-
-            <dl class="contact-strip">
-                <div class="contact-cell">
-                    <dt>Email</dt>
-                    <dd><a href="mailto:popyakter4407@gmail.com">popyakter4407@gmail.com</a></dd>
-                </div>
-                <div class="contact-cell">
-                    <dt>Phone</dt>
-                    <dd><a href="tel:+8801924798350">+880 1924 798 350</a></dd>
-                </div>
-                <div class="contact-cell">
-                    <dt>LinkedIn</dt>
-                    <dd><a href="https://www.linkedin.com/in/popy-akter-tj/" target="_blank" rel="noopener">popy-akter-tj</a></dd>
-                </div>
-                <div class="contact-cell">
-                    <dt>Portfolio</dt>
-                    <dd><a href="https://popyakterseo.github.io/Portfolio/" target="_blank" rel="noopener">popyakterseo.github.io</a></dd>
-                </div>
-            </dl>
         </header>
 
-        <!-- § 01 EXECUTIVE SUMMARY -->
+        <!-- ===== SUMMARY ===== -->
         <section>
-            <div class="section-head">
-                <div class="section-num">§ 01</div>
-                <h2 class="section-title">Executive <em>summary</em></h2>
-                <div class="section-kicker">Profile · Philosophy</div>
-            </div>
-
+            <h2>Professional Summary</h2>
             <div class="summary">
-                <p>Results-driven SEO Manager leading organic growth strategy across 50+ websites. Combines advanced technical SEO, dynamic structured data implementation, AI-accelerated workflows, and rigorous performance tracking into systems that compound over time.</p>
-                <p>Specialised in scalable SEO architecture, dynamic PHP schema, Elementor HTML site building, and content ranking across SEO, AEO &amp; GEO surfaces — aligning every initiative with business KPIs rather than vanity rankings.</p>
-            </div>
-
-            <div class="philosophy">
-                <q>SEO is not rankings. SEO is <em>revenue.</em></q>
-                <p class="philosophy-note">Every strategic action maps to a measurable business outcome. The question that frames the work: how does this increase profitable organic traffic?</p>
+                <p>SEO Manager with over five years of hands-on search experience, leading organic growth strategy across a portfolio of 50+ client websites in Canada, the United States and the United Kingdom. Specialises in technical SEO, structured data at scale, and content built to rank in Google while being extracted and cited by AI answer engines.</p>
+                <p>Combines strategy with delivery: runs full technical audits, writes production HTML and CSS, deploys dynamic PHP schema, directs an off-page team, audits Google Ads performance against cost per acquisition, and reports monthly to business owners and directors. Consistently focused on verified leads and revenue contribution rather than traffic volume alone.</p>
             </div>
         </section>
 
-        <!-- § 02 CORE COMPETENCIES -->
+        <!-- ===== CORE SKILLS ===== -->
         <section>
-            <div class="section-head">
-                <div class="section-num">§ 02</div>
-                <h2 class="section-title">Core <em>competencies</em></h2>
-                <div class="section-kicker">Disciplines · Tools · Stack</div>
+            <h2>Core Skills</h2>
+
+            <div class="skill-row">
+                <div class="skill-label">Technical SEO</div>
+                <div class="skill-detail">Technical audits, crawlability and indexation diagnostics, site architecture, Core Web Vitals, canonicalisation, redirect mapping, XML sitemaps, robots directives, keyword cannibalisation resolution, website migrations</div>
             </div>
 
-            <div class="skills">
-                <div class="skill">
-                    <div class="skill-header">
-                        <div class="skill-title">Technical &amp; On-Page</div>
-                        <span class="skill-id">A.01</span>
-                    </div>
-                    <ul>
-                        <li>Crawl &amp; indexation audits</li>
-                        <li>Dynamic PHP schema</li>
-                        <li>Core Web Vitals optimization</li>
-                        <li>Internal linking architecture</li>
-                        <li>Entity-based metadata</li>
-                        <li>Sitemap &amp; robots structure</li>
-                    </ul>
-                </div>
+            <div class="skill-row">
+                <div class="skill-label">Structured Data</div>
+                <div class="skill-detail">Schema markup, dynamic PHP schema injection, LocalBusiness, Service, Organization and FAQ schema, rich result eligibility, entity optimisation</div>
+            </div>
 
-                <div class="skill">
-                    <div class="skill-header">
-                        <div class="skill-title">SEO · AEO · GEO</div>
-                        <span class="skill-id">A.02</span>
-                    </div>
-                    <ul>
-                        <li>Answer engine optimization</li>
-                        <li>AI-overview content design</li>
-                        <li>Semantic &amp; entity clustering</li>
-                        <li>Local SEO &amp; map-pack ranking</li>
-                        <li>Pillar &amp; cluster systems</li>
-                        <li>Off-page authority building</li>
-                    </ul>
-                </div>
+            <div class="skill-row">
+                <div class="skill-label">GEO &amp; AI Search</div>
+                <div class="skill-detail">Generative Engine Optimisation (GEO), Answer Engine Optimisation (AEO), LLM visibility, AI Overviews, brand citation tracking across ChatGPT, Perplexity and Gemini, AI crawler accessibility, E-E-A-T signal building, prompt and query research</div>
+            </div>
 
-                <div class="skill">
-                    <div class="skill-header">
-                        <div class="skill-title">Strategy &amp; Growth</div>
-                        <span class="skill-id">A.03</span>
-                    </div>
-                    <ul>
-                        <li>eCommerce traffic capture</li>
-                        <li>Revenue-focused keyword mapping</li>
-                        <li>SEO + paid media synergy</li>
-                        <li>CRO &amp; funnel alignment</li>
-                        <li>KPI dashboarding</li>
-                        <li>AI-driven research workflows</li>
-                    </ul>
-                </div>
+            <div class="skill-row">
+                <div class="skill-label">Content Strategy</div>
+                <div class="skill-detail">Keyword research, search intent mapping, competitor gap analysis, pillar and cluster architecture, content briefs, on-page optimisation, metadata, internal linking strategy, editorial calendars</div>
+            </div>
 
-                <div class="skill">
-                    <div class="skill-header">
-                        <div class="skill-title">Tooling</div>
-                        <span class="skill-id">A.04</span>
-                    </div>
-                    <ul>
-                        <li>Screaming Frog</li>
-                        <li>GSC · GA4 · Microsoft Clarity</li>
-                        <li>SEMrush · BrightLocal</li>
-                        <li>Asana · ClickUp · Workspace</li>
-                        <li>Google AI Studio</li>
-                        <li>Canva · WebP &amp; GeoTag tools</li>
-                    </ul>
-                </div>
+            <div class="skill-row">
+                <div class="skill-label">Local SEO</div>
+                <div class="skill-detail">Google Business Profile optimisation, multi-location and multi-city strategy, map-pack ranking, local citations and NAP consistency, city-page architecture, review acquisition</div>
+            </div>
 
-                <div class="skill">
-                    <div class="skill-header">
-                        <div class="skill-title">Development</div>
-                        <span class="skill-id">A.05</span>
-                    </div>
-                    <ul>
-                        <li>Elementor HTML site building</li>
-                        <li>WordPress backend optimization</li>
-                        <li>Dynamic PHP schema injection</li>
-                        <li>Structured data implementation</li>
-                        <li>HTML page creation</li>
-                        <li>Basic CSS</li>
-                    </ul>
-                </div>
+            <div class="skill-row">
+                <div class="skill-label">Off-Page &amp; Authority</div>
+                <div class="skill-detail">Backlink strategy and roadmapping, backlink audits, referring domain growth, editorial outreach, geo-targeted link acquisition, disavow file construction, team delegation</div>
+            </div>
 
-                <div class="skill">
-                    <div class="skill-header">
-                        <div class="skill-title">Reporting</div>
-                        <span class="skill-id">A.06</span>
-                    </div>
-                    <ul>
-                        <li>Monthly KPI reporting</li>
-                        <li>Traffic &amp; ranking trend analysis</li>
-                        <li>Conversion tracking alignment</li>
-                        <li>Stakeholder presentations</li>
-                        <li>Technical-to-business translation</li>
-                        <li>Strategic adjustment cycles</li>
-                    </ul>
-                </div>
+            <div class="skill-row">
+                <div class="skill-label">Analytics &amp; Paid Media</div>
+                <div class="skill-detail">Conversion tracking verification, lead quality auditing, Google Ads performance auditing, CTR, CPC and CPA analysis, KPI dashboarding, monthly client reporting</div>
+            </div>
+
+            <div class="skill-row">
+                <div class="skill-label">Development</div>
+                <div class="skill-detail">HTML, CSS, WordPress backend optimisation, Elementor, Gutenberg blocks, PHP schema templating, custom WordPress plugin development</div>
+            </div>
+
+            <div class="skill-row">
+                <div class="skill-label">Tools</div>
+                <div class="skill-detail">Google Search Console, Google Analytics 4, Screaming Frog, Semrush, Ahrefs, BrightLocal, Microsoft Clarity, Google Ads, Looker Studio, Asana, ClickUp, Google Workspace</div>
+            </div>
+
+            <div class="skill-row">
+                <div class="skill-label">Stakeholder Skills</div>
+                <div class="skill-detail">Direct client ownership, executive reporting, translating technical findings into commercial decisions, cross-functional coordination with developers and writers, escalation management, team leadership</div>
             </div>
         </section>
 
-        <!-- § 03 EXPERIENCE -->
+        <!-- ===== EXPERIENCE ===== -->
         <section>
-            <div class="section-head">
-                <div class="section-num">§ 03</div>
-                <h2 class="section-title">Professional <em>experience</em></h2>
-                <div class="section-kicker">2017 — Present</div>
-            </div>
+            <h2>Professional Experience</h2>
 
-            <div class="experience-entry">
-                <div class="exp-meta">
-                    <div class="exp-dates"><span class="ongoing"></span>Dec 2025<br>— Present</div>
-                    <div class="exp-location">Vancouver, BC<br>Remote</div>
-                </div>
-                <div>
-                    <h4 class="exp-title">SEO Manager</h4>
-                    <div class="exp-company">Cansoft Technologies</div>
-                    <ul class="exp-bullets">
-                        <li>Spearhead end-to-end technical and on-page SEO strategies for a portfolio of 50+ client websites, aligned with ongoing Google algorithm updates.</li>
-                        <li>Conduct advanced technical audits — diagnosing complex backend issues to improve crawlability and indexation speed.</li>
-                        <li>Implement dynamic PHP-based schema site-wide, structuring LocalBusiness and Service schemas for maximum rich-result eligibility.</li>
-                        <li>Deliver monthly KPI reports to executive stakeholders, translating technical metrics into business growth insight.</li>
-                    </ul>
-                    <div class="exp-tags">
-                        <span class="exp-tag">Technical SEO</span>
-                        <span class="exp-tag">Schema Markup</span>
-                        <span class="exp-tag">SEO Audits</span>
-                        <span class="exp-tag">Team Leadership</span>
-                        <span class="exp-tag">AEO / GEO</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="experience-entry">
-                <div class="exp-meta">
-                    <div class="exp-dates">Jan 2024<br>— Mar 2025</div>
-                    <div class="exp-location">Vancouver, BC</div>
-                </div>
-                <div>
-                    <h4 class="exp-title">Digital Marketing Strategist</h4>
-                    <div class="exp-company">Cansoft Technologies</div>
-                    <ul class="exp-bullets">
-                        <li>Led team coordination and collaborated cross-functionally with development and content teams to execute digital growth campaigns.</li>
-                        <li>Performed market research, competitor gap analysis, and funnel-aligned SEO planning to identify high-impact organic revenue opportunities.</li>
-                        <li>Monitored traffic, keyword rankings, and user behaviour via GA4 and Microsoft Clarity, refining marketing funnels iteratively.</li>
-                        <li>Audited paid media reports against CTR, CPC, and ROAS — proposing landing page improvements to integrate SEO and paid media.</li>
-                    </ul>
-                    <div class="exp-tags">
-                        <span class="exp-tag">Digital Strategy</span>
-                        <span class="exp-tag">Team Coordination</span>
-                        <span class="exp-tag">SEO + Paid Synergy</span>
-                        <span class="exp-tag">KPI Tracking</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="experience-entry">
-                <div class="exp-meta">
-                    <div class="exp-dates">Aug 2023<br>— Dec 2023</div>
-                    <div class="exp-location">Dhaka,<br>Bangladesh</div>
-                </div>
-                <div>
-                    <h4 class="exp-title">Management Trainee <span style="font-style:italic; font-weight:400; font-size:13px; color: var(--muted);">— Part-time</span></h4>
-                    <div class="exp-company">Youth School for Social Entrepreneurs</div>
-                    <ul class="exp-bullets">
-                        <li>Provided comprehensive virtual assistance and managed operational data using advanced Excel workflows.</li>
-                        <li>Streamlined internal processes and supported cross-departmental project coordination.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="experience-entry">
-                <div class="exp-meta">
-                    <div class="exp-dates">Mar 2023<br>— Aug 2023</div>
-                    <div class="exp-location">Remote</div>
-                </div>
-                <div>
-                    <h4 class="exp-title">Intern</h4>
-                    <div class="exp-company">Youth School for Social Entrepreneurs</div>
-                    <ul class="exp-bullets">
-                        <li>Supported daily administrative operations, balancing multiple responsibilities under tight deadlines.</li>
-                        <li>Developed strong time management and presentation skills through collaborative internal projects.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="experience-entry">
-                <div class="exp-meta">
-                    <div class="exp-dates">May 2017<br>— Jul 2017</div>
-                    <div class="exp-location">Dhaka, Bangladesh<br>On-site</div>
-                </div>
-                <div>
-                    <h4 class="exp-title">Office Coordinator</h4>
-                    <div class="exp-company">Euro Bangla IT</div>
-                    <ul class="exp-bullets">
-                        <li>Handled day-to-day office administration and facilitated cross-departmental communication.</li>
-                        <li>Organised and maintained critical documentation and scheduling using Microsoft Excel.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- § 04 ACHIEVEMENTS -->
-        <section>
-            <div class="section-head">
-                <div class="section-num">§ 04</div>
-                <h2 class="section-title">Selected <em>achievements</em></h2>
-                <div class="section-kicker">Recognition · Case Studies</div>
-            </div>
-
-            <div class="achievement highlight">
-                <div class="achievement-head">
-                    <h4 class="achievement-title">2025 Annual Evaluation — Distinction</h4>
-                    <span class="achievement-id">REC / 01</span>
-                </div>
-                <div class="achievement-grid">
-                    <dt>Context</dt>
-                    <dd>Cansoft Technologies annual performance evaluation, judged on strategic execution and client revenue impact across the portfolio.</dd>
-                </div>
-                <div class="recognition-stat">
-                    <span>90.74<em>/100</em></span>
-                    <span class="stat-label">Best Scorer &amp; Team Lead</span>
-                </div>
-            </div>
-
-            <div class="achievement">
-                <div class="achievement-head">
-                    <h4 class="achievement-title">Multi-Site SEO Scaling — 50+ Websites</h4>
-                    <span class="achievement-id">CS / 01</span>
-                </div>
-                <dl class="achievement-grid">
-                    <dt>Challenge</dt>
-                    <dd>Inconsistent performance and technical foundations across a portfolio of 50+ diverse client websites.</dd>
-                    <dt>Approach</dt>
-                    <dd>Systemic technical audits, backend internal linking overhaul, structured data deployment, and monthly KPI-based reporting cycles.</dd>
-                    <dt>Outcome</dt>
-                    <dd>Stabilised organic visibility, stronger crawl efficiency, and improved average site health scores across the portfolio.</dd>
-                </dl>
-            </div>
-
-            <div class="achievement">
-                <div class="achievement-head">
-                    <h4 class="achievement-title">Dynamic PHP Schema at Scale</h4>
-                    <span class="achievement-id">CS / 02</span>
-                </div>
-                <dl class="achievement-grid">
-                    <dt>Challenge</dt>
-                    <dd>Client websites lacked structured data, limiting rich-result eligibility and SERP feature exposure.</dd>
-                    <dt>Approach</dt>
-                    <dd>Built dynamic PHP-based schema deployed site-wide — LocalBusiness and Service structures integrated within WordPress backend.</dd>
-                    <dt>Outcome</dt>
-                    <dd>Enhanced rich-result eligibility, improved SERP click-through rates, and clearer indexation signals.</dd>
-                </dl>
-            </div>
-
-            <div class="achievement">
-                <div class="achievement-head">
-                    <h4 class="achievement-title">Automation &amp; Custom SEO Tool Development</h4>
-                    <span class="achievement-id">CS / 03</span>
-                </div>
-                <dl class="achievement-grid">
-                    <dt>Challenge</dt>
-                    <dd>Manual SEO workflows were inefficient, slowing delivery across the portfolio.</dd>
-                    <dt>Approach</dt>
-                    <dd>Developed three internal tools — Unlimited WebP Converter, GeoTag Tool, and SEO Analyzer — to automate repetitive technical tasks.</dd>
-                    <dt>Outcome</dt>
-                    <dd>Significant reduction in workload, accelerated optimization cycles, and freed capacity for strategic work.</dd>
-                </dl>
-            </div>
-
-            <div class="achievement">
-                <div class="achievement-head">
-                    <h4 class="achievement-title">6-Month Off-Page Strategy — Multi-Location Brand</h4>
-                    <span class="achievement-id">CS / 04</span>
-                </div>
-                <dl class="achievement-grid">
-                    <dt>Challenge</dt>
-                    <dd>A Canadian multi-location printing brand needed authority signals competitive with national players, plus local trust at map-pack level.</dd>
-                    <dt>Approach</dt>
-                    <dd>Phased six-month off-page roadmap — foundation citations, .ca directory placement, niche citations, editorial guest posts (DR 35+), and geo-targeted links.</dd>
-                    <dt>Outcome</dt>
-                    <dd>Documented, KPI-tracked authority system projecting 200–260 referring domains and 35–50 DR 40+ links across six months.</dd>
-                </dl>
-            </div>
-        </section>
-
-        <!-- § 05 EDUCATION & LANGUAGES -->
-        <section>
-            <div class="section-head">
-                <div class="section-num">§ 05</div>
-                <h2 class="section-title">Education <em>&amp; languages</em></h2>
-                <div class="section-kicker">Academic Background</div>
-            </div>
-
-            <div class="footer-grid">
-                <ul class="education-list">
-                    <li>
-                        <div class="education-year">Postgraduate</div>
-                        <div class="education-detail">
-                            <strong>Master of Business Administration</strong>
-                            <span>Management · University of Dhaka</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="education-year">Undergraduate</div>
-                        <div class="education-detail">
-                            <strong>Bachelor of Business Administration</strong>
-                            <span>Management · University of Dhaka</span>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="education-year">Professional</div>
-                        <div class="education-detail">
-                            <strong>Professional Digital Marketing</strong>
-                            <span>Creative IT Institute</span>
-                        </div>
-                    </li>
+            <div class="job">
+                <div class="job-title">SEO Manager</div>
+                <div class="job-meta"><strong>Cansoft Technologies</strong> &mdash; Vancouver, BC, Canada (Remote) &nbsp;|&nbsp; December 2025 &ndash; Present</div>
+                <ul>
+                    <li>Own end-to-end technical and on-page SEO strategy for a portfolio of 50+ client websites across dental, home services, real estate, eCommerce and finance sectors.</li>
+                    <li>Grew one flagship dental client from 818 to 4,500 monthly organic sessions and from 17 to 134 top-three keyword positions across a 16-month engagement.</li>
+                    <li>Deploy dynamic PHP-based schema at template level across the portfolio, maintaining valid LocalBusiness, Service and Organization markup without per-page maintenance.</li>
+                    <li>Lead GEO and AEO implementation, structuring content for extraction and citation by AI answer engines and monitoring brand visibility across ChatGPT, Perplexity, Gemini and AI Overviews.</li>
+                    <li>Direct the off-page team on backlink acquisition, citation building and disavow strategy, growing one client to 488 referring domains.</li>
+                    <li>Audit Google Ads campaign performance against CTR and cost per conversion, delivering an 11.43% CTR at $39.34 per conversion on one active account.</li>
+                    <li>Verify lead tracking end to end and audit form submissions to separate genuine enquiries from spam and duplicates, giving clients accurate cost-per-lead figures.</li>
+                    <li>Present monthly KPI reports to business owners and directors, translating technical metrics into commercial recommendations.</li>
                 </ul>
+            </div>
 
-                <div class="languages">
-                    <ul class="lang-list">
-                        <li><span>English</span><span class="level">Fluent</span></li>
-                        <li><span>Bengali</span><span class="level">Native</span></li>
-                        <li><span>Hindi</span><span class="level">Basic</span></li>
-                    </ul>
-                </div>
+            <div class="job">
+                <div class="job-title">Project Manager</div>
+                <div class="job-meta"><strong>Cansoft Technologies</strong> &mdash; Vancouver, BC, Canada (Remote) &nbsp;|&nbsp; March 2025 &ndash; December 2025</div>
+                <ul>
+                    <li>Managed client-facing delivery across dental, HVAC, home building, real estate and eCommerce accounts, owning the line of communication with business owners.</li>
+                    <li>Ran full website rebuilds from staged demo through client feedback rounds to live launch, coordinating developers, content writers and the off-page team.</li>
+                    <li>Produced SEO-optimised service pages in HTML with schema and internal linking built in from the start, sequenced against keyword priorities set by the client.</li>
+                    <li>Delivered five priority service pages for one home builder account in a single cycle, prompting an immediate client request to extend the same work to a second city.</li>
+                    <li>Handled technical objections and competing priorities from clients, including technically sophisticated stakeholders running their own automated systems.</li>
+                    <li>Identified and proposed account growth opportunities, including a documented service-area expansion analysis for a multi-city exterior services client.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-title">Digital Marketing Strategist</div>
+                <div class="job-meta"><strong>Cansoft Technologies</strong> &mdash; Vancouver, BC, Canada (Remote) &nbsp;|&nbsp; January 2024 &ndash; March 2025</div>
+                <ul>
+                    <li>Coordinated cross-functional development and content teams to execute digital growth campaigns across a multi-client portfolio.</li>
+                    <li>Performed technical audits, competitor gap analysis and funnel-aligned SEO planning to surface high-impact organic revenue opportunities.</li>
+                    <li>Monitored traffic, keyword rankings and user behaviour through Google Analytics 4 and Microsoft Clarity, refining conversion funnels iteratively.</li>
+                    <li>Audited paid media reporting against CTR, CPC and ROAS, proposing landing page improvements to align organic and paid channels.</li>
+                    <li>Built internal efficiency tools, including a bulk WebP image converter, an image geo-tagging utility and an on-page SEO analyser.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-title">Management Trainee (Part-time)</div>
+                <div class="job-meta"><strong>Youth School for Social Entrepreneurs</strong> &mdash; Dhaka, Bangladesh &nbsp;|&nbsp; August 2023 &ndash; December 2023</div>
+                <ul>
+                    <li>Managed operational data through advanced Excel workflows and provided remote administrative support.</li>
+                    <li>Streamlined internal processes and supported cross-departmental project coordination.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-title">Intern</div>
+                <div class="job-meta"><strong>Youth School for Social Entrepreneurs</strong> &mdash; Dhaka, Bangladesh (Remote) &nbsp;|&nbsp; March 2023 &ndash; August 2023</div>
+                <ul>
+                    <li>Supported daily operations across multiple concurrent responsibilities under tight deadlines.</li>
+                    <li>Contributed to collaborative internal projects, building presentation and reporting skills.</li>
+                </ul>
+            </div>
+
+            <div class="job">
+                <div class="job-title">Office Coordinator</div>
+                <div class="job-meta"><strong>Euro Bangla IT</strong> &mdash; Dhaka, Bangladesh &nbsp;|&nbsp; May 2017 &ndash; July 2017</div>
+                <ul>
+                    <li>Handled office administration, documentation control and cross-departmental communication.</li>
+                </ul>
             </div>
         </section>
 
-        <!-- COLOPHON -->
-        <div class="colophon">
-            <div>&copy; MMXXVI · Popy Akter</div>
+        <!-- ===== ACHIEVEMENTS ===== -->
+        <section>
+            <h2>Key Achievements</h2>
+
+            <div class="achievement">
+                <h3>Multi-Year Organic Growth &mdash; Dental Practice, Saskatoon</h3>
+                <p>Inherited an account ranking for 616 keywords with only 17 in the top three and organic traffic flat at 818 monthly sessions. Rebuilt technical foundations, restructured service pages to procedure-level search intent, ran a monthly editorial cycle, and grew referring domains steadily rather than in spikes.</p>
+                <p><span class="result">Result:</span> Organic traffic 818 to 4,500 monthly sessions. Top-three positions 17 to 134. Top-ten positions 119 to 504. Ranking keywords 616 to 3,700. Referring domains grown to 488. Eight core service terms reached position one.</p>
+            </div>
+
+            <div class="achievement">
+                <h3>Lead Quality Audit &mdash; Exterior Services, Saskatchewan</h3>
+                <p>Client reporting counted raw form submissions as leads, bundling spam, duplicates and job applications with genuine estimate requests and making cost per lead unknowable. Audited every submission individually, classified each entry, verified tracking end to end, and rebuilt reporting around verified leads only.</p>
+                <p><span class="result">Result:</span> 618 verified estimate leads established across 13 months, with 94 job applications separated into their own pipeline. Record single month of 103 leads, up 74% year on year.</p>
+            </div>
+
+            <div class="achievement">
+                <h3>Technical Audit Adopted by Client &mdash; Real Estate, British Columbia</h3>
+                <p>A technically sophisticated client had rebuilt his own 273-page site using AI coding agents and was questioning the value of external SEO support. Delivered four findings with business consequences attached: a stale cached homepage being served by Google, three analytics tools with no verified lead counting, a contact form on custom code at risk of silent failure, and 46 near-duplicate city pages diluting local relevance.</p>
+                <p><span class="result">Result:</span> Client actioned every finding, resubmitted the sitemap, requested reindexing on priority pages, and confirmed the audit's value in writing. Budget was redirected toward local authority building and AI search visibility.</p>
+            </div>
+
+            <div class="achievement">
+                <h3>Dynamic Schema Deployment at Portfolio Scale</h3>
+                <p>Structured data was missing or invalid across a large client portfolio, and neither hand-written schema nor plugin-generated markup was viable at scale. Built dynamic PHP schema injected at template level, pulling business data programmatically so markup stays accurate site-wide.</p>
+                <p><span class="result">Result:</span> Valid, consistent structured data across the portfolio with centralised maintenance, improving rich result eligibility and strengthening the entity signals that now feed AI citation.</p>
+            </div>
+
+            <div class="achievement">
+                <h3>Annual Performance Evaluation &mdash; Highest Score, 2025</h3>
+                <p>Scored 90.74 out of 100 in the Cansoft Technologies annual evaluation, judged on strategic execution and client revenue impact across the portfolio. Recognised as highest scorer and team lead.</p>
+            </div>
+        </section>
+
+        <!-- ===== EDUCATION ===== -->
+        <section>
+            <h2>Education &amp; Certification</h2>
+
+            <div class="edu-item">
+                <strong>Master of Business Administration (MBA), Management</strong>
+                <span>University of Dhaka, Bangladesh</span>
+            </div>
+
+            <div class="edu-item">
+                <strong>Bachelor of Business Administration (BBA), Management</strong>
+                <span>University of Dhaka, Bangladesh</span>
+            </div>
+
+            <div class="edu-item">
+                <strong>Professional Digital Marketing Certification</strong>
+                <span>Creative IT Institute, Dhaka</span>
+            </div>
+        </section>
+
+        <!-- ===== LANGUAGES ===== -->
+        <section>
+            <h2>Languages</h2>
+            <div class="edu-item">
+                <span>English &mdash; Fluent (professional working proficiency) &nbsp;|&nbsp; Bengali &mdash; Native &nbsp;|&nbsp; Hindi &mdash; Basic</span>
+            </div>
+        </section>
+
+        <div class="cv-footer">
+            <div>&copy; 2026 Popy Akter</div>
             <div>References available on request</div>
             <div class="accent">popyakterseo.github.io/Portfolio</div>
         </div>

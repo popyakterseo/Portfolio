@@ -4,10 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Willowgreen Dental — 12-Month SEO Case Study | Popy Akter</title>
-<meta name="description" content="A 12-month SEO case study for Willowgreen Dental, Saskatoon. Organic traffic +150%, Top 3 keyword rankings +173%, average position 19.5 → 11. By Popy Akter, SEO Manager at Cansoft Technologies.">
+<meta name="description" content="A 12-month SEO case study for Willowgreen Dental, Saskatoon. Top 3 rankings +173%, organic traffic +150%, average position 19.5 to 11. By Popy Akter, SEO Manager at Cansoft Technologies.">
 <meta name="author" content="Popy Akter">
 <meta property="og:title" content="Willowgreen Dental — 12-Month SEO Case Study">
-<meta property="og:description" content="Organic traffic +150%, Top 3 rankings +173%, position 19.5 → 11. SEO case study by Popy Akter.">
+<meta property="og:description" content="Top 3 rankings +173%, organic traffic +150%, average position 19.5 to 11. SEO case study by Popy Akter.">
 <meta property="og:type" content="article">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,6 +49,8 @@
     margin: 0 auto;
     padding: 0 32px;
   }
+
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
   /* ============ TOP BAR ============ */
   .topbar {
@@ -171,7 +173,7 @@
     margin-bottom: 64px;
   }
 
-  /* ============ THESIS / HERO NUMBER ============ */
+  /* ============ THESIS ============ */
   .thesis {
     padding: 120px 0;
     background: var(--paper);
@@ -236,7 +238,7 @@
     margin-top: 16px;
   }
 
-  /* ============ AT-A-GLANCE METRICS ============ */
+  /* ============ METRICS ============ */
   .metrics {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -289,9 +291,25 @@
     line-height: 1.4;
   }
 
-  /* ============ WINNING KEYWORDS LEDGER ============ */
+  /* ============ KEYWORD LEDGER ============ */
   .ledger {
     border-top: 2px solid var(--ink);
+  }
+  .ledger + .ledger-group-title { margin-top: 72px; }
+  .ledger-group-title {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 26px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+    font-variation-settings: 'opsz' 96;
+  }
+  .ledger-group-note {
+    font-size: 14.5px;
+    color: var(--ink-soft);
+    max-width: 62ch;
+    margin-bottom: 28px;
+    line-height: 1.55;
   }
   .ledger-head {
     display: grid;
@@ -304,9 +322,9 @@
     text-transform: uppercase;
     color: var(--muted);
   }
-  .ledger-head span:last-child { text-align: right; }
   .ledger-head span:nth-child(3),
-  .ledger-head span:nth-child(4) { text-align: right; }
+  .ledger-head span:nth-child(4),
+  .ledger-head span:nth-child(5) { text-align: right; }
   .ledger-row {
     display: grid;
     grid-template-columns: 40px 1fr 70px 90px 80px;
@@ -358,7 +376,6 @@
     text-align: right;
     font-weight: 500;
   }
-  .ledger-vol small { color: var(--muted); font-size: 10px; margin-left: 2px; letter-spacing: 0.08em; }
   .ledger-kd {
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px;
@@ -377,7 +394,7 @@
     .ledger-pos { font-size: 24px; }
   }
 
-  /* ============ EVIDENCE / DATA BLOCKS ============ */
+  /* ============ EVIDENCE ============ */
   .evidence-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -426,11 +443,22 @@
     gap: 10px;
     font-family: 'JetBrains Mono', monospace;
     font-size: 13px;
+    white-space: nowrap;
   }
   .evidence-from { color: var(--muted); text-decoration: line-through; }
   .evidence-to { color: var(--ink); font-weight: 600; font-size: 15px; }
   .evidence-delta { color: var(--gain); font-weight: 600; font-size: 12px; margin-left: 6px; }
   .evidence-delta.flat { color: var(--muted); }
+
+  .evidence-caveat {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--muted);
+    margin-top: 20px;
+    padding: 14px 16px;
+    background: var(--bg-alt);
+    border-left: 2px solid var(--rule);
+  }
 
   /* ============ METHOD ============ */
   .method-grid {
@@ -473,7 +501,7 @@
     max-width: 42ch;
   }
 
-  /* ============ PULLQUOTE / TAKEAWAY ============ */
+  /* ============ TAKEAWAY ============ */
   .takeaway {
     padding: 120px 0;
     background: var(--ink);
@@ -507,9 +535,7 @@
   }
 
   /* ============ FOOTER ============ */
-  footer {
-    padding: 80px 0 40px;
-  }
+  footer { padding: 80px 0 40px; }
   .footer-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -568,9 +594,9 @@
     gap: 12px;
   }
 
-  /* ============ REDUCED MOTION ============ */
   @media (prefers-reduced-motion: reduce) {
     * { animation: none !important; transition: none !important; }
+    html { scroll-behavior: auto; }
   }
 </style>
 </head>
@@ -579,7 +605,7 @@
 <div class="topbar">
   <div class="wrap topbar-inner">
     <span>Case Study · SEO · Local Health</span>
-    <span>By <a href="https://linkedin.com/in/popy-akter-seo" target="_blank" rel="noopener">Popy Akter</a></span>
+    <span>By <a href="https://www.linkedin.com/in/popy-akter-tj/" target="_blank" rel="noopener">Popy Akter</a></span>
   </div>
 </div>
 
@@ -610,11 +636,11 @@
 </header>
 
 <!-- ============ THESIS ============ -->
-<section class="thesis" style="border-bottom: 1px solid var(--rule);">
+<section class="thesis">
   <div class="wrap">
     <div class="thesis-inner">
       <div class="thesis-copy">
-        <p>Over twelve months, Willowgreen Dental moved from the second page of Google to the first — <span class="accent">nearly doubling organic traffic</span> and tripling the number of keywords ranking in the Top 3.</p>
+        <p>Over twelve months, Willowgreen Dental moved from the second page of Google to the first — <span class="accent">tripling the keywords ranking in the Top 3</span> while organic traffic grew by half again.</p>
       </div>
       <div class="thesis-numbers">
         <div class="thesis-move">
@@ -633,7 +659,7 @@
   <div class="wrap">
     <div class="section-label"><span class="dot"></span>At a glance</div>
     <h2 class="section-title">The twelve-month picture, in six numbers.</h2>
-    <p class="section-lede">All figures compare June 2026 against June 2025. Sources: Google Search Console, GA4, Semrush organic positions.</p>
+    <p class="section-lede">Every figure compares June 2026 against June 2025 — the same month, twelve months apart, so seasonality is controlled for. Sources: Google Search Console, GA4, and Semrush worldwide organic positions.</p>
 
     <div class="metrics">
       <div class="metric">
@@ -661,27 +687,30 @@
         <div class="metric-note">Times the site appeared in results.</div>
       </div>
       <div class="metric">
-        <span class="metric-label">Ranking keywords</span>
-        <div class="metric-value">3,660</div>
-        <div class="metric-delta">↑ +12% · from 3,271</div>
-        <div class="metric-note">Total keywords Semrush tracks in position.</div>
+        <span class="metric-label">Referring domains</span>
+        <div class="metric-value">488</div>
+        <div class="metric-delta">↑ built through the period</div>
+        <div class="metric-note">Citations, local placements and editorial links.</div>
       </div>
       <div class="metric">
         <span class="metric-label">Form submissions</span>
         <div class="metric-value">35</div>
         <div class="metric-delta">↑ +30% · from 27</div>
-        <div class="metric-note">Booking and enquiry form conversions.</div>
+        <div class="metric-note">Booking and enquiry conversions, June month.</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ============ WINNING KEYWORDS LEDGER ============ -->
+<!-- ============ KEYWORDS ============ -->
 <section>
   <div class="wrap">
-    <div class="section-label"><span class="dot"></span>Winning keywords</div>
-    <h2 class="section-title">The rankings that pay the bills.</h2>
-    <p class="section-lede">A representative selection of the non-branded keywords Willowgreen Dental now holds inside the Top 10, ranked by monthly search volume. These are the terms a prospective patient would actually type into Google — not variations of the practice's own name.</p>
+    <div class="section-label"><span class="dot"></span>Where the practice ranks</div>
+    <h2 class="section-title">Two keyword sets, doing two different jobs.</h2>
+    <p class="section-lede">Not every ranking is meant to fill a chair. The first set below is the commercial core — the terms a prospective patient types when they are ready to book. The second set is informational, and its job is authority: it earns the topical credibility that helps the commercial pages rank at all. Both matter. Confusing them is how SEO reporting starts to mislead.</p>
+
+    <div class="ledger-group-title">Commercial &amp; local intent</div>
+    <p class="ledger-group-note">Non-branded terms with booking intent, ranked by monthly search volume. Ranking for the practice's own name is table stakes; these are the queries that decide where a new patient goes.</p>
 
     <div class="ledger">
       <div class="ledger-head">
@@ -701,14 +730,14 @@
       </div>
       <div class="ledger-row">
         <span class="ledger-num">02</span>
-        <div class="ledger-kw">saskatoon oral surgery<small>Navigational · Saskatoon</small></div>
+        <div class="ledger-kw">saskatoon oral surgery<small>Local · Saskatoon</small></div>
         <div class="ledger-pos">3</div>
         <div class="ledger-vol">1,000</div>
         <div class="ledger-kd"><b>14</b> KD</div>
       </div>
       <div class="ledger-row">
         <span class="ledger-num">03</span>
-        <div class="ledger-kw">saskatoon pediatric dentistry<small>Informational · Saskatoon</small></div>
+        <div class="ledger-kw">saskatoon pediatric dentistry<small>Local · Saskatoon</small></div>
         <div class="ledger-pos">5</div>
         <div class="ledger-vol">720</div>
         <div class="ledger-kd"><b>13</b> KD</div>
@@ -722,73 +751,87 @@
       </div>
       <div class="ledger-row">
         <span class="ledger-num">05</span>
-        <div class="ledger-kw">dental wash<small>Informational · Canada</small></div>
-        <div class="ledger-pos">4</div>
-        <div class="ledger-vol">720</div>
-        <div class="ledger-kd"><b>47</b> KD</div>
-      </div>
-      <div class="ledger-row">
-        <span class="ledger-num">06</span>
         <div class="ledger-kw">childrens dentist saskatoon<small>Commercial · Saskatoon</small></div>
         <div class="ledger-pos">8</div>
         <div class="ledger-vol">590</div>
         <div class="ledger-kd"><b>22</b> KD</div>
       </div>
       <div class="ledger-row">
-        <span class="ledger-num">07</span>
+        <span class="ledger-num">06</span>
         <div class="ledger-kw">saskatoon dentists<small>Commercial · Saskatoon</small></div>
         <div class="ledger-pos">2</div>
         <div class="ledger-vol">480</div>
         <div class="ledger-kd"><b>44</b> KD</div>
       </div>
       <div class="ledger-row">
-        <span class="ledger-num">08</span>
+        <span class="ledger-num">07</span>
         <div class="ledger-kw">emergency walk in dentist near me<small>Transactional · Canada</small></div>
         <div class="ledger-pos">3</div>
         <div class="ledger-vol">480</div>
         <div class="ledger-kd"><b>12</b> KD</div>
       </div>
       <div class="ledger-row">
-        <span class="ledger-num">09</span>
+        <span class="ledger-num">08</span>
         <div class="ledger-kw">emergency dentist saskatoon<small>Commercial · Saskatoon</small></div>
         <div class="ledger-pos">2</div>
         <div class="ledger-vol">390</div>
         <div class="ledger-kd"><b>24</b> KD</div>
       </div>
       <div class="ledger-row">
+        <span class="ledger-num">09</span>
+        <div class="ledger-kw">oral surgeons saskatoon<small>Local · Saskatoon</small></div>
+        <div class="ledger-pos">2</div>
+        <div class="ledger-vol">320</div>
+        <div class="ledger-kd"><b>15</b> KD</div>
+      </div>
+      <div class="ledger-row">
         <span class="ledger-num">10</span>
+        <div class="ledger-kw">dental emergency saskatoon<small>Commercial · Saskatoon</small></div>
+        <div class="ledger-pos">3</div>
+        <div class="ledger-vol">260</div>
+        <div class="ledger-kd"><b>9</b> KD</div>
+      </div>
+    </div>
+
+    <div class="ledger-group-title">Informational authority</div>
+    <p class="ledger-group-note">These queries carry no booking intent, and they are not presented as if they did. They exist to build topical depth and expertise signals around the treatments the practice actually sells — and several rank at position one against national competition.</p>
+
+    <div class="ledger">
+      <div class="ledger-head">
+        <span>№</span>
+        <span>Keyword</span>
+        <span>Pos.</span>
+        <span>Vol/mo</span>
+        <span>KD</span>
+      </div>
+
+      <div class="ledger-row">
+        <span class="ledger-num">11</span>
+        <div class="ledger-kw">dental wash<small>Informational · Canada</small></div>
+        <div class="ledger-pos">4</div>
+        <div class="ledger-vol">720</div>
+        <div class="ledger-kd"><b>47</b> KD</div>
+      </div>
+      <div class="ledger-row">
+        <span class="ledger-num">12</span>
         <div class="ledger-kw">space maintainer<small>Informational · Canada</small></div>
         <div class="ledger-pos">1</div>
         <div class="ledger-vol">390</div>
         <div class="ledger-kd"><b>11</b> KD</div>
       </div>
       <div class="ledger-row">
-        <span class="ledger-num">11</span>
+        <span class="ledger-num">13</span>
         <div class="ledger-kw">can cavities heal themselves<small>Informational · Canada</small></div>
         <div class="ledger-pos">1</div>
         <div class="ledger-vol">320</div>
         <div class="ledger-kd"><b>4</b> KD</div>
       </div>
       <div class="ledger-row">
-        <span class="ledger-num">12</span>
-        <div class="ledger-kw">oral surgeons saskatoon<small>Navigational · Saskatoon</small></div>
-        <div class="ledger-pos">2</div>
-        <div class="ledger-vol">320</div>
-        <div class="ledger-kd"><b>15</b> KD</div>
-      </div>
-      <div class="ledger-row">
-        <span class="ledger-num">13</span>
+        <span class="ledger-num">14</span>
         <div class="ledger-kw">will cavities heal themselves<small>Informational · Canada</small></div>
         <div class="ledger-pos">1</div>
         <div class="ledger-vol">260</div>
         <div class="ledger-kd"><b>3</b> KD</div>
-      </div>
-      <div class="ledger-row">
-        <span class="ledger-num">14</span>
-        <div class="ledger-kw">dental emergency saskatoon<small>Commercial · Saskatoon</small></div>
-        <div class="ledger-pos">3</div>
-        <div class="ledger-vol">260</div>
-        <div class="ledger-kd"><b>9</b> KD</div>
       </div>
       <div class="ledger-row">
         <span class="ledger-num">15</span>
@@ -800,7 +843,7 @@
     </div>
 
     <p style="margin-top: 40px; font-size: 13px; color: var(--muted); font-family: 'JetBrains Mono', monospace; letter-spacing: 0.04em;">
-      Volumes and difficulty from Semrush · Full ranking dataset covers 3,660 keywords · 504 in Top 10 · 134 in Top 3
+      Volumes and difficulty from Semrush · Full dataset covers 3,660 ranking keywords · 504 in Top 10 · 134 in Top 3
     </p>
   </div>
 </section>
@@ -820,12 +863,12 @@
   <div class="wrap">
     <div class="section-label"><span class="dot"></span>The evidence</div>
     <h2 class="section-title">Where the numbers come from.</h2>
-    <p class="section-lede">Nothing in this report is inferred. Every figure below is pulled directly from the tools this practice already runs on. Screenshots and monthly reports on file.</p>
+    <p class="section-lede">Nothing here is inferred. Every figure is pulled directly from the tools this practice already runs on, and where a comparison is not valid, it is labelled rather than dressed up. Screenshots and monthly reports on file.</p>
 
     <div class="evidence-grid">
 
       <div class="evidence">
-        <div class="evidence-title">Google Search Console · June YoY</div>
+        <div class="evidence-title">Google Search Console · June year on year</div>
 
         <div class="evidence-row">
           <div class="evidence-metric">Clicks<small>Monthly total</small></div>
@@ -852,33 +895,24 @@
           </div>
         </div>
         <div class="evidence-row">
-          <div class="evidence-metric">CTR<small>Blended</small></div>
+          <div class="evidence-metric">Click-through rate<small>Blended across all queries</small></div>
           <div class="evidence-values">
-            <span class="evidence-to">0.4%</span>
-            <span class="evidence-delta flat">held</span>
+            <span class="evidence-from">0.37%</span>
+            <span class="evidence-to">0.44%</span>
+            <span class="evidence-delta">+17%</span>
           </div>
+        </div>
+
+        <div class="evidence-caveat">
+          Clicks grew faster than impressions, so CTR rose despite the query mix widening considerably. A blended rate this low is normal for a site ranking across thousands of informational terms, most of which sit outside the top three. The commercial pages convert at materially higher rates.
         </div>
       </div>
 
       <div class="evidence">
-        <div class="evidence-title">GA4 · Trailing 12 months</div>
+        <div class="evidence-title">GA4 · Session and user data</div>
 
         <div class="evidence-row">
-          <div class="evidence-metric">Active users<small>Last calendar year</small></div>
-          <div class="evidence-values">
-            <span class="evidence-to">15,000</span>
-            <span class="evidence-delta">+29.7%</span>
-          </div>
-        </div>
-        <div class="evidence-row">
-          <div class="evidence-metric">New users<small>Last calendar year</small></div>
-          <div class="evidence-values">
-            <span class="evidence-to">15,000</span>
-            <span class="evidence-delta">+30.6%</span>
-          </div>
-        </div>
-        <div class="evidence-row">
-          <div class="evidence-metric">Sessions<small>Last 30 days YoY</small></div>
+          <div class="evidence-metric">Sessions<small>Last 30 days, year on year</small></div>
           <div class="evidence-values">
             <span class="evidence-from">1,014</span>
             <span class="evidence-to">1,841</span>
@@ -886,7 +920,7 @@
           </div>
         </div>
         <div class="evidence-row">
-          <div class="evidence-metric">Organic sessions<small>Last 30 days YoY</small></div>
+          <div class="evidence-metric">Organic sessions<small>Last 30 days, year on year</small></div>
           <div class="evidence-values">
             <span class="evidence-from">918</span>
             <span class="evidence-to">1,494</span>
@@ -894,16 +928,26 @@
           </div>
         </div>
         <div class="evidence-row">
-          <div class="evidence-metric">Key events<small>Conversion actions</small></div>
+          <div class="evidence-metric">Active users<small>Trailing twelve months</small></div>
           <div class="evidence-values">
-            <span class="evidence-to">11,000</span>
-            <span class="evidence-delta">+39,650%</span>
+            <span class="evidence-to">15,000</span>
+            <span class="evidence-delta">+29.7%</span>
           </div>
+        </div>
+        <div class="evidence-row">
+          <div class="evidence-metric">Conversion tracking<small>Key events</small></div>
+          <div class="evidence-values">
+            <span class="evidence-to">Implemented in period</span>
+          </div>
+        </div>
+
+        <div class="evidence-caveat">
+          Key event tracking was configured partway through the engagement, so no meaningful prior-year baseline exists and no percentage change is claimed. Form submissions, tracked independently throughout, are reported above.
         </div>
       </div>
 
       <div class="evidence">
-        <div class="evidence-title">Semrush · Keyword portfolio</div>
+        <div class="evidence-title">Semrush · Keyword portfolio, worldwide</div>
 
         <div class="evidence-row">
           <div class="evidence-metric">Top 3 rankings<small>First-page pole positions</small></div>
@@ -945,10 +989,14 @@
             <span class="evidence-delta">+1</span>
           </div>
         </div>
+
+        <div class="evidence-caveat">
+          Total keyword count rose modestly while Top 3 positions nearly tripled. That is the intended shape: the work was about moving existing rankings up, not inflating the footprint with terms nobody searches.
+        </div>
       </div>
 
       <div class="evidence">
-        <div class="evidence-title">On-site conversions</div>
+        <div class="evidence-title">On-site conversions &amp; top pages</div>
 
         <div class="evidence-row">
           <div class="evidence-metric">Contact form submissions<small>June, monthly total</small></div>
@@ -959,25 +1007,25 @@
           </div>
         </div>
         <div class="evidence-row">
-          <div class="evidence-metric">Top landing page<small>bit-your-tongue guide</small></div>
+          <div class="evidence-metric">Bitten tongue care guide<small>Top landing page</small></div>
           <div class="evidence-values">
             <span class="evidence-to">302 visits</span>
           </div>
         </div>
         <div class="evidence-row">
-          <div class="evidence-metric">Homepage traffic<small>Direct entry</small></div>
+          <div class="evidence-metric">Homepage</div>
           <div class="evidence-values">
             <span class="evidence-to">294 visits</span>
           </div>
         </div>
         <div class="evidence-row">
-          <div class="evidence-metric">Cavity healing article<small>Informational win</small></div>
+          <div class="evidence-metric">Cavity healing article<small>Informational</small></div>
           <div class="evidence-values">
             <span class="evidence-to">113 visits</span>
           </div>
         </div>
         <div class="evidence-row">
-          <div class="evidence-metric">Oral surgery service page</div>
+          <div class="evidence-metric">Oral surgery service page<small>Commercial</small></div>
           <div class="evidence-values">
             <span class="evidence-to">103 visits</span>
           </div>
@@ -993,24 +1041,24 @@
   <div class="wrap">
     <div class="section-label"><span class="dot"></span>How the ground was moved</div>
     <h2 class="section-title">Four disciplines, applied consistently for twelve months.</h2>
-    <p class="section-lede">There was no single big move. The gains above are the compound result of a monthly cadence — technical hygiene, content built around real queries, and careful attention to keyword cannibalization.</p>
+    <p class="section-lede">There was no single big move. The gains above are the compound result of a monthly cadence — technical hygiene, content built around real queries, and careful attention to keyword cannibalisation.</p>
 
     <div class="method-grid">
       <div class="method-item">
-        <h3>Cannibalization-aware content strategy</h3>
-        <p>Blog articles were commissioned only after auditing the existing service pages for overlapping intent. New posts targeted informational queries — cavity healing, tongue injuries, filling repairs — that the service pages were never built to rank for. Result: 134 keywords now hold Top 3 positions, up from 49.</p>
+        <h3>Cannibalisation-aware content strategy</h3>
+        <p>Blog articles were commissioned only after auditing existing service pages for overlapping intent. New posts targeted informational queries — cavity healing, tongue injuries, filling repairs — that the service pages were never built to rank for. Top 3 positions rose from 49 to 134 without the service pages losing ground to their own blog.</p>
       </div>
       <div class="method-item">
         <h3>Technical SEO groundwork</h3>
-        <p>Ongoing attention to schema markup, meta title and description quality, internal linking to live URLs only, and monthly Semrush and Screaming Frog audits. Average Google position moved from 19.5 to 11.0 over the period — an 8.5-position lift blended across the entire query portfolio.</p>
+        <p>Ongoing attention to schema markup, meta title and description quality, internal linking to live URLs only, and monthly Semrush and Screaming Frog audits. Average position moved from 19.5 to 11.0 — an 8.5-position lift blended across the entire query portfolio.</p>
       </div>
       <div class="method-item">
         <h3>Local search focus</h3>
-        <p>The Saskatoon-modifier keyword set — "saskatoon oral surgery," "emergency dentist saskatoon," "saskatoon pediatric dentistry," "childrens dentist saskatoon" — was prioritized. All four now sit in the Top 8, and together represent the highest-intent traffic the practice receives.</p>
+        <p>The Saskatoon-modifier set — oral surgery, emergency dentist, pediatric dentistry, children's dentist — was prioritised above generic national terms. All four now sit inside the Top 8, and together they represent the highest-intent traffic the practice receives.</p>
       </div>
       <div class="method-item">
-        <h3>Informational content that converts</h3>
-        <p>The top-visited page of June 2026 was an editorial guide on when to seek immediate care for a bitten tongue (302 monthly visits). Ranking for how-to queries builds domain authority and feeds the practice's expertise signals — E-E-A-T in the language of Google's raters.</p>
+        <h3>Authority built to support the commercial pages</h3>
+        <p>Informational content and 488 referring domains were built for one purpose: making the treatment pages credible enough to rank. The bitten-tongue guide drew 302 visits in June, and that topical depth is what lets a single-location practice compete for terms like teeth cleaning at national scale.</p>
       </div>
     </div>
   </div>
@@ -1022,12 +1070,12 @@
     <div class="footer-grid">
       <div>
         <div class="footer-title">Case study by <em>Popy Akter</em></div>
-        <p class="footer-role">SEO Manager at Cansoft Technologies, currently overseeing SEO, content, and paid search across a portfolio of Canadian, UK, and Bangladeshi client sites.</p>
+        <p class="footer-role">SEO Manager at Cansoft Technologies, overseeing technical SEO, content and paid search across a portfolio of Canadian, US and UK client sites.</p>
       </div>
       <div class="footer-col">
         <h4>Contact</h4>
-        <a href="https://linkedin.com/in/popy-akter-seo" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://popyakterseo.github.io/Portfolio" target="_blank" rel="noopener">Portfolio</a>
+        <a href="https://www.linkedin.com/in/popy-akter-tj/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://popyakterseo.github.io/Portfolio/" target="_blank" rel="noopener">Portfolio</a>
       </div>
       <div class="footer-col">
         <h4>Client</h4>
@@ -1036,7 +1084,7 @@
       </div>
     </div>
     <div class="colophon">
-      <span>© 2026 · Popy Akter · Case study reproduced with client work on file</span>
+      <span>© 2026 · Popy Akter · Reporting data on file</span>
       <span>Set in Fraunces, Inter &amp; JetBrains Mono</span>
     </div>
   </div>

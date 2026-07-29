@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Popy Akter — SEO Manager & eCommerce Growth Strategist</title>
-    <meta name="description" content="Portfolio of Popy Akter, an SEO Manager specialising in technical SEO, dynamic schema implementation, and revenue-driven organic growth strategies for 50+ websites.">
+    <title>Popy Akter — SEO Manager, Technical SEO &amp; GEO Strategist</title>
+    <meta name="description" content="Portfolio of Popy Akter, an SEO Manager specialising in technical SEO, dynamic schema, GEO and AI search visibility, and revenue-driven organic growth across 50+ websites.">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Popy Akter — SEO Manager & eCommerce Growth Strategist">
-    <meta property="og:description" content="Technical SEO, schema architecture, and revenue-driven organic growth.">
+    <meta property="og:title" content="Popy Akter — SEO Manager, Technical SEO &amp; GEO Strategist">
+    <meta property="og:description" content="Technical SEO, schema architecture, GEO, and revenue-driven organic growth.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://popyakterseo.github.io/Portfolio/">
     <meta property="og:image" content="https://popyakterseo.github.io/Portfolio/og-image.png">
@@ -18,11 +18,10 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Popy Akter — SEO Manager & eCommerce Growth Strategist">
-    <meta name="twitter:description" content="Technical SEO, schema architecture, and revenue-driven organic growth.">
+    <meta name="twitter:title" content="Popy Akter — SEO Manager, Technical SEO &amp; GEO Strategist">
+    <meta name="twitter:description" content="Technical SEO, schema architecture, GEO, and revenue-driven organic growth.">
     <meta name="twitter:image" content="https://popyakterseo.github.io/Portfolio/og-image.png">
 
-    <!-- Fonts: Fraunces (variable serif) + Geist (clean sans) + JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,300..900,0..100,0..1&family=Geist:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -41,7 +40,7 @@
             --muted-soft:  #9A968E;
             --hairline:    #D4CFC4;
             --hairline-soft:#E5E0D4;
-            --accent:      #2D4A3E;     /* Deep forest — growth, strategy */
+            --accent:      #2D4A3E;
             --accent-soft: #4A6B5C;
             --accent-tint: #DDE5DF;
 
@@ -70,7 +69,6 @@
             overflow-x: hidden;
         }
 
-        /* Subtle paper grain */
         body::before {
             content: "";
             position: fixed;
@@ -88,6 +86,12 @@
             padding: 0 var(--gutter);
             position: relative;
             z-index: 2;
+        }
+
+        a:focus-visible,
+        summary:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
         }
 
         /* ============================================
@@ -118,7 +122,7 @@
 
         .topbar nav {
             display: flex;
-            gap: 28px;
+            gap: 24px;
         }
 
         .topbar nav a {
@@ -130,7 +134,7 @@
         .topbar nav a:hover { color: var(--accent); }
 
         /* ============================================
-           HERO — MASTHEAD
+           MASTHEAD
            ============================================ */
         .masthead {
             padding: 80px 0 60px;
@@ -205,13 +209,6 @@
             max-width: 540px;
         }
 
-        .lede::first-letter {
-            initial-letter: 2;
-            color: var(--accent);
-            font-weight: 500;
-            margin-right: 6px;
-        }
-
         .masthead-aside {
             display: flex;
             flex-direction: column;
@@ -240,7 +237,7 @@
         }
 
         /* ============================================
-           RESULTS / OUTCOMES
+           METRICS
            ============================================ */
         .metrics-row {
             display: grid;
@@ -248,7 +245,7 @@
             gap: 0;
             border-top: 1px solid var(--hairline);
             border-bottom: 1px solid var(--hairline);
-            margin-bottom: 48px;
+            margin-bottom: 40px;
         }
 
         .metric {
@@ -270,7 +267,7 @@
 
         .metric-value {
             font-family: var(--serif);
-            font-size: clamp(40px, 5vw, 64px);
+            font-size: clamp(34px, 4.2vw, 54px);
             font-weight: 300;
             line-height: 1;
             letter-spacing: -0.04em;
@@ -290,6 +287,20 @@
             color: var(--muted);
             line-height: 1.4;
         }
+
+        .metrics-caption {
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 40px;
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .metrics-caption .source { color: var(--accent); }
 
         .chart-frame {
             border: 1px solid var(--hairline);
@@ -341,7 +352,7 @@
         }
 
         /* ============================================
-           SECTION SCAFFOLDING
+           SECTIONS
            ============================================ */
         section {
             padding: 80px 0;
@@ -457,7 +468,7 @@
         }
 
         /* ============================================
-           PHILOSOPHY — PULL QUOTE
+           PHILOSOPHY
            ============================================ */
         .philosophy {
             background: var(--ink);
@@ -470,9 +481,7 @@
         .philosophy::before {
             content: "";
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0;
             height: 1px;
             background: linear-gradient(90deg, transparent, var(--accent-soft), transparent);
         }
@@ -539,7 +548,7 @@
         }
 
         /* ============================================
-           EXPERTISE GRID
+           EXPERTISE
            ============================================ */
         .expertise-grid {
             display: grid;
@@ -587,6 +596,7 @@
 
         .domain ul {
             list-style: none;
+            counter-reset: item;
         }
 
         .domain li {
@@ -609,14 +619,9 @@
             min-width: 24px;
         }
 
-        .domain ul { counter-reset: item; }
-
         .domain li:last-child { border-bottom: none; }
 
-        /* Wide domain takes 2 columns */
-        .domain--wide {
-            grid-column: 1 / -1;
-        }
+        .domain--wide { grid-column: 1 / -1; }
 
         .domain--wide ul {
             display: grid;
@@ -625,7 +630,7 @@
         }
 
         /* ============================================
-           EXPERIENCE — EDITORIAL TIMELINE
+           EXPERIENCE
            ============================================ */
         .experience-entry {
             display: grid;
@@ -638,10 +643,7 @@
 
         .experience-entry:last-child { border-bottom: none; }
 
-        .exp-sidebar {
-            position: sticky;
-            top: 30px;
-        }
+        .exp-sidebar { position: sticky; top: 30px; }
 
         .exp-company {
             font-family: var(--serif);
@@ -756,9 +758,7 @@
             justify-content: space-between;
         }
 
-        .tool-group h4 span:last-child {
-            color: var(--muted-soft);
-        }
+        .tool-group h4 span:last-child { color: var(--muted-soft); }
 
         .tool-list {
             display: flex;
@@ -786,14 +786,14 @@
             padding: 0;
         }
 
-        .case:first-child { border-top: 1px solid var(--hairline); }
+        .case:first-of-type { border-top: 1px solid var(--hairline); }
 
         .case summary {
             cursor: pointer;
             list-style: none;
             padding: 32px 0;
             display: grid;
-            grid-template-columns: 60px 1fr auto;
+            grid-template-columns: 64px 1fr auto;
             gap: 32px;
             align-items: center;
             transition: padding-left 0.3s ease;
@@ -834,7 +834,7 @@
         }
 
         .case-content {
-            padding: 0 0 40px 92px;
+            padding: 0 0 40px 96px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 40px;
@@ -863,8 +863,105 @@
             color: var(--ink-soft);
         }
 
+        .case-figures {
+            grid-column: 1 / -1;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0;
+            border-top: 1px solid var(--hairline);
+            border-bottom: 1px solid var(--hairline);
+            margin-top: 8px;
+        }
+
+        .case-figure {
+            padding: 18px 16px;
+            border-right: 1px solid var(--hairline-soft);
+        }
+
+        .case-figure:last-child { border-right: none; }
+
+        .case-figure b {
+            font-family: var(--serif);
+            font-size: 26px;
+            font-weight: 400;
+            line-height: 1;
+            color: var(--accent);
+            letter-spacing: -0.02em;
+            display: block;
+            margin-bottom: 6px;
+            font-variation-settings: "opsz" 144;
+        }
+
+        .case-figure span {
+            font-family: var(--mono);
+            font-size: 9px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--muted);
+            line-height: 1.3;
+            display: block;
+        }
+
         /* ============================================
-           PORTFOLIO DOCS
+           CLIENT ROSTER
+           ============================================ */
+        .roster-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 0;
+            border-top: 1px solid var(--hairline);
+            border-left: 1px solid var(--hairline);
+        }
+
+        .roster-col {
+            padding: 28px 30px;
+            border-right: 1px solid var(--hairline);
+            border-bottom: 1px solid var(--hairline);
+        }
+
+        .roster-col h4 {
+            font-family: var(--mono);
+            font-size: 10px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 18px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--hairline-soft);
+        }
+
+        .roster-col ul { list-style: none; }
+
+        .roster-col li {
+            padding: 8px 0;
+            font-family: var(--serif);
+            font-size: 16px;
+            line-height: 1.3;
+            font-variation-settings: "opsz" 36;
+        }
+
+        .roster-col li a {
+            color: var(--ink);
+            text-decoration: none;
+            border-bottom: 1px solid var(--hairline);
+            transition: all 0.2s ease;
+        }
+
+        .roster-col li a:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+
+        .roster-note {
+            font-size: 14px;
+            color: var(--muted);
+            margin-top: 32px;
+            max-width: 720px;
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           DOCS
            ============================================ */
         .docs-grid {
             display: grid;
@@ -955,26 +1052,11 @@
             transform: translateX(4px);
         }
 
-        /* Case study card — full-width feature variant */
         .doc-card--featured {
             grid-column: 1 / -1;
             background: linear-gradient(135deg, var(--paper) 0%, var(--paper-warm) 100%);
             border-color: var(--accent-soft);
             position: relative;
-        }
-
-        .doc-card--featured::before {
-            content: "NEW";
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-family: var(--mono);
-            font-size: 10px;
-            letter-spacing: 0.14em;
-            color: var(--paper);
-            background: var(--accent);
-            padding: 4px 10px;
-            font-weight: 600;
         }
 
         .doc-card--featured .doc-metrics {
@@ -995,7 +1077,7 @@
 
         .doc-card--featured .doc-metric-value {
             font-family: var(--serif);
-            font-size: 32px;
+            font-size: 30px;
             font-weight: 400;
             line-height: 1;
             color: var(--accent);
@@ -1043,9 +1125,7 @@
             position: relative;
         }
 
-        .fw-step:hover {
-            background: var(--paper-warm);
-        }
+        .fw-step:hover { background: var(--paper-warm); }
 
         .fw-num {
             font-family: var(--serif);
@@ -1076,7 +1156,7 @@
         }
 
         /* ============================================
-           CREDENTIALS (Education / Awards / Languages)
+           CREDENTIALS
            ============================================ */
         .creds-grid {
             display: grid;
@@ -1096,9 +1176,7 @@
             padding-left: 32px;
         }
 
-        .cred-col:not(:first-child):not(:last-child) {
-            padding-left: 32px;
-        }
+        .cred-col:not(:first-child):not(:last-child) { padding-left: 32px; }
 
         .cred-col h4 {
             font-family: var(--mono);
@@ -1111,9 +1189,7 @@
             border-bottom: 1px solid var(--hairline);
         }
 
-        .cred-item {
-            margin-bottom: 24px;
-        }
+        .cred-item { margin-bottom: 24px; }
 
         .cred-item:last-child { margin-bottom: 0; }
 
@@ -1144,6 +1220,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 12px;
         }
 
         .award-highlight .label {
@@ -1159,11 +1236,10 @@
             font-style: italic;
             font-size: 18px;
             font-variation-settings: "opsz" 36;
+            text-align: right;
         }
 
-        .lang-list {
-            list-style: none;
-        }
+        .lang-list { list-style: none; }
 
         .lang-list li {
             padding: 12px 0;
@@ -1187,7 +1263,7 @@
         }
 
         /* ============================================
-           FOOTER — COLOPHON
+           FOOTER
            ============================================ */
         footer {
             background: var(--ink);
@@ -1199,9 +1275,7 @@
         footer::before {
             content: "";
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0;
             height: 1px;
             background: linear-gradient(90deg, transparent, var(--accent-soft), transparent);
         }
@@ -1285,7 +1359,7 @@
             .exp-sidebar { position: static; }
             .role { grid-template-columns: 1fr; gap: 12px; }
             .tools-grid { grid-template-columns: 1fr; gap: 40px; }
-            .case-content { grid-template-columns: 1fr; gap: 24px; padding-left: 60px; }
+            .case-content { grid-template-columns: 1fr; gap: 24px; padding-left: 0; }
             .docs-grid { grid-template-columns: 1fr; }
             .framework { grid-template-columns: repeat(2, 1fr); }
             .creds-grid { grid-template-columns: 1fr; }
@@ -1294,6 +1368,7 @@
             .footer-grid { grid-template-columns: 1fr; gap: 40px; }
             .section-head { grid-template-columns: 1fr; gap: 12px; }
             .section-kicker { text-align: left; }
+            .case summary { grid-template-columns: 48px 1fr auto; gap: 16px; }
         }
 
         @media (max-width: 560px) {
@@ -1303,9 +1378,10 @@
             .framework { grid-template-columns: 1fr; }
             .colophon { flex-direction: column; gap: 8px; }
             .masthead-aside { flex-direction: column; align-items: flex-start; }
+            .award-highlight { flex-direction: column; align-items: flex-start; }
+            .award-highlight .value { text-align: left; }
         }
 
-        /* Print */
         @media print {
             body { background: white; color: black; }
             section { page-break-inside: avoid; padding: 30px 0; }
@@ -1313,12 +1389,12 @@
             .philosophy { background: white; color: black; }
         }
 
-        /* Reduced motion */
         @media (prefers-reduced-motion: reduce) {
             *, *::before, *::after {
                 animation-duration: 0.01ms !important;
                 transition-duration: 0.01ms !important;
             }
+            html { scroll-behavior: auto; }
         }
     </style>
 </head>
@@ -1335,6 +1411,7 @@
                 <a href="#expertise">Expertise</a>
                 <a href="#experience">Experience</a>
                 <a href="#case-studies">Cases</a>
+                <a href="#clients">Clients</a>
                 <a href="./cv.html">CV</a>
                 <a href="#contact">Contact</a>
             </nav>
@@ -1351,14 +1428,14 @@
             <div class="masthead-grid">
                 <div>
                     <h1 class="name">Popy<br>Akter<em>.</em></h1>
-                    <div class="role-line">SEO Manager <span class="sep">/</span> Technical SEO &amp; AEO <span class="sep">/</span> GEO &amp; eCommerce Growth Strategist</div>
+                    <div class="role-line">SEO Manager <span class="sep">/</span> Technical SEO &amp; AEO <span class="sep">/</span> GEO &amp; Growth Strategist</div>
                     <p class="lede">
-                        Building scalable SEO systems for 50+ websites — where technical architecture, dynamic schema, and AI-accelerated workflows converge across <em>SEO, AEO &amp; GEO</em> into measurable organic growth.
+                        Fourteen years of search compressed into one working method: technical foundations, dynamic schema, and content built to rank on Google and get cited by <em>AI answer engines</em> — measured in leads, not impressions.
                     </p>
                 </div>
 
                 <aside class="masthead-aside">
-                    <img class="portrait" src="https://drive.google.com/thumbnail?id=1UePGYm5DSzVba59h46qHx_AJDGND9rlf&sz=w800" alt="Popy Akter, SEO Manager" loading="lazy">
+                    <img class="portrait" src="https://drive.google.com/thumbnail?id=1UePGYm5DSzVba59h46qHx_AJDGND9rlf&sz=w800" alt="Portrait of Popy Akter, SEO Manager" loading="lazy">
                     <div class="portrait-caption">
                         <span>Portrait</span>
                         <span>2026</span>
@@ -1367,7 +1444,7 @@
             </div>
         </header>
 
-        <!-- 01 · SUMMARY -->
+        <!-- 01 · PROFILE -->
         <section id="summary">
             <div class="section-head">
                 <div class="section-num">§ 01</div>
@@ -1377,10 +1454,10 @@
 
             <div class="summary-grid">
                 <div class="summary-body">
-                    <p>I lead organic growth strategy across more than fifty websites, combining technical SEO, on-page optimization, structured data implementation, content strategy, and performance tracking into systems that compound over time.</p>
-                    <p>My work moves beyond classical SEO — I rank content across <strong>SEO, AEO &amp; GEO</strong>, optimise for local search and answer engines, and use AI as an accelerator rather than a replacement. The judgement and strategic layer remain mine; AI handles the velocity.</p>
-                    <p>I specialise in scalable SEO architecture, dynamic PHP schema, backend optimization, Elementor HTML site building, and aligning every initiative with business KPIs — not vanity rankings.</p>
-                    <p><strong>Data-backed. Technically sound. Growth-oriented.</strong></p>
+                    <p>I lead organic growth across a portfolio of more than fifty client websites — running technical audits, building structured data, producing pages in HTML, and owning the reporting line back to the client.</p>
+                    <p>My work spans classical search and what comes next. I rank content across <strong>SEO, AEO &amp; GEO</strong>, optimise for local map-pack visibility, and structure pages so answer engines can extract and cite them. AI handles velocity; the strategy and the judgement stay mine.</p>
+                    <p>The part I care most about is the number at the end of the funnel. Traffic that does not convert is a vanity metric, so I audit lead tracking, separate real enquiries from spam, and report on what actually reached the client.</p>
+                    <p><strong>Data-backed. Technically sound. Accountable to revenue.</strong></p>
                 </div>
 
                 <div class="contact-block" id="contact">
@@ -1401,7 +1478,7 @@
                         <dd><a href="tel:+8801924798350">+880 1924 798 350</a></dd>
 
                         <dt>LinkedIn</dt>
-                        <dd><a href="https://www.linkedin.com/in/popy-akter-tj/" target="_blank" rel="noopener">popy-akter-tj</a></dd>
+                        <dd><a href="https://www.linkedin.com/in/popy-akter-seo/" target="_blank" rel="noopener">popy-akter-seo</a></dd>
 
                         <dt>CV</dt>
                         <dd><a href="./cv.html">View &amp; download</a></dd>
@@ -1415,34 +1492,40 @@
             <div class="section-head">
                 <div class="section-num">§ 02</div>
                 <h2 class="section-title">Measured <em>outcomes</em></h2>
-                <div class="section-kicker">12-Month Search Performance</div>
+                <div class="section-kicker">16-Month Client Growth</div>
             </div>
 
             <div class="metrics-row">
                 <div class="metric">
-                    <div class="metric-label">Total Clicks</div>
-                    <div class="metric-value">11.3<em>K</em></div>
-                    <div class="metric-context">Organic search visits<br>over twelve months</div>
+                    <div class="metric-label">Organic Traffic</div>
+                    <div class="metric-value">818<em>→</em>4.5K</div>
+                    <div class="metric-context">Monthly organic sessions<br>Feb 2025 — Jun 2026</div>
                 </div>
                 <div class="metric">
-                    <div class="metric-label">Total Impressions</div>
-                    <div class="metric-value">1.39<em>M</em></div>
-                    <div class="metric-context">SERP exposures<br>across tracked queries</div>
+                    <div class="metric-label">Top 3 Positions</div>
+                    <div class="metric-value">17<em>→</em>134</div>
+                    <div class="metric-context">Keywords ranking in the<br>first three results</div>
                 </div>
                 <div class="metric">
-                    <div class="metric-label">Average CTR</div>
-                    <div class="metric-value">0.8<em>%</em></div>
-                    <div class="metric-context">Continuing to improve<br>via SERP feature targeting</div>
+                    <div class="metric-label">Ranking Keywords</div>
+                    <div class="metric-value">616<em>→</em>3.7K</div>
+                    <div class="metric-context">Total indexed keyword<br>footprint</div>
                 </div>
                 <div class="metric">
-                    <div class="metric-label">Average Position</div>
-                    <div class="metric-value">15.9</div>
-                    <div class="metric-context">With visible compounding<br>trend in 2026 Q1–Q2</div>
+                    <div class="metric-label">Referring Domains</div>
+                    <div class="metric-value">488</div>
+                    <div class="metric-context">Built through citations,<br>editorial and local links</div>
                 </div>
             </div>
 
+            <div class="metrics-caption">
+                <span class="source">Client · Willowgreen Dental, Saskatoon</span>
+                <span>Source · Semrush &amp; Google Search Console</span>
+                <span>Owned end to end</span>
+            </div>
+
             <div class="chart-frame">
-                <img src="https://drive.google.com/thumbnail?id=1tucIBexPu1MVF49QhD441BphcdrHxeNh&sz=w1600" alt="Google Search Console performance chart showing clicks and impressions growth from May 2025 to May 2026, with marked upward trajectory beginning January 2026.">
+                <img src="https://drive.google.com/thumbnail?id=1tucIBexPu1MVF49QhD441BphcdrHxeNh&sz=w1600" alt="Google Search Console performance chart showing clicks and impressions growth from May 2025 to May 2026, with a marked upward trajectory beginning January 2026.">
                 <div class="chart-meta">
                     <div class="source">Source · Google Search Console</div>
                     <div>Period · May 2025 — May 2026</div>
@@ -1451,13 +1534,13 @@
             </div>
 
             <p class="chart-caption">
-                A steady baseline through 2025, then a deliberate acceleration into 2026 — the curve of a strategy compounding rather than spiking. The work behind it: technical foundation, dynamic schema, content architecture aligned to intent, and a shift toward AEO &amp; GEO surfaces.
+                A flat baseline through early 2025, then sustained acceleration into 2026 — the shape of a strategy compounding rather than spiking. What sat behind it: technical foundations first, dynamic schema across every service page, content architecture mapped to intent, and a deliberate shift toward AEO and GEO surfaces.
             </p>
         </section>
 
     </div>
 
-    <!-- PHILOSOPHY — FULL WIDTH DARK -->
+    <!-- PHILOSOPHY -->
     <section class="philosophy">
         <div class="wrap">
             <div class="philosophy-mark">&ldquo;</div>
@@ -1483,7 +1566,7 @@
                 </div>
                 <div class="pillar">
                     <div class="pillar-num">05</div>
-                    <div class="pillar-text">Conversion alignment is non-negotiable.</div>
+                    <div class="pillar-text">Verify the lead before you report the win.</div>
                 </div>
                 <div class="pillar">
                     <div class="pillar-num">06</div>
@@ -1500,7 +1583,7 @@
             <div class="section-head">
                 <div class="section-num">§ 03</div>
                 <h2 class="section-title">Core <em>expertise</em></h2>
-                <div class="section-kicker">Disciplines & Capabilities</div>
+                <div class="section-kicker">Disciplines &amp; Capabilities</div>
             </div>
 
             <div class="expertise-grid">
@@ -1510,108 +1593,110 @@
                         <span class="domain-id">A.01</span>
                     </div>
                     <ul>
-                        <li>In-depth technical audits across crawl, index, and site health</li>
+                        <li>Full technical audits across crawl, index and site health</li>
                         <li>Dynamic PHP schema implementation</li>
-                        <li>Structured data — LocalBusiness, Service, Organization</li>
-                        <li>Crawlability and indexation improvements</li>
-                        <li>Core Web Vitals and page speed optimization</li>
-                        <li>Canonical and duplicate content management</li>
+                        <li>Structured data — LocalBusiness, Service, Organization, FAQ</li>
+                        <li>Crawlability and indexation diagnostics</li>
+                        <li>Core Web Vitals and page speed</li>
+                        <li>Canonicalisation, redirect mapping and duplicate resolution</li>
                         <li>XML sitemap and robots architecture</li>
-                        <li>Backend internal linking systems</li>
+                        <li>Keyword cannibalisation resolution</li>
                     </ul>
                 </div>
 
                 <div class="domain">
                     <div class="domain-header">
-                        <h3 class="domain-title">Content · SEO <span style="font-style:italic;">+</span> AEO <span style="font-style:italic;">+</span> GEO</h3>
+                        <h3 class="domain-title">GEO <span style="font-style:italic;">+</span> AEO <span style="font-style:italic;">+</span> AI Search</h3>
                         <span class="domain-id">A.02</span>
                     </div>
                     <ul>
-                        <li>Advanced AEO &amp; GEO-optimized content writing</li>
-                        <li>Content built to win answer engine &amp; AI-overview surfaces</li>
-                        <li>Intent-based keyword mapping at scale</li>
-                        <li>Pillar and cluster content architecture</li>
-                        <li>Entity-based and semantic optimization</li>
-                        <li>Metadata optimization across portfolios</li>
-                        <li>SERP feature &amp; rich result targeting</li>
-                        <li>AI-assisted research and content refinement</li>
+                        <li>Content structured for AI extraction and citation</li>
+                        <li>Brand visibility tracking across ChatGPT, Perplexity and Gemini</li>
+                        <li>AI Overview and featured snippet targeting</li>
+                        <li>Entity optimisation and semantic clustering</li>
+                        <li>Citation-ready summaries, comparison tables and FAQ blocks</li>
+                        <li>E-E-A-T signal building for LLM trust</li>
+                        <li>AI crawler accessibility and robots directives</li>
+                        <li>Prompt and query research for commercial intent</li>
                     </ul>
                 </div>
 
                 <div class="domain">
                     <div class="domain-header">
-                        <h3 class="domain-title">Off-Page <span style="font-style:italic;">&</span> Authority</h3>
+                        <h3 class="domain-title">Off-Page <span style="font-style:italic;">&amp;</span> Authority</h3>
                         <span class="domain-id">A.03</span>
                     </div>
                     <ul>
-                        <li>Multi-month backlink acquisition strategy &amp; roadmap</li>
+                        <li>Multi-month backlink strategy and roadmapping</li>
                         <li>Backlink audits — referring domains, DR profile, toxicity</li>
+                        <li>Delegating and reviewing an off-page execution team</li>
                         <li>Local citation building and NAP consistency</li>
-                        <li>Tiered directory submission (niche &amp; general)</li>
                         <li>Editorial guest post outreach planning</li>
-                        <li>Geo-targeted link building for local search</li>
-                        <li>Disavow strategy and link quality monitoring</li>
+                        <li>Geo-targeted link acquisition for local search</li>
+                        <li>Disavow file construction and link monitoring</li>
                     </ul>
                 </div>
 
                 <div class="domain">
                     <div class="domain-header">
-                        <h3 class="domain-title">eCommerce <span style="font-style:italic;">&</span> Growth</h3>
+                        <h3 class="domain-title">Lead Quality <span style="font-style:italic;">&amp;</span> Paid Media</h3>
                         <span class="domain-id">A.04</span>
                     </div>
                     <ul>
-                        <li>AI-driven growth strategy and planning</li>
-                        <li>Revenue-focused keyword targeting</li>
-                        <li>Category and product page optimization</li>
-                        <li>Brand traffic capture strategy</li>
-                        <li>Comparison and high-intent blog strategy</li>
-                        <li>Funnel-aligned SEO planning</li>
-                        <li>SEO and paid media synergy</li>
+                        <li>End-to-end lead tracking verification</li>
+                        <li>Form submission auditing — real leads versus spam and duplicates</li>
+                        <li>Google Ads performance auditing against CTR, CPC and CPA</li>
+                        <li>Cost-per-conversion analysis and budget recommendations</li>
+                        <li>Landing page and conversion path alignment</li>
+                        <li>Analytics stack cleanup and event validation</li>
+                        <li>Organic and paid channel integration</li>
                     </ul>
                 </div>
 
                 <div class="domain">
                     <div class="domain-header">
-                        <h3 class="domain-title">Local SEO <span style="font-style:italic;">&</span> Maps</h3>
+                        <h3 class="domain-title">Local SEO <span style="font-style:italic;">&amp;</span> Maps</h3>
                         <span class="domain-id">A.05</span>
                     </div>
                     <ul>
-                        <li>Google Business Profile optimization at scale</li>
-                        <li>Multi-location local ranking strategy</li>
-                        <li>Local schema and geo-tagging</li>
-                        <li>City-page architecture and content</li>
+                        <li>Google Business Profile optimisation at scale</li>
+                        <li>Multi-location and multi-city ranking strategy</li>
+                        <li>Local schema and image geo-tagging</li>
+                        <li>City-page architecture without duplication risk</li>
                         <li>Review acquisition and reputation signals</li>
-                        <li>Map-pack visibility tracking</li>
+                        <li>Map-pack visibility tracking by radius</li>
                     </ul>
                 </div>
 
                 <div class="domain">
                     <div class="domain-header">
-                        <h3 class="domain-title">Reporting <span style="font-style:italic;">&</span> Analysis</h3>
+                        <h3 class="domain-title">Build <span style="font-style:italic;">&amp;</span> Production</h3>
                         <span class="domain-id">A.06</span>
                     </div>
                     <ul>
-                        <li>Monthly performance reporting</li>
-                        <li>KPI tracking and dashboard creation</li>
-                        <li>Traffic and ranking trend analysis</li>
-                        <li>User behaviour tracking — Clarity and GA4</li>
-                        <li>Conversion tracking alignment</li>
-                        <li>Actionable strategic adjustments</li>
+                        <li>Hand-written HTML and CSS for SEO-optimised pages</li>
+                        <li>Production-ready WordPress page builds with schema and internal links</li>
+                        <li>Full site rebuilds from demo through client approval to launch</li>
+                        <li>Elementor and Gutenberg block production</li>
+                        <li>WordPress backend optimisation</li>
+                        <li>Custom WordPress plugin development</li>
                     </ul>
                 </div>
 
                 <div class="domain domain--wide">
                     <div class="domain-header">
-                        <h3 class="domain-title">Client <span style="font-style:italic;">&</span> Stakeholder Management</h3>
+                        <h3 class="domain-title">Client <span style="font-style:italic;">&amp;</span> Stakeholder Management</h3>
                         <span class="domain-id">A.07</span>
                     </div>
                     <ul>
-                        <li>Leading client SEO discussions and discovery</li>
-                        <li>Presenting performance reports to stakeholders</li>
-                        <li>Translating technical data into business insight</li>
-                        <li>Collaborating with developers and content teams</li>
-                        <li>Supporting SEO proposals and strategy planning</li>
-                        <li>Cross-functional project leadership</li>
+                        <li>Direct client ownership across a live account portfolio</li>
+                        <li>Presenting monthly performance reports to owners and directors</li>
+                        <li>Translating technical findings into commercial decisions</li>
+                        <li>Managing approval cycles from draft to publication</li>
+                        <li>Coordinating developers, writers and off-page teams</li>
+                        <li>Proactive account growth and expansion proposals</li>
+                        <li>Handling client-side technical objections and pushback</li>
+                        <li>Escalation and blocker management</li>
                     </ul>
                 </div>
             </div>
@@ -1628,19 +1713,34 @@
             <div class="experience-entry">
                 <div class="exp-sidebar">
                     <h3 class="exp-company">Cansoft<br>Technologies</h3>
-                    <div class="exp-location">Vancouver, BC</div>
+                    <div class="exp-location">Vancouver, BC · Remote</div>
                 </div>
                 <div class="exp-roles">
                     <div class="role">
                         <div class="role-dates"><span class="ongoing"></span>Dec 2025<br>— Present</div>
                         <div class="role-body">
                             <h4>SEO Manager</h4>
-                            <p>Spearhead end-to-end technical and on-page SEO strategies for a portfolio of 50+ client websites. Conduct advanced technical audits, resolving complex backend issues to improve crawlability and indexation speed. Lead dynamic PHP schema implementations and structured data mapping to maximise SERP feature eligibility. Every initiative aligns directly with core business KPIs and revenue-driven organic growth.</p>
+                            <p>Own end-to-end technical and on-page SEO strategy across a portfolio of 50+ client websites. Run advanced technical audits, resolving backend issues that block crawlability and indexation. Lead dynamic PHP schema deployment and structured data mapping for rich-result eligibility. Direct the off-page team on backlink acquisition, audit Google Ads performance against CPA, and present monthly KPI reporting to client owners and directors.</p>
                             <div class="role-tags">
                                 <span class="role-tag">Technical SEO</span>
-                                <span class="role-tag">SEO Audits</span>
+                                <span class="role-tag">GEO &amp; AEO</span>
                                 <span class="role-tag">Schema Markup</span>
+                                <span class="role-tag">Google Ads Audit</span>
                                 <span class="role-tag">Team Leadership</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="role">
+                        <div class="role-dates">Mar 2025<br>— Dec 2025</div>
+                        <div class="role-body">
+                            <h4>Project Manager</h4>
+                            <p>Managed client-facing delivery across dental, home services, real estate and eCommerce accounts. Ran full website rebuilds from demo through client feedback to launch, coordinating developers, writers and the off-page team. Held direct approval cycles with business owners, handled technical objections, and drove account growth through proactive expansion proposals.</p>
+                            <div class="role-tags">
+                                <span class="role-tag">Client Delivery</span>
+                                <span class="role-tag">Website Rebuilds</span>
+                                <span class="role-tag">Cross-team Coordination</span>
+                                <span class="role-tag">Account Growth</span>
                             </div>
                         </div>
                     </div>
@@ -1649,11 +1749,11 @@
                         <div class="role-dates">Jan 2024<br>— Mar 2025</div>
                         <div class="role-body">
                             <h4>Digital Marketing Strategist</h4>
-                            <p>Managed team coordination and collaborated with cross-functional development teams to execute robust digital growth campaigns. Performed comprehensive SEO audits and market research to identify high-impact organic opportunities. Monitored traffic, keyword rankings, and conversion metrics to continuously refine marketing funnels.</p>
+                            <p>Coordinated cross-functional development and content teams to execute digital growth campaigns. Performed technical audits, competitor gap analysis and funnel-aligned SEO planning to surface high-impact organic opportunities. Monitored traffic, rankings and user behaviour through GA4 and Microsoft Clarity, refining marketing funnels iteratively.</p>
                             <div class="role-tags">
-                                <span class="role-tag">Team Coordination</span>
-                                <span class="role-tag">SEO Audits</span>
                                 <span class="role-tag">Digital Strategy</span>
+                                <span class="role-tag">SEO Audits</span>
+                                <span class="role-tag">GA4 &amp; Clarity</span>
                                 <span class="role-tag">KPI Tracking</span>
                             </div>
                         </div>
@@ -1671,9 +1771,9 @@
                         <div class="role-dates">Aug 2023<br>— Dec 2023</div>
                         <div class="role-body">
                             <h4>Management Trainee <span style="color:var(--muted); font-style:italic; font-size:14px; font-weight:400;">— Part-time</span></h4>
-                            <p>Provided comprehensive virtual assistance and managed operational data using advanced Excel workflows. Streamlined internal processes and assisted in cross-departmental project coordination.</p>
+                            <p>Provided virtual assistance and managed operational data through advanced Excel workflows. Streamlined internal processes and supported cross-departmental project coordination.</p>
                             <div class="role-tags">
-                                <span class="role-tag">Virtual Assistance</span>
+                                <span class="role-tag">Operations</span>
                                 <span class="role-tag">Microsoft Excel</span>
                                 <span class="role-tag">Project Coordination</span>
                             </div>
@@ -1684,10 +1784,10 @@
                         <div class="role-dates">Mar 2023<br>— Aug 2023</div>
                         <div class="role-body">
                             <h4>Intern</h4>
-                            <p>Supported daily administrative operations, balancing multiple responsibilities under tight deadlines. Developed strong time management and presentation skills through collaborative internal projects.</p>
+                            <p>Supported daily administrative operations, balancing multiple responsibilities under tight deadlines. Built time management and presentation skills through collaborative internal projects.</p>
                             <div class="role-tags">
                                 <span class="role-tag">Time Management</span>
-                                <span class="role-tag">Presentation Skills</span>
+                                <span class="role-tag">Presentation</span>
                             </div>
                         </div>
                     </div>
@@ -1704,11 +1804,10 @@
                         <div class="role-dates">May 2017<br>— Jul 2017</div>
                         <div class="role-body">
                             <h4>Office Coordinator</h4>
-                            <p>Handled day-to-day office administration and cross-departmental communication. Organised and maintained critical documentation and scheduling using Microsoft Excel.</p>
+                            <p>Handled day-to-day office administration and cross-departmental communication. Organised and maintained critical documentation and scheduling.</p>
                             <div class="role-tags">
-                                <span class="role-tag">Office Administration</span>
-                                <span class="role-tag">Microsoft Excel</span>
-                                <span class="role-tag">Data Management</span>
+                                <span class="role-tag">Administration</span>
+                                <span class="role-tag">Documentation</span>
                             </div>
                         </div>
                     </div>
@@ -1716,87 +1815,40 @@
             </div>
         </section>
 
-        <!-- 05 · TOOLS -->
-        <section>
-            <div class="section-head">
-                <div class="section-num">§ 05</div>
-                <h2 class="section-title">Tools <em>of trade</em></h2>
-                <div class="section-kicker">Stack & Workflow</div>
-            </div>
-
-            <div class="tools-grid">
-                <div class="tool-group">
-                    <h4><span>SEO & Technical</span><span>06</span></h4>
-                    <div class="tool-list">
-                        <span>Screaming Frog</span>
-                        <span>Google Search Console</span>
-                        <span>Google Analytics 4</span>
-                        <span>SEMrush</span>
-                        <span>BrightLocal</span>
-                        <span>SERProbot</span>
-                    </div>
-                </div>
-
-                <div class="tool-group">
-                    <h4><span>Project & Workflow</span><span>04</span></h4>
-                    <div class="tool-list">
-                        <span>Asana</span>
-                        <span>ClickUp</span>
-                        <span>Google Workspace</span>
-                        <span>Microsoft Clarity</span>
-                    </div>
-                </div>
-
-                <div class="tool-group">
-                    <h4><span>Content &amp; AI</span><span>04</span></h4>
-                    <div class="tool-list">
-                        <span>Canva</span>
-                        <span>Google AI Studio</span>
-                        <span>AI-driven SEO research</span>
-                        <span>AEO &amp; GEO content tooling</span>
-                    </div>
-                </div>
-
-                <div class="tool-group">
-                    <h4><span>Development & Backend</span><span>06</span></h4>
-                    <div class="tool-list">
-                        <span>Elementor HTML site building</span>
-                        <span>WordPress optimization</span>
-                        <span>Dynamic PHP schema</span>
-                        <span>Structured data implementation</span>
-                        <span>HTML page creation</span>
-                        <span>Basic CSS</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 06 · CASE STUDIES -->
+        <!-- 05 · CASE STUDIES -->
         <section id="case-studies">
             <div class="section-head">
-                <div class="section-num">§ 06</div>
+                <div class="section-num">§ 05</div>
                 <h2 class="section-title">Case <em>studies</em></h2>
                 <div class="section-kicker">Selected Work</div>
             </div>
 
-            <details class="case">
+            <details class="case" open>
                 <summary>
                     <span class="case-num">CS / 01</span>
-                    <span class="case-title">Multi-Site SEO Leadership across 50+ Websites</span>
+                    <span class="case-title">16 Months of Compounding Growth — Saskatoon Dental Practice</span>
                     <span class="case-toggle">+</span>
                 </summary>
                 <div class="case-content">
                     <div class="case-block">
                         <h5>Challenge</h5>
-                        <p>Managing SEO strategy across multiple websites with varying performance levels and inconsistent technical foundations.</p>
+                        <p>Willowgreen Dental was ranking for 616 keywords but only 17 of them sat in the top three, with organic traffic flat at 818 monthly visits. Visibility existed; conversion-adjacent visibility did not. The practice competed against every general dentist in Saskatoon for the same generic terms.</p>
                     </div>
                     <div class="case-block">
                         <h5>Approach</h5>
-                        <p>Full technical audits, crawlability and indexing fixes, structured data implementation, backend internal linking overhaul, metadata and content restructuring, and monthly KPI-based reporting.</p>
+                        <p>Technical foundations first — crawl and indexation fixes, structured data across every service page. Then content architecture: service pages mapped to procedure-level intent rather than broad terms, supported by a monthly editorial cycle with client approval built in. Local SEO ran in parallel, with map-pack tracking on a 2.5km radius. Off-page work built referring domains steadily rather than in spikes. A tightly scoped Google Ads campaign covered high-intent terms while organic compounded.</p>
                     </div>
                     <div class="case-block">
                         <h5>Outcome</h5>
-                        <p>Improved site health scores, consistent organic visibility gains, stronger crawl efficiency, and enhanced reporting transparency for stakeholders.</p>
+                        <p>Traffic grew more than fivefold and top-three rankings went from 17 to 134 across sixteen months. Eight core service terms reached position one, including root canal, veneers and family dental clinic. The Ads campaign returned an 11.43% click-through rate at $39.34 per conversion — well inside benchmark for the sector.</p>
+                    </div>
+                    <div class="case-figures">
+                        <div class="case-figure"><b>818→4.5K</b><span>Monthly organic traffic</span></div>
+                        <div class="case-figure"><b>17→134</b><span>Top 3 positions</span></div>
+                        <div class="case-figure"><b>119→504</b><span>Top 10 positions</span></div>
+                        <div class="case-figure"><b>488</b><span>Referring domains</span></div>
+                        <div class="case-figure"><b>11.43%</b><span>Google Ads CTR</span></div>
+                        <div class="case-figure"><b>$39.34</b><span>Cost per conversion</span></div>
                     </div>
                 </div>
             </details>
@@ -1804,21 +1856,27 @@
             <details class="case">
                 <summary>
                     <span class="case-num">CS / 02</span>
-                    <span class="case-title">Dynamic PHP Schema Implementation at Scale</span>
+                    <span class="case-title">Auditing Lead Volume Down to Lead Truth — Everflow Exteriors</span>
                     <span class="case-toggle">+</span>
                 </summary>
                 <div class="case-content">
                     <div class="case-block">
                         <h5>Challenge</h5>
-                        <p>Client websites lacked structured data, limiting search visibility and rich result eligibility.</p>
+                        <p>Everflow's reporting counted raw form submissions as leads. That number looked healthy but told the client nothing useful — it bundled spam, duplicate entries and job applications together with real estimate requests, so cost-per-lead was unknowable and budget decisions were being made on a figure nobody had verified.</p>
                     </div>
                     <div class="case-block">
                         <h5>Approach</h5>
-                        <p>Built dynamic PHP-based schema deployed site-wide with structured LocalBusiness and Service schema, integrated directly within the WordPress backend.</p>
+                        <p>I audited every submission individually rather than trusting the form plugin's count. Each entry was classified as a genuine estimate request, a duplicate, spam, or a job application, then reconciled against the analytics record. The tracking itself was tested end to end to confirm real enquiries were reaching the client and being recorded. From there, reporting shifted to verified leads only, with applications tracked separately as a recruitment signal.</p>
                     </div>
                     <div class="case-block">
                         <h5>Outcome</h5>
-                        <p>Enhanced rich result eligibility, improved SERP click-through rates, and clearer indexation signals across the portfolio.</p>
+                        <p>An honest baseline: 618 verified estimate leads across thirteen months, and 94 job applications separated out into their own pipeline. June 2026 set a record at 103 leads in a single month, up 74% year over year. When I later proposed a service-area expansion, the client declined on capacity grounds — the right answer, and one the accurate numbers made possible.</p>
+                    </div>
+                    <div class="case-figures">
+                        <div class="case-figure"><b>618</b><span>Verified leads, 13 months</span></div>
+                        <div class="case-figure"><b>103</b><span>Record single month</span></div>
+                        <div class="case-figure"><b>+74%</b><span>Year over year, June</span></div>
+                        <div class="case-figure"><b>94</b><span>Applications, tracked separately</span></div>
                     </div>
                 </div>
             </details>
@@ -1826,21 +1884,27 @@
             <details class="case">
                 <summary>
                     <span class="case-num">CS / 03</span>
-                    <span class="case-title">Automation &amp; Custom SEO Tool Development</span>
+                    <span class="case-title">A Technical Audit the Client Chose to Act On — Corbin &amp; Co</span>
                     <span class="case-toggle">+</span>
                 </summary>
                 <div class="case-content">
                     <div class="case-block">
                         <h5>Challenge</h5>
-                        <p>Manual SEO workflows were inefficient and time-consuming, slowing delivery and increasing error rates.</p>
+                        <p>A Langley real estate client had rebuilt his own 273-page site using AI coding agents and automated most of his content and reporting. He was technically capable, confident in his stack, and openly questioning what an SEO team could still add. The honest answer had to be specific or it would not land.</p>
                     </div>
                     <div class="case-block">
                         <h5>Approach</h5>
-                        <p>Developed three internal efficiency tools: an Unlimited WebP Converter, a GeoTag Tool, and an SEO Analyzer Tool to automate repeat tasks.</p>
+                        <p>I audited the live site and returned four findings with business consequences attached rather than a list of errors. Google was serving a cached homepage with an outdated headline and form. Three analytics tools were running simultaneously with no verified confirmation that a single real lead was being counted. The contact form depended on custom code that would fail silently on the next plugin update, with no alert. And 46 of 273 pages targeted cities with near-identical copy and no genuine connection to the Langley brand — a duplication pattern that quietly erodes local relevance. I framed the underlying argument plainly: automation still needs a human watching it, because a form that stops working or a page ranking for the wrong city does more damage than no automation at all.</p>
                     </div>
                     <div class="case-block">
                         <h5>Outcome</h5>
-                        <p>Reduced repetitive workload, accelerated technical optimization cycles, and freed team capacity for strategic work.</p>
+                        <p>The client accepted every finding and ran the cleanup himself — metadata and title duplication, utility-page indexing, nofollow and empty-anchor issues, thin content, a dead internal link — then resubmitted the sitemap and requested reindexing on priority pages. He confirmed the value of the audit in writing. The forward proposal shifted budget from now-automated content toward local authority building, AI-search visibility, and SEO foundations for two divisions launching later in the year.</p>
+                    </div>
+                    <div class="case-figures">
+                        <div class="case-figure"><b>273</b><span>Pages audited</span></div>
+                        <div class="case-figure"><b>4</b><span>Critical findings</span></div>
+                        <div class="case-figure"><b>46</b><span>Duplicate city pages flagged</span></div>
+                        <div class="case-figure"><b>100%</b><span>Findings actioned by client</span></div>
                     </div>
                 </div>
             </details>
@@ -1848,21 +1912,26 @@
             <details class="case">
                 <summary>
                     <span class="case-num">CS / 04</span>
-                    <span class="case-title">Paid Media Audit &amp; SEO Channel Alignment</span>
+                    <span class="case-title">Building for Citation, Not Just Ranking — GEO &amp; AI Search</span>
                     <span class="case-toggle">+</span>
                 </summary>
                 <div class="case-content">
                     <div class="case-block">
                         <h5>Challenge</h5>
-                        <p>Paid advertising performance lacked alignment with the organic strategy, creating funnel friction.</p>
+                        <p>A growing share of commercial queries now resolve inside an AI answer rather than a click. For local service businesses, that means the question "who is the best dentist in Saskatoon" can be answered without the ranking page ever being visited. Classical position tracking does not measure this, so the risk is invisible until the traffic is already gone.</p>
                     </div>
                     <div class="case-block">
                         <h5>Approach</h5>
-                        <p>Audited Ads reports against CTR, CPC, and ROAS benchmarks. Proposed landing page and keyword alignment to bridge SEO and paid into a single integration strategy.</p>
+                        <p>I restructure content so that language models can extract and attribute it: direct answers placed in the opening lines, entity-rich passages that establish who the business is and where it operates, comparison tables, definitional blocks and FAQ sections shaped the way answer engines quote them. Underneath that sits the technical layer — clean schema, consistent entity signals, and crawler accessibility for AI agents alongside traditional bots. Off-page work targets the third-party sources these systems tend to cite, since trust is inherited as much as earned. Visibility is then monitored by querying ChatGPT, Perplexity, Gemini and AI Overviews directly for the commercial prompts a real buyer would use, and checking who gets named.</p>
                     </div>
                     <div class="case-block">
                         <h5>Outcome</h5>
-                        <p>Cleaner funnel logic, stronger cross-channel growth strategy, and better traffic quality alignment across both channels.</p>
+                        <p>A dual-channel approach that holds classical rankings while building presence on generative surfaces — and, just as importantly, a way to see what is happening there. Willowgreen currently surfaces on 56 AI-attributed queries and 26 SERP features. This is a fast-moving discipline and I treat it as one: monitored, tested, and revised against what the engines actually do rather than what the industry assumes.</p>
+                    </div>
+                    <div class="case-figures">
+                        <div class="case-figure"><b>4</b><span>Answer engines monitored</span></div>
+                        <div class="case-figure"><b>56</b><span>AI-attributed queries, one client</span></div>
+                        <div class="case-figure"><b>26</b><span>SERP features held</span></div>
                     </div>
                 </div>
             </details>
@@ -1870,21 +1939,21 @@
             <details class="case">
                 <summary>
                     <span class="case-num">CS / 05</span>
-                    <span class="case-title">AEO &amp; GEO Content Strategy Built to Beat the SERP</span>
+                    <span class="case-title">Dynamic PHP Schema Across a 50-Site Portfolio</span>
                     <span class="case-toggle">+</span>
                 </summary>
                 <div class="case-content">
                     <div class="case-block">
                         <h5>Challenge</h5>
-                        <p>Classical SEO content was losing visibility to AI overviews and answer engines, with traffic shifting to zero-click surfaces.</p>
+                        <p>Structured data was missing or inconsistent across a large client portfolio, limiting rich-result eligibility. Hand-writing schema per page was not viable at that scale, and plugin-generated markup was generic and often invalid.</p>
                     </div>
                     <div class="case-block">
                         <h5>Approach</h5>
-                        <p>Restructured content around AEO &amp; GEO principles — entity-rich passages, direct answer formatting, semantic clustering, and AI-assisted research at velocity. Combined classical ranking factors with answer-engine readability.</p>
+                        <p>Built dynamic PHP-based schema injected at the template level inside the WordPress backend, pulling business data programmatically so LocalBusiness, Service and Organization markup stayed accurate site-wide without per-page maintenance. Validated output and monitored eligibility in Search Console.</p>
                     </div>
                     <div class="case-block">
                         <h5>Outcome</h5>
-                        <p>Content surfacing across answer engines and AI overviews while retaining classical ranking strength — a dual-channel organic strategy that compounds against Google updates.</p>
+                        <p>Consistent, valid structured data across the portfolio, improved rich-result eligibility, and clearer entity signals — the same signals that now feed AI citation. One implementation, deployed everywhere, maintained centrally.</p>
                     </div>
                 </div>
             </details>
@@ -1892,27 +1961,117 @@
             <details class="case">
                 <summary>
                     <span class="case-num">CS / 06</span>
-                    <span class="case-title">6-Month Off-Page Strategy — Canadian Multi-Location Brand</span>
+                    <span class="case-title">Full Site Rebuilds, Demo to Launch</span>
                     <span class="case-toggle">+</span>
                 </summary>
                 <div class="case-content">
                     <div class="case-block">
                         <h5>Challenge</h5>
-                        <p>A Canadian printing brand with 15 city locations needed authority signals competitive with national players, plus local trust at the map-pack level.</p>
+                        <p>Several clients across HVAC, home building and heating had sites that ranked poorly and converted worse — dated layouts, weak local signals, and contact paths that lost visitors. Each rebuild had to satisfy an owner with strong opinions and limited patience for process.</p>
                     </div>
                     <div class="case-block">
                         <h5>Approach</h5>
-                        <p>Built a phased six-month off-page roadmap: foundation citations (NAP, GBP, social profiles), Canadian .ca directory placement, niche printing &amp; design citations, editorial guest post outreach to DR 35+ Canadian business media, plus geo-targeted link acquisition. Tracked against monthly KPI targets for referring domains, DR 40+ links, and Canadian-domain ratio.</p>
+                        <p>I ran these end to end: staged demo build, structured feedback round with the owner, then launch. Service pages were written to keyword priorities the client set themselves, built in HTML with schema and internal linking in place from the start rather than retrofitted. Feedback was actioned specifically — button behaviour, copy changes, form field order, service-area lists reworked to remove redundant sub-areas while preserving the ones carrying local search value.</p>
                     </div>
                     <div class="case-block">
                         <h5>Outcome</h5>
-                        <p>A documented, KPI-tracked authority-building system — moving from baseline to projected 200–260 referring domains and 35–50 DR 40+ links across six months, with built-in local relevance for every target city.</p>
+                        <p>Live, indexed, conversion-oriented sites with owner sign-off on record. On one home builder account, five priority service pages went live in a single cycle against the client's own stated keyword ranking — major renovations, custom shops, garages, barns and main floor renovations — and the client immediately asked for the same treatment in a second city.</p>
+                    </div>
+                </div>
+            </details>
+
+            <details class="case">
+                <summary>
+                    <span class="case-num">CS / 07</span>
+                    <span class="case-title">Custom Tooling &amp; Workflow Automation</span>
+                    <span class="case-toggle">+</span>
+                </summary>
+                <div class="case-content">
+                    <div class="case-block">
+                        <h5>Challenge</h5>
+                        <p>Repetitive technical work — image conversion, geo-tagging, on-page checks, lead notification — consumed hours that should have gone to strategy, and manual handling introduced errors at portfolio scale.</p>
+                    </div>
+                    <div class="case-block">
+                        <h5>Approach</h5>
+                        <p>Built internal tools to remove the repetition: an unlimited WebP converter, a geo-tagging utility, and an SEO analyser. Separately developed a universal WordPress lead-notification plugin supporting Elementor Pro, Contact Form 7, WPForms, Gravity Forms and Fluent Forms, with a three-step setup wizard, automatic chat ID detection, and no hardcoded credentials — designed for reuse across any client site.</p>
+                    </div>
+                    <div class="case-block">
+                        <h5>Outcome</h5>
+                        <p>Faster optimisation cycles, fewer manual errors, and reusable infrastructure rather than one-off fixes. Capacity moved from repetition to strategy.</p>
                     </div>
                 </div>
             </details>
         </section>
 
-        <!-- 07 · FEATURED DOCS -->
+        <!-- 06 · CLIENTS -->
+        <section id="clients">
+            <div class="section-head">
+                <div class="section-num">§ 06</div>
+                <h2 class="section-title">Client <em>portfolio</em></h2>
+                <div class="section-kicker">Sectors &amp; Live Work</div>
+            </div>
+
+            <div class="roster-grid">
+                <div class="roster-col">
+                    <h4>Dental &amp; Healthcare</h4>
+                    <ul>
+                        <li><a href="https://willowgreendental.com/" target="_blank" rel="noopener">Willowgreen Dental</a></li>
+                        <li><a href="https://downtowndentalcentre.com/" target="_blank" rel="noopener">Downtown Dental Centre</a></li>
+                        <li><a href="https://www.forestmanordental.com/" target="_blank" rel="noopener">Forest Manor Dental</a></li>
+                        <li><a href="https://www.stridestherapies.ca/" target="_blank" rel="noopener">Strides Therapies</a></li>
+                    </ul>
+                </div>
+
+                <div class="roster-col">
+                    <h4>Home Services &amp; Trades</h4>
+                    <ul>
+                        <li><a href="https://everflow.ca/" target="_blank" rel="noopener">Everflow Eaves &amp; Exteriors</a></li>
+                        <li><a href="https://smithbrothersheatandair.com/" target="_blank" rel="noopener">Smith Brothers Heat &amp; Air</a></li>
+                        <li><a href="https://accoladeheating.com/" target="_blank" rel="noopener">Accolade Heating &amp; Air</a></li>
+                        <li><a href="https://robsonhomebuilders.com/" target="_blank" rel="noopener">Robson Home Builders</a></li>
+                        <li><a href="https://westwholesale.ca/" target="_blank" rel="noopener">West Wholesale Fencing &amp; Railing</a></li>
+                    </ul>
+                </div>
+
+                <div class="roster-col">
+                    <h4>Real Estate &amp; Property</h4>
+                    <ul>
+                        <li><a href="https://callcorbin.ca/" target="_blank" rel="noopener">Corbin &amp; Co</a></li>
+                        <li><a href="https://thevalleylife.ca/" target="_blank" rel="noopener">The Valley Life</a></li>
+                    </ul>
+                </div>
+
+                <div class="roster-col">
+                    <h4>eCommerce &amp; Retail</h4>
+                    <ul>
+                        <li><a href="https://nmnsupplementcanada.ca/" target="_blank" rel="noopener">NMN Supplement Canada</a></li>
+                        <li><a href="https://pokeys.com/" target="_blank" rel="noopener">Pokeys</a></li>
+                    </ul>
+                </div>
+
+                <div class="roster-col">
+                    <h4>Finance &amp; Professional</h4>
+                    <ul>
+                        <li><a href="https://trucksfinancing.ca/" target="_blank" rel="noopener">Trucks Financing</a></li>
+                        <li><a href="https://pinklimevc.com/" target="_blank" rel="noopener">Pink Lime VC</a></li>
+                    </ul>
+                </div>
+
+                <div class="roster-col">
+                    <h4>Travel &amp; Automotive</h4>
+                    <ul>
+                        <li><a href="https://albertaambassador.com/" target="_blank" rel="noopener">Alberta Ambassador</a></li>
+                        <li><a href="https://www.cernacollision.ca/" target="_blank" rel="noopener">Cerna Collision</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <p class="roster-note">
+                A selection from a portfolio of 50+ sites across Canada, the United States and the United Kingdom. Work spans technical audits, content and page production, local SEO, off-page authority, and paid media auditing. Additional references and reporting available on request.
+            </p>
+        </section>
+
+        <!-- 07 · DOCUMENTS -->
         <section>
             <div class="section-head">
                 <div class="section-num">§ 07</div>
@@ -1922,37 +2081,36 @@
 
             <div class="docs-grid">
 
-                <!-- FEATURED CASE STUDY — Willowgreen Dental -->
                 <div class="doc-card doc-card--featured">
                     <div class="doc-card-head">
-                        <h3>Willowgreen Dental<br>12-Month SEO Case Study</h3>
+                        <h3>Willowgreen Dental<br>Full SEO Case Study</h3>
                         <span class="doc-card-num">DOC / 01</span>
                     </div>
-                    <p>A full year-over-year growth report for a Saskatoon dental practice — built from live Google Search Console, GA4, and Semrush data. The story: moving from the second page of Google to the first, tripling Top 3 rankings, and nearly doubling organic traffic in twelve months.</p>
+                    <p>Sixteen months of client reporting built from live Google Search Console, GA4 and Semrush data — from the second page of Google to eight service terms at position one, with Google Ads performance tracked alongside.</p>
 
                     <div class="doc-metrics">
                         <div class="doc-metric">
-                            <div class="doc-metric-value">+150<em>%</em></div>
-                            <div class="doc-metric-label">Organic<br>traffic growth</div>
+                            <div class="doc-metric-value">818<em>→</em>4.5K</div>
+                            <div class="doc-metric-label">Monthly<br>organic traffic</div>
                         </div>
                         <div class="doc-metric">
-                            <div class="doc-metric-value">+173<em>%</em></div>
-                            <div class="doc-metric-label">Top 3<br>rankings 49→134</div>
+                            <div class="doc-metric-value">17<em>→</em>134</div>
+                            <div class="doc-metric-label">Top 3<br>positions</div>
                         </div>
                         <div class="doc-metric">
-                            <div class="doc-metric-value">19.5<em>→</em>11</div>
-                            <div class="doc-metric-label">Average GSC<br>position</div>
+                            <div class="doc-metric-value">616<em>→</em>3.7K</div>
+                            <div class="doc-metric-label">Ranking<br>keywords</div>
                         </div>
                         <div class="doc-metric">
-                            <div class="doc-metric-value">+85<em>%</em></div>
-                            <div class="doc-metric-label">GSC clicks<br>818→1,510</div>
+                            <div class="doc-metric-value">$39.34</div>
+                            <div class="doc-metric-label">Google Ads<br>cost per conversion</div>
                         </div>
                     </div>
 
                     <div class="doc-links">
                         <a href="willowgreen-dental-seo-case-study.html" class="doc-link">
                             <span>View the full case study</span>
-                            <span class="arrow">→</span>
+                            <span class="arrow">&rarr;</span>
                         </a>
                     </div>
                 </div>
@@ -1962,15 +2120,15 @@
                         <h3>SEO Reporting<br>&amp; Schema</h3>
                         <span class="doc-card-num">DOC / 02</span>
                     </div>
-                    <p>Samples of detailed performance reporting and the advanced structured data logic powering SERP eligibility across client sites.</p>
+                    <p>Monthly client reporting samples and the structured data logic behind rich-result eligibility across the portfolio.</p>
                     <div class="doc-links">
                         <a href="https://drive.google.com/file/d/10IyzdDG114dtQzmWXdNPKY1ZCnJov28O/view?usp=sharing" target="_blank" rel="noopener" class="doc-link">
                             <span>SEO Performance Report</span>
-                            <span class="arrow">→</span>
+                            <span class="arrow">&rarr;</span>
                         </a>
                         <a href="https://drive.google.com/file/d/1wvQjGISfmpmEG13zJw6yOCYtxW_ZSP2q/view?usp=sharing" target="_blank" rel="noopener" class="doc-link">
                             <span>Advanced Schema Documentation</span>
-                            <span class="arrow">→</span>
+                            <span class="arrow">&rarr;</span>
                         </a>
                     </div>
                 </div>
@@ -1980,15 +2138,15 @@
                         <h3>Internal Linking<br>Strategy</h3>
                         <span class="doc-card-num">DOC / 03</span>
                     </div>
-                    <p>Strategic frameworks for mapping entities, structuring topical clusters, and distributing page authority across complex sites.</p>
+                    <p>Frameworks for mapping entities, structuring topical clusters, and distributing page authority across large sites.</p>
                     <div class="doc-links">
                         <a href="https://drive.google.com/file/d/1ax2s-rwdTqpaxlSSHsJVhpCAiQPfeRl2/view?usp=drive_link" target="_blank" rel="noopener" class="doc-link">
                             <span>Linking Strategy — Document I</span>
-                            <span class="arrow">→</span>
+                            <span class="arrow">&rarr;</span>
                         </a>
                         <a href="https://drive.google.com/file/d/1d5vJ64d3nV70mGilj-gUkTqwcGaLOaSF/view?usp=sharing" target="_blank" rel="noopener" class="doc-link">
                             <span>Linking Strategy — Document II</span>
-                            <span class="arrow">→</span>
+                            <span class="arrow">&rarr;</span>
                         </a>
                     </div>
                 </div>
@@ -1998,11 +2156,11 @@
                         <h3>Off-Page Strategy &amp; Backlink Roadmap</h3>
                         <span class="doc-card-num">DOC / 04</span>
                     </div>
-                    <p>A complete 6-month off-page playbook for a Canadian multi-location brand — backlink audit, monthly acquisition plan, KPI tracker, editorial &amp; niche link targets, and a Canadian directory &amp; citation master plan. Available on request.</p>
+                    <p>A six-month off-page playbook for a Canadian multi-location brand — backlink audit, phased acquisition plan, KPI tracker, editorial and niche link targets, plus a directory and citation master plan.</p>
                     <div class="doc-links">
-                        <a href="https://docs.google.com/spreadsheets/d/1XTJ1BSqipdhzfXgQBky0D9MWmf-Q6C7O/edit?usp=sharing&ouid=110437046627069400645&rtpof=true&sd=true" target="_blank" rel="noopener" class="doc-link">
-                            <span>View the 6-month off-page playbook</span>
-                            <span class="arrow">→</span>
+                        <a href="https://docs.google.com/spreadsheets/d/1XTJ1BSqipdhzfXgQBky0D9MWmf-Q6C7O/edit?usp=sharing&amp;ouid=110437046627069400645&amp;rtpof=true&amp;sd=true" target="_blank" rel="noopener" class="doc-link">
+                            <span>View the six-month off-page playbook</span>
+                            <span class="arrow">&rarr;</span>
                         </a>
                     </div>
                 </div>
@@ -2021,42 +2179,42 @@
                 <div class="fw-step">
                     <div class="fw-num">1</div>
                     <div class="fw-title">Business &amp; KPI Alignment</div>
-                    <div class="fw-desc">Understand revenue goals. Define SEO success metrics that connect to outcomes, not vanity.</div>
+                    <div class="fw-desc">Understand revenue goals. Define success metrics that connect to outcomes, not vanity.</div>
                 </div>
                 <div class="fw-step">
                     <div class="fw-num">2</div>
                     <div class="fw-title">Technical Foundation</div>
-                    <div class="fw-desc">Audit and resolve crawl, index, and structural issues before any tactical work begins.</div>
+                    <div class="fw-desc">Audit and resolve crawl, index and structural issues before any tactical work begins.</div>
                 </div>
                 <div class="fw-step">
                     <div class="fw-num">3</div>
                     <div class="fw-title">Keyword &amp; Intent Mapping</div>
-                    <div class="fw-desc">Identify high-impact, revenue-focused terms and map them to the right page types.</div>
+                    <div class="fw-desc">Identify revenue-focused terms and map them to the right page types.</div>
                 </div>
                 <div class="fw-step">
                     <div class="fw-num">4</div>
                     <div class="fw-title">Content &amp; Architecture</div>
-                    <div class="fw-desc">Build scalable pillar-and-cluster systems that compound topical authority.</div>
+                    <div class="fw-desc">Build pillar-and-cluster systems that compound topical authority over time.</div>
                 </div>
                 <div class="fw-step">
                     <div class="fw-num">5</div>
-                    <div class="fw-title">Internal Linking</div>
-                    <div class="fw-desc">Strengthen authority distribution through deliberate, structured linking patterns.</div>
+                    <div class="fw-title">Structured Data &amp; Entities</div>
+                    <div class="fw-desc">Implement schema for rich results and the entity signals AI systems rely on.</div>
                 </div>
                 <div class="fw-step">
                     <div class="fw-num">6</div>
-                    <div class="fw-title">Structured Data &amp; SERP</div>
-                    <div class="fw-desc">Implement schema to unlock rich results and improve search appearance.</div>
+                    <div class="fw-title">Lead Tracking Verification</div>
+                    <div class="fw-desc">Test the path end to end. Confirm real enquiries arrive and are counted correctly.</div>
                 </div>
                 <div class="fw-step">
                     <div class="fw-num">7</div>
                     <div class="fw-title">Performance Monitoring</div>
-                    <div class="fw-desc">Track KPIs through GA4, GSC, and dedicated SEO tooling with monthly cadence.</div>
+                    <div class="fw-desc">Track through GSC, GA4 and answer-engine queries on a monthly cadence.</div>
                 </div>
                 <div class="fw-step">
                     <div class="fw-num">8</div>
                     <div class="fw-title">Continuous Growth</div>
-                    <div class="fw-desc">Optimize and iterate based on real performance data — never assumption.</div>
+                    <div class="fw-desc">Optimise and iterate on real performance data — never on assumption.</div>
                 </div>
             </div>
         </section>
@@ -2090,7 +2248,7 @@
                     <h4>Recognition</h4>
                     <div class="cred-item">
                         <strong>2025 Annual Evaluation</strong>
-                        <span>Average Score · 90.74</span>
+                        <span>Average Score · 90.74 / 100</span>
                         <div class="award-highlight">
                             <div class="label">Distinction</div>
                             <div class="value">Best Scorer &amp; Team Lead</div>
@@ -2127,13 +2285,13 @@
                         <dd><a href="tel:+8801924798350">+880 1924 798 350</a></dd>
 
                         <dt>LinkedIn</dt>
-                        <dd><a href="https://www.linkedin.com/in/popy-akter-tj/" target="_blank" rel="noopener">linkedin.com/in/popy-akter-tj</a></dd>
+                        <dd><a href="https://www.linkedin.com/in/popy-akter-seo/" target="_blank" rel="noopener">linkedin.com/in/popy-akter-seo</a></dd>
 
                         <dt>CV</dt>
                         <dd><a href="./cv.html">View &amp; download CV</a></dd>
 
                         <dt>Status</dt>
-                        <dd>Open to collaborations</dd>
+                        <dd>Open to remote roles &amp; collaborations</dd>
                     </dl>
                 </div>
             </div>
